@@ -9,8 +9,8 @@ defmodule L10nElixir.Mixfile do
      source_url: "https://github.com/elixir-lang/elixir",
      docs: fn() -> docs() end,
      exgettext: [ extra: Extrans ],
-     aliases: aliases,
-     deps: deps]
+     aliases: aliases(),
+     deps: deps()]
   end
   def abs_path(s) when is_list(s) do
     Path.join([File.cwd! | s])
@@ -20,10 +20,10 @@ defmodule L10nElixir.Mixfile do
   end
   def make_source_ref(source_dir) do
     gitdir = Path.join(source_dir, ".git")
-    {shead, 0} = System.cmd("git", ["--git-dir", gitdir, 
+    {shead, 0} = System.cmd("git", ["--git-dir", gitdir,
                                     "rev-parse", "HEAD"])
     shead = String.rstrip(shead)
-    {stag, 0} = System.cmd("git", ["--git-dir", gitdir, 
+    {stag, 0} = System.cmd("git", ["--git-dir", gitdir,
                                    "tag", "--points-at", shead])
     stag = String.rstrip(stag)
     case stag do
@@ -32,7 +32,7 @@ defmodule L10nElixir.Mixfile do
       _ -> stag
     end
   end
-  def docs do 
+  def docs do
     source_dir = "deps/elixir"
     sr = abs_path([source_dir, "lib/elixir/ebin"])
 #    IO.inspect File.los(sr)
@@ -59,7 +59,10 @@ defmodule L10nElixir.Mixfile do
      source_beam: sr,
      source_ref: sref,
      extras: [
+              "pages/Behaviours.md",
+              "pages/Guards.md",
               "pages/Naming Conventions.md",
+              "pages/Operators.md",
               "pages/Typespecs.md",
               "pages/Writing Documentation.md"
              ],
@@ -77,32 +80,32 @@ defmodule L10nElixir.Mixfile do
     [docs_all: &docs_all/1]
   end
   def docs_all(_) do
-    apps = ["l10n_iex", "l10n_ex_unit", "l10n_eex", "l10n_logger"]
+    apps = ["l10n_iex", "l10n_ex_unit", "l10n_eex", "l10n_logger", "l10n_mix"]
     locale = Regex.replace(~r/(..).*/, System.get_env("LANG"), "\\1")
     Enum.map apps,
     fn(app) ->
       Code.load_file("deps/#{app}/mix.exs")
       Code.append_path("_build/dev/lib/ex_doc/ebin")
-      File.cp("deps/#{app}/priv/lang/#{locale}/#{app}.exmo", 
-              "priv/lang/#{locale}/#{app}.exmo")
+      File.cp("deps/#{app}/priv/lang/#{locale}/#{app}.exmo",
+        "priv/lang/#{locale}/#{app}.exmo")
       mod = Module.concat(Mix.Utils.camelize(app), Mixfile)
       l10napp = mod.project
       b = Regex.replace(~r/^l10n_(.*)/, app, "\\1")
-        |> String.to_atom 
+        |> String.to_atom
       case Application.load(b) do
         :ok -> :ok
-        {:error, {:already_loaded, m}} -> :ok
+        {:error, {:already_loaded, _m}} -> :ok
       end
 #      IO.inspect [{b, Application.spec(b)}]
       b = Application.spec(b)
         |> Keyword.get(:modules)
         |> hd
         |> Module.concat(nil)
-      l10napp = update_in(l10napp, 
-                          [:docs, :source_root], 
-                          fn(_) ->  
+      l10napp = update_in(l10napp,
+                          [:docs, :source_root],
+                          fn(_) ->
                             d = Path.dirname(b.__info__(:compile)[:source])
-                            r = Path.join([d, "..", "..", ".."]) 
+                            r = Path.join([d, "..", "..", ".."])
                             |> Path.expand
                             IO.inspect [r: r]
                             r
@@ -120,16 +123,16 @@ defmodule L10nElixir.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:elixir, github: "elixir-lang/elixir" }, # tag: "v1.2.0"},
-     {:ex_doc, github: "elixir-lang/ex_doc"},
-     {:earmark, "~> 0.1.17 or ~> 0.2", optional: true},
-     {:extrans, path: "../../extrans"},
-     {:exgettext, github: "k1complete/exgettext"},
-	   {:l10n_iex,  github: "k1complete/l10n_iex"},
-#      compile: "mix do deps.get, deps.compile, compile, docs" },
-	   {:l10n_ex_unit,  github: "k1complete/l10n_ex_unit"},
-	   {:l10n_eex,  github: "k1complete/l10n_eex"},
-	   {:l10n_logger,  github: "k1complete/l10n_logger"}
+    [{:elixir, github: "elixir-lang/elixir", tag: "v1.4.0"}, # tag: "v1.2.0"},
+     {:ex_doc, "~> 0.14.5"},
+     {:earmark, "~> 1.0.0"},
+     {:extrans, git: "git@bitbucket.org:zuki_ebetsu/extrans.git"},
+     {:exgettext, git: "git@bitbucket.org:zuki_ebetsu/exgettext.git"},
+	   {:l10n_iex,  git: "git@bitbucket.org:zuki_ebetsu/l10n_iex.git"},
+	   {:l10n_ex_unit,  git: "git@bitbucket.org:zuki_ebetsu/l10n_ex_unit.git"},
+	   {:l10n_eex,  git: "git@bitbucket.org:zuki_ebetsu/l10n_eex.git"},
+	   {:l10n_logger,  git: "git@bitbucket.org:zuki_ebetsu/l10n_logger.git"},
+     {:l10n_mix,  git: "git@bitbucket.org:zuki_ebetsu/l10n_mix.git"}
 #      compile: "mix do deps.get, deps.compile, compile, docs" }
 #	    compile: "mix do deps.get, deps.compile; mix; mix l10n.msgfmt"}
     ]

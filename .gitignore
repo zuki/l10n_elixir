@@ -4,3 +4,6 @@ erl_crash.dump
 *~
 *.pox
 *.ez
+doc
+mix.lock
+priv/lang
