@@ -1,0 +1,15 @@
+#. TRANSLATORS: def EEx.Tokenizer.tokenize(bin, line, opts \\ [])
+#: lib/eex/tokenizer.ex:9 
+msgid ""
+"Tokenizes the given charlist or binary.\n"
+"\n"
+"It returns {:ok, list} with the following tokens:\n"
+"\n"
+"  * `{:text, content}`\n"
+"  * `{:expr, line, marker, content}`\n"
+"  * `{:start_expr, line, marker, content}`\n"
+"  * `{:middle_expr, line, marker, content}`\n"
+"  * `{:end_expr, line, marker, content}`\n"
+"\n"
+"Or `{:error, line, error}` in case of errors.\n"
+msgstr ""

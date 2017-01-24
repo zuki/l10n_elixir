@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2017-01-23 11:03+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def EEx.Compiler.compile(source, opts)
+#: lib/eex/compiler.ex:7
+msgid ""
+"This is the compilation entry point. It glues the tokenizer\n"
+"and the engine together by handling the tokens and invoking\n"
+"the engine every time a full expression or text is received.\n"
+msgstr ""
+"コンパイルのエントリポイントです。完全な式かテキストを\n"
+"受け取るたびに、トークンをハンドリングしエンジンを起動する\n"
+"ことによってトークナイザとエンジンをつなげます。\n"
