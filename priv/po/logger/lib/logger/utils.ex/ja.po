@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2017-01-23 11:04+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Logger.Utils.truncate(chardata, n)
+#: lib/logger/utils.ex:4
+msgid ""
+"Truncates a `chardata` into `n` bytes.\n"
+"\n"
+"There is a chance we truncate in the middle of a grapheme\n"
+"cluster but we never truncate in the middle of a binary\n"
+"codepoint. For this reason, truncation is not exact.\n"
+msgstr ""
+"`chardata`を`n` バイトに切り詰めます。\n"
+"\n"
+"バイナリコードポイントの途中では絶対に切り詰めることはありませんが\n"
+"書記素のかたまりの途中で切り詰める可能性はあります。\n"
+"このため、切り詰めは不正確です。\n"
+
+#. TRANSLATORS: def Logger.Utils.format_time(arg)
+#: lib/logger/utils.ex:250
+msgid "Formats time as chardata.\n"
+msgstr "時間をchardataとしてフォーマットします。\n"
+
+#. TRANSLATORS: def Logger.Utils.timestamp(utc_log?)
+#: lib/logger/utils.ex:237
+msgid "Returns a timestamp that includes milliseconds.\n"
+msgstr "ミリ秒を含むタイムスタンプを返します。\n"
+
+#. TRANSLATORS: def Logger.Utils.format_date(arg)
+#: lib/logger/utils.ex:257
+msgid "Formats date as chardata.\n"
+msgstr "chardataとして日付をフォーマットします\n"
+
+#. TRANSLATORS: def Logger.Utils.inspect(format, args, truncate, opts \\ %Inspect.Opts{})
+#: lib/logger/utils.ex:83
+msgid ""
+"Receives a format string and arguments and replace `~p`,\n"
+"`~P`, `~w` and `~W` by its inspected variants.\n"
+msgstr ""
+"フォーマット文字列と引数を受取り、インスペクト\n"
+"される変数によって`~p`、`~P`、`~w`と`~W`を置換します。\n"

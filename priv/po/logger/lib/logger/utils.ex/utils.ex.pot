@@ -1,0 +1,30 @@
+#. TRANSLATORS: def Logger.Utils.truncate(chardata, n)
+#: lib/logger/utils.ex:4 
+msgid ""
+"Truncates a `chardata` into `n` bytes.\n"
+"\n"
+"There is a chance we truncate in the middle of a grapheme\n"
+"cluster but we never truncate in the middle of a binary\n"
+"codepoint. For this reason, truncation is not exact.\n"
+msgstr ""
+#. TRANSLATORS: def Logger.Utils.format_time(arg)
+#: lib/logger/utils.ex:250 
+msgid ""
+"Formats time as chardata.\n"
+msgstr ""
+#. TRANSLATORS: def Logger.Utils.timestamp(utc_log?)
+#: lib/logger/utils.ex:237 
+msgid ""
+"Returns a timestamp that includes milliseconds.\n"
+msgstr ""
+#. TRANSLATORS: def Logger.Utils.format_date(arg)
+#: lib/logger/utils.ex:257 
+msgid ""
+"Formats date as chardata.\n"
+msgstr ""
+#. TRANSLATORS: def Logger.Utils.inspect(format, args, truncate, opts \\ %Inspect.Opts{})
+#: lib/logger/utils.ex:83 
+msgid ""
+"Receives a format string and arguments and replace `~p`,\n"
+"`~P`, `~w` and `~W` by its inspected variants.\n"
+msgstr ""

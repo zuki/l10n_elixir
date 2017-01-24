@@ -1,0 +1,5 @@
+#. TRANSLATORS: def Logger.App.stop()
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/logger/lib/logger/app.ex:55 
+msgid ""
+"Stops the application without sending messages to error logger.\n"
+msgstr ""
