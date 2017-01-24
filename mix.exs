@@ -62,7 +62,23 @@ defmodule L10nElixir.Mixfile do
     [docs_all: &docs_all/1]
   end
 
-  def docs_all(_) do
+  def docs_all(opts \\ []) do
+    apps = [{"eex", "EEx", "EEx"}, {"elixir", "Elixir", "Kernel"}, {"ex_unit", "ExUnit", "ExUnit"}, {"iex", "IEx", "IEx"}, {"logger", "Logger", "Logger"}, {"mix", "Mix", "Mix"}]
+
+    subapp = List.first(opts)
+    if subapp do
+      case List.keyfind(apps, subapp, 0) do
+      {app, proj, main} ->
+        make_doc({app, proj, main})
+      _ ->
+        IO.puts "Invalid name: #{subapp}"
+      end
+    else
+      Enum.map apps, &(make_doc(&1))
+    end
+  end
+
+  defp make_doc({app, proj, main}) do
     source_dir = "deps/elixir"
     sref = if (File.exists?(source_dir)) do
          make_source_ref(source_dir)
@@ -75,61 +91,57 @@ defmodule L10nElixir.Mixfile do
                  else
                    {:ok, nil}
                  end
-    apps = [{"eex", "EEx", "EEx"}, {"elixir", "Elixir", "Kernel"}, {"ex_unit", "ExUnit", "ExUnit"}, {"iex", "IEx", "IEx"}, {"logger", "Logger", "Logger"}, {"mix", "Mix", "Mix"}]
-    Enum.map apps,
-      fn({app, proj, main}) ->
-        Code.append_path("_build/dev/lib/ex_doc/ebin")
-        Code.append_path("_build/dev/lib/exgettext/ebin")
-        sr = abs_path([source_dir, "lib/#{app}/ebin"])
-        lang = Regex.replace(~r/(..).*/, System.get_env("LANG"), "\\1")
-        b = String.to_atom(app)
-        docs =
-          [
-             project: proj,
-             app: app,
-             version: version,
-             formatter: Exgettext.HTML,
-             source_root: abs_path("deps/elixir"),
-             logo: "logo.png",
-             logo_url: "http://elixir-lang.org/docs/logo.png",
-             source_beam: sr,
-             source_ref: sref,
-             output: "doc/#{version}/#{app}",
-             main: main,
-             deps: [exgettext: [path: "../exgettext"]]
-          ]
-        l10napp =
-          [
-             name: b,
-             compilers: Mix.compilers ++ [:po],
-             version: version,
-             source_url: "https://github.com/elixir-lang/elixir",
-             docs: docs,
-             lang: lang
-          ]
+    Code.append_path("_build/dev/lib/ex_doc/ebin")
+    Code.append_path("_build/dev/lib/exgettext/ebin")
+    sr = abs_path([source_dir, "lib/#{app}/ebin"])
+    lang = Regex.replace(~r/(..).*/, System.get_env("LANG"), "\\1")
+    b = String.to_atom(app)
+    docs =
+      [
+         project: proj,
+         app: app,
+         version: version,
+         formatter: Exgettext.HTML,
+         source_root: abs_path("deps/elixir"),
+         logo: "logo.png",
+         logo_url: "http://elixir-lang.org/docs/logo.png",
+         source_beam: sr,
+         source_ref: sref,
+         output: "doc/#{version}/#{app}",
+         main: main,
+         deps: [exgettext: [path: "../exgettext"]]
+      ]
+    l10napp =
+      [
+         name: b,
+         compilers: Mix.compilers ++ [:po],
+         version: version,
+         source_url: "https://github.com/elixir-lang/elixir",
+         docs: docs,
+         lang: lang
+      ]
 
-        case Application.load(b) do
-          :ok -> :ok
-          {:error, {:already_loaded, _m}} -> :ok
-        end
-  #      IO.inspect [{b, Application.spec(b)}]
-        b = Application.spec(b)
-          |> Keyword.get(:modules)
-          |> hd
-          |> Module.concat(nil)
-        l10napp = update_in(l10napp,
-                            [:docs, :source_root],
-                            fn(_) ->
-                              d = Path.dirname(b.__info__(:compile)[:source])
-                              r = Path.join([d, "..", "..", ".."])
-                              |> Path.expand
-                              # IO.inspect [r: r]
-                              r
-                            end)
-        fmt(l10napp)
-  #      IO.inspect [l10napp: l10napp]
-        Mix.Tasks.Docs.run([], l10napp)
+    case Application.load(b) do
+      :ok -> :ok
+      {:error, {:already_loaded, _m}} -> :ok
     end
+#      IO.inspect [{b, Application.spec(b)}]
+    b = Application.spec(b)
+      |> Keyword.get(:modules)
+      |> hd
+      |> Module.concat(nil)
+    l10napp = update_in(l10napp,
+                        [:docs, :source_root],
+                        fn(_) ->
+                          d = Path.dirname(b.__info__(:compile)[:source])
+                          r = Path.join([d, "..", "..", ".."])
+                          |> Path.expand
+                          # IO.inspect [r: r]
+                          r
+                        end)
+    fmt(l10napp)
+#      IO.inspect [l10napp: l10napp]
+    Mix.Tasks.Docs.run([], l10napp)
   end
 
   defp fmt(config) do
