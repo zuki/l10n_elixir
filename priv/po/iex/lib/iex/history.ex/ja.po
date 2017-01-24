@@ -1,0 +1,42 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2017-01-23 11:04+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def IEx.History.nth(state, n)
+#: lib/iex/history.ex:112
+msgid ""
+"Gets the nth item from the history.\n"
+"\n"
+"If `n` < 0, the count starts from the most recent item and goes back in "
+"time.\n"
+msgstr ""
+"履歴からn番目の項目を取得します。\n"
+"\n"
+"`n` < 0の場合は、もっとも最近のアイテムから後ろ向きに数えます。\n"
+
+#. TRANSLATORS: def IEx.History.append(state, entry, limit)
+#: lib/iex/history.ex:91
+msgid "Appends one entry to the history.\n"
+msgstr "履歴にエントリを一つ追加します。\n"
+
+#. TRANSLATORS: def IEx.History.each(state, fun)
+#: lib/iex/history.ex:103
+msgid ""
+"Enumerates over all items in the history starting from the oldest one and\n"
+"applies `fun` to each one in turn.\n"
+msgstr ""
+"もっとも古いものからスタートして全ての履歴アイテムを列挙して、\n"
+"それぞれに`fun`を適用します。\n"
+
+#. TRANSLATORS: def IEx.History.init()
+#: lib/iex/history.ex:86
+msgid "Initializes IEx history state.\n"
+msgstr "IEx履歴状態を初期化します。\n"

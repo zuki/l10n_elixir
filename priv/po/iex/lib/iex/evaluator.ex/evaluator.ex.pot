@@ -1,0 +1,22 @@
+#. TRANSLATORS: def IEx.Evaluator.value_from_env(evaluator, key)
+#: lib/iex/evaluator.ex:43 
+msgid ""
+"Returns the current session environment if a session exists.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Evaluator.init(command, server, leader, opts)
+#: lib/iex/evaluator.ex:4 
+msgid ""
+"Eval loop for an IEx session. Its responsibilities include:\n"
+"\n"
+"  * loading of .iex files\n"
+"  * evaluating code\n"
+"  * trapping exceptions in the code being evaluated\n"
+"  * keeping expression history\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Evaluator.value_from_binding(evaluator, var_name, map_key_path)
+#: lib/iex/evaluator.ex:27 
+msgid ""
+"Gets a value out of the binding, using the provided\n"
+"variable name and map key path.\n"
+msgstr ""

@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2017-01-23 11:04+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def IEx.Introspection.b(mod, fun)
+#: lib/iex/introspection.ex:197
+msgid "Prints documentation for the given callback function with any arity.\n"
+msgstr "指定したコールバック関数のすべてのアリティのドキュメントを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.b(mod)
+#: lib/iex/introspection.ex:182
+msgid "Prints the list of behaviour callbacks for the given module.\n"
+msgstr "指定したモジュールのbehaviourコールバックのリストを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.t(module, type)
+#: lib/iex/introspection.ex:284
+msgid "Prints the given type in module with any arity.\n"
+msgstr "任意のアリティを持つモジュール内の指定したタイプを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.h(modules, function, arity)
+#: lib/iex/introspection.ex:79
+msgid ""
+"Prints the documentation for the given function\n"
+"and arity in the list of modules.\n"
+msgstr ""
+"モジュールのリスト内にある指定したアリティを持つ指定した関数の\n"
+"ドキュメンテーションを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.t(module, type, arity)
+#: lib/iex/introspection.ex:306
+msgid "Prints the type in module with given arity.\n"
+msgstr "指定したアリティを持つモジュールのタイプを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.h(modules, function)
+#: lib/iex/introspection.ex:39
+msgid ""
+"Prints the documentation for the given function\n"
+"with any arity in the list of modules.\n"
+msgstr ""
+"モジュールのリスト内にある任意のアリティを持つ指定した関数の\n"
+"ドキュメンテーションを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.s(module, function)
+#: lib/iex/introspection.ex:355
+msgid "Prints the specs for given module and function.\n"
+msgstr "指定したモジュールと関数のspecを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.h(module)
+#: lib/iex/introspection.ex:10
+msgid "Prints the documentation for the given module.\n"
+msgstr "指定したモジュールのドキュメントを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.s(module)
+#: lib/iex/introspection.ex:336
+msgid "Prints the specs for given module.\n"
+msgstr "指定したモジュールのspecを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.s(module, function, arity)
+#: lib/iex/introspection.ex:376
+msgid "Prints the spec in given module, with arity.\n"
+msgstr "指定したモジュールと関数、アリティのspecを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.b(mod, fun, arity)
+#: lib/iex/introspection.ex:212
+msgid "Prints documentation for the given callback function and arity.\n"
+msgstr "指定したコールバック関数とアリティのドキュメントを表示します。\n"
+
+#. TRANSLATORS: def IEx.Introspection.t(module)
+#: lib/iex/introspection.ex:271
+msgid "Prints the types for the given module.\n"
+msgstr "指定したモジュールのタイプを表示します。\n"

@@ -1,0 +1,62 @@
+#. TRANSLATORS: def IEx.Introspection.b(mod, fun)
+#: lib/iex/introspection.ex:197 
+msgid ""
+"Prints documentation for the given callback function with any arity.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.b(mod)
+#: lib/iex/introspection.ex:182 
+msgid ""
+"Prints the list of behaviour callbacks for the given module.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.t(module, type)
+#: lib/iex/introspection.ex:284 
+msgid ""
+"Prints the given type in module with any arity.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.h(modules, function, arity)
+#: lib/iex/introspection.ex:79 
+msgid ""
+"Prints the documentation for the given function\n"
+"and arity in the list of modules.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.t(module, type, arity)
+#: lib/iex/introspection.ex:306 
+msgid ""
+"Prints the type in module with given arity.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.h(modules, function)
+#: lib/iex/introspection.ex:39 
+msgid ""
+"Prints the documentation for the given function\n"
+"with any arity in the list of modules.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.s(module, function)
+#: lib/iex/introspection.ex:355 
+msgid ""
+"Prints the specs for given module and function.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.h(module)
+#: lib/iex/introspection.ex:10 
+msgid ""
+"Prints the documentation for the given module.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.s(module)
+#: lib/iex/introspection.ex:336 
+msgid ""
+"Prints the specs for given module.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.s(module, function, arity)
+#: lib/iex/introspection.ex:376 
+msgid ""
+"Prints the spec in given module, with arity.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.b(mod, fun, arity)
+#: lib/iex/introspection.ex:212 
+msgid ""
+"Prints documentation for the given callback function and arity.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Introspection.t(module)
+#: lib/iex/introspection.ex:271 
+msgid ""
+"Prints the types for the given module.\n"
+msgstr ""

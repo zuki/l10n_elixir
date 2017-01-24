@@ -1,0 +1,23 @@
+#. TRANSLATORS: def IEx.History.nth(state, n)
+#: lib/iex/history.ex:112 
+msgid ""
+"Gets the nth item from the history.\n"
+"\n"
+"If `n` < 0, the count starts from the most recent item and goes back in time.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.History.append(state, entry, limit)
+#: lib/iex/history.ex:91 
+msgid ""
+"Appends one entry to the history.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.History.each(state, fun)
+#: lib/iex/history.ex:103 
+msgid ""
+"Enumerates over all items in the history starting from the oldest one and\n"
+"applies `fun` to each one in turn.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.History.init()
+#: lib/iex/history.ex:86 
+msgid ""
+"Initializes IEx history state.\n"
+msgstr ""

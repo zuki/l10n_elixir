@@ -1,0 +1,14 @@
+#. TRANSLATORS: def IEx.CLI.start()
+#: lib/iex/cli.ex:40 
+msgid ""
+"In order to work properly, IEx needs to be set as the\n"
+"proper `-user` when starting the Erlang VM and we do so\n"
+"by pointing exactly to this function.\n"
+"\n"
+"If possible, Elixir will start a tty (smart terminal)\n"
+"which makes all control commands available in tty\n"
+"available to the developer.\n"
+"\n"
+"In case `tty` is not available (for example, Windows),\n"
+"a dumb terminal version is started instead.\n"
+msgstr ""

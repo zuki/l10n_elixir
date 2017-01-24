@@ -1,0 +1,20 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2017-01-23 11:04+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def IEx.Remsh.expand(node)
+#: lib/iex/remsh.ex:4
+msgid ""
+"Provides one helper function that is injected into connecting\n"
+"remote nodes to properly handle autocompletion.\n"
+msgstr ""
+"自動補間を正しく扱うためにリモートノードへの接続時に挿入される\n"
+"一つのヘルパー関数を提供します。\n"

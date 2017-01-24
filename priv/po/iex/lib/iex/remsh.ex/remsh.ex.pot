@@ -1,0 +1,6 @@
+#. TRANSLATORS: def IEx.Remsh.expand(node)
+#: lib/iex/remsh.ex:4 
+msgid ""
+"Provides one helper function that is injected into connecting\n"
+"remote nodes to properly handle autocompletion.\n"
+msgstr ""

@@ -1,0 +1,42 @@
+#. TRANSLATORS: def IEx.Server.take_over(identifier, opts, timeout \\ 1000, server \\ whereis())
+#: lib/iex/server.ex:58 
+msgid ""
+"Requests to take over the given shell from the\n"
+"current process.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Server.whereis()
+#: lib/iex/server.ex:10 
+msgid ""
+"Finds the IEx server, on this or another node.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Server.evaluator()
+#: lib/iex/server.ex:45 
+msgid ""
+"Returns the PID of the IEx evaluator process if it exists.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Server.start_evaluator(opts)
+#: lib/iex/server.ex:143 
+msgid ""
+"Starst an evaluator using the provided options.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Server.start(opts, arg)
+#: lib/iex/server.ex:90 
+msgid ""
+"Starts IEx by executing a given callback and spawning\n"
+"the server only after the callback is done.\n"
+"\n"
+"The server responsibilities include:\n"
+"\n"
+"  * reading input\n"
+"  * sending messages to the evaluator\n"
+"  * handling takeover process of the evaluator\n"
+"\n"
+"If there is any takeover during the callback execution\n"
+"we spawn a new server for it without waiting for its\n"
+"conclusion.\n"
+msgstr ""
+#. TRANSLATORS: def IEx.Server.local()
+#: lib/iex/server.ex:21 
+msgid ""
+"Returns the PID of the IEx server on the local node if exists.\n"
+msgstr ""

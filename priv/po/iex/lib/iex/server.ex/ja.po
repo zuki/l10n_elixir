@@ -1,0 +1,68 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2017-01-23 11:04+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def IEx.Server.take_over(identifier, opts, timeout \\ 1000, server \\ whereis())
+#: lib/iex/server.ex:58
+msgid ""
+"Requests to take over the given shell from the\n"
+"current process.\n"
+msgstr ""
+"現在のプロセスから死してしたシェルへのテイクオーバーを\n"
+"要求します。\n"
+
+#. TRANSLATORS: def IEx.Server.whereis()
+#: lib/iex/server.ex:10
+msgid "Finds the IEx server, on this or another node.\n"
+msgstr "このノードまたは他のノードのIExサーバを探します。\n"
+
+#. TRANSLATORS: def IEx.Server.evaluator()
+#: lib/iex/server.ex:45
+msgid "Returns the PID of the IEx evaluator process if it exists.\n"
+msgstr "もしあれば、IEx評価器プロセスのPIDを返します。\n"
+
+#. TRANSLATORS: def IEx.Server.start_evaluator(opts)
+#: lib/iex/server.ex:143
+msgid "Starst an evaluator using the provided options.\n"
+msgstr "指定したオプションを使い評価器を開始します。\n"
+
+#. TRANSLATORS: def IEx.Server.start(opts, arg)
+#: lib/iex/server.ex:90
+msgid ""
+"Starts IEx by executing a given callback and spawning\n"
+"the server only after the callback is done.\n"
+"\n"
+"The server responsibilities include:\n"
+"\n"
+"  * reading input\n"
+"  * sending messages to the evaluator\n"
+"  * handling takeover process of the evaluator\n"
+"\n"
+"If there is any takeover during the callback execution\n"
+"we spawn a new server for it without waiting for its\n"
+"conclusion.\n"
+msgstr ""
+"指定したコールバックを実行し、コールバックの終了後にはじめてサーバーを\n"
+"生成することによりIExを開始します。\n"
+"\n"
+"サーバは以下に責任をもちます:\n"
+"\n"
+"  * 入力の読み込み\n"
+"  * 評価器へのメッセージの送信\n"
+"  * 評価器のテイクオーバープロセスの処理\n"
+"\n"
+"コールバックの実行中にテイクオーバーがあった場合は、その結果を待つことなく\n"
+"新しいサーバを生成します。\n"
+
+#. TRANSLATORS: def IEx.Server.local()
+#: lib/iex/server.ex:21
+msgid "Returns the PID of the IEx server on the local node if exists.\n"
+msgstr "もしあれば、ローカルノードのIExサーバのPIDを返します。\n"
