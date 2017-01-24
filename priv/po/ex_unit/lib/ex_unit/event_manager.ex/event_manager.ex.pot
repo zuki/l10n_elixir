@@ -1,0 +1,8 @@
+#. TRANSLATORS: def ExUnit.EventManager.start_link()
+#: lib/ex_unit/event_manager.ex:7 
+msgid ""
+"Starts an event manager that publishes events during the suite run.\n"
+"\n"
+"This is what power formatters as well as the\n"
+"internal statistics server for ExUnit.\n"
+msgstr ""

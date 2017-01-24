@@ -1,0 +1,8 @@
+#. TRANSLATORS: def ExUnit.Diff.script(left, right)
+#: lib/ex_unit/diff.ex:4 
+msgid ""
+"Returns an edit script representing the difference between `left` and `right`.\n"
+"\n"
+"Returns `nil` if they are not the same data type,\n"
+"or if the given data type is not supported.\n"
+msgstr ""
