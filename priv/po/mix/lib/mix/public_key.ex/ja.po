@@ -1,0 +1,33 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2017-01-23 11:04+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Mix.PublicKey.verify(binary, hash, signature)
+#: lib/mix/public_key.ex:51
+msgid ""
+"Verifies the given binary has the proper signature using the system public "
+"keys.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.PublicKey.public_keys()
+#: lib/mix/public_key.ex:21
+msgid "Returns all public keys as a list.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.PublicKey.public_keys_path()
+#: lib/mix/public_key.ex:16
+msgid "Returns the filesystem path for public keys.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.PublicKey.decode!(id, key)
+#: lib/mix/public_key.ex:34
+msgid "Decodes a public key and raises if the key is invalid.\n"
+msgstr ""

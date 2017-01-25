@@ -1,0 +1,12 @@
+#. TRANSLATORS: Elixir.Mix.Tasks.Archive.Check Summary
+#: lib/mix/tasks/archive.check.ex:4 
+msgid ""
+"Checks all archives are available.\n"
+"\n"
+"Mix projects can specify required archives using\n"
+"the `:archives` option:\n"
+"\n"
+"    archives: [{:foo, \"~> 1.0.0\"}]\n"
+"\n"
+"This task guarantees this option is respected.\n"
+msgstr ""

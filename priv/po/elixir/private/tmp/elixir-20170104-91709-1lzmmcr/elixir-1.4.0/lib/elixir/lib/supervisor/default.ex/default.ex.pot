@@ -1,0 +1,8 @@
+#. TRANSLATORS: def Supervisor.Default.init(args)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/elixir/lib/supervisor/default.ex:4 
+msgid ""
+"Supervisor callback that simply returns the given args.\n"
+"\n"
+"This is the supervisor used by `Supervisor.start_link/2`\n"
+"and others.\n"
+msgstr ""

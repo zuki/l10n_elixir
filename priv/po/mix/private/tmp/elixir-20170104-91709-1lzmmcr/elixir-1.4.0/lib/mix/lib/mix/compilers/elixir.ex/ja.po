@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: elixir 1.4.0\n"
+"PO-Revision-Date: 2017-01-24 15:54+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"POT-Creation-Date: \n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. TRANSLATORS: def Mix.Compilers.Elixir.read_manifest(manifest, compile_path)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/compilers/elixir.ex:117
+msgid "Reads the manifest.\n"
+msgstr "マニフェストを読み込みます。\n"
+
+#. TRANSLATORS: def Mix.Compilers.Elixir.protocols_and_impls(manifest, compile_path)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/compilers/elixir.ex:108
+msgid "Returns protocols and implementations for the given `manifest`.\n"
+msgstr "指定した`manifest`のプロトコルと実装を返します。\n"
+
+#. TRANSLATORS: def Mix.Compilers.Elixir.compile(manifest, srcs, dest, force, opts)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/compilers/elixir.ex:18
+msgid ""
+"Compiles stale Elixir files.\n"
+"\n"
+"It expects a `manifest` file, the source directories, the source directories "
+"to skip,\n"
+"the extensions to read in sources, the destination directory, a flag to know "
+"if\n"
+"compilation is being forced or not and a callback to be invoked\n"
+"once (and only if) compilation starts.\n"
+"\n"
+"The `manifest` is written down with information including dependencies\n"
+"between modules, which helps it recompile only the modules that\n"
+"have changed at runtime.\n"
+msgstr ""
+"古いElixirファイルをコンパイルします。\n"
+"\n"
+"引数には、`manifest`ファイル、ソースディレクトリ、スキップする\n"
+"ソースディレクトリ、ソースとして読み込む拡張子、デスティネーション\n"
+"ディレクトリ、コンパイルを強制するか否かを示すフラグ、コンパイルが\n"
+"開始した時（および、その時に限り）起動するべきコールバックが想定されていま"
+"す。\n"
+"\n"
+"`manifest`はモジュール間の依存関係を含む情報が記載されています。\n"
+"実行時に変更されたモジュールのみを再コンパイルするのに\n"
+"役立ちます。\n"

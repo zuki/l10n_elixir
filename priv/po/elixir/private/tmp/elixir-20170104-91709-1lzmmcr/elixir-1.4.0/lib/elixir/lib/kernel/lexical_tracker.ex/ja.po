@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Kernel.LexicalTracker.remote_references(arg)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/elixir/lib/kernel/lexical_tracker.ex:12
+#, fuzzy
+msgid "Returns all remotes referenced in this lexical scope.\n"
+msgstr "このレキシカルスコープの中につながる全てのリモートを返します。\n"
+
+#. TRANSLATORS: def Kernel.LexicalTracker.remote_dispatches(arg)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/elixir/lib/kernel/lexical_tracker.ex:19
+#, fuzzy
+msgid "Returns all remote dispatches in this lexical scope.\n"
+msgstr "このレキシカルスコープの中につながる全てのリモートを返します。\n"
+
+#. TRANSLATORS: def Kernel.LexicalTracker.dest(arg)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/elixir/lib/kernel/lexical_tracker.ex:26
+msgid ""
+"Gets the destination the lexical scope is meant to\n"
+"compile to.\n"
+msgstr "コンパイルするはずの目的のレキシカルスコープを得ます。\n"

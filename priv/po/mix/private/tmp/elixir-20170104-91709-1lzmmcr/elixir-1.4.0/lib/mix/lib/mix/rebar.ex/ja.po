@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: elixir 1.4.0\n"
+"PO-Revision-Date: 2017-01-23 11:05+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Mix.Rebar.merge_config(old, new)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/rebar.ex:64
+msgid "Merges a rebar3 parent config with a child config.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.recur(config, fun)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/rebar.ex:201
+msgid ""
+"Runs `fun` for the given config and for each `sub_dirs` in the\n"
+"given Rebar config.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.dependency_config(config)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/rebar.ex:173
+msgid ""
+"Update Rebar configuration to be more suitable for dependencies.\n"
+"\n"
+"Drops `warnings_as_errors` from `erl_opts`.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.global_rebar_cmd(manager)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/rebar.ex:11
+msgid ""
+"Returns the path to the global copy of `rebar`, defined by the\n"
+"environment variables `MIX_REBAR` or `MIX_REBAR3`.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.local_rebar_cmd(manager)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/rebar.ex:22
+msgid "Returns the path to the local copy of `rebar`, if one exists.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.deps(app, config, overrides)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/rebar.ex:187
+msgid ""
+"Parses the dependencies in given `rebar.config` to Mix's dependency format.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.serialize_config(config)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/rebar.ex:166
+msgid "Serializes a Rebar config to a term file.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.load_config(dir)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/rebar.ex:39
+msgid ""
+"Loads `rebar.config` and evaluates `rebar.config.script` if it\n"
+"exists in the given directory.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.local_rebar_path(manager)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/rebar.ex:4
+msgid "Returns the path supposed to host the local copy of `rebar`.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.rebar_cmd(manager)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/rebar.ex:32
+msgid "Returns the path to the available `rebar` command.\n"
+msgstr ""

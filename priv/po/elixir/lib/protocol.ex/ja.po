@@ -21,10 +21,42 @@ msgstr ""
 "\n"
 "もしそうなら`:ok`を返し、さもなくば`ArgumentError`を上げます。\n"
 
-#. TRANSLATORS: Elixir.Protocol Summary
-#: lib/protocol.ex:2
-msgid "Functions for working with protocols.\n"
-msgstr "プロトコルで動く関数です。\n"
+#. TRANSLATORS: def Protocol.extract_protocols(paths)
+#: lib/protocol.ex:129
+#, fuzzy
+msgid ""
+"Extracts all protocols from the given paths.\n"
+"\n"
+"The paths can be either a charlist or a string. Internally\n"
+"they are worked on as charlists, so passing them as lists\n"
+"avoid extra conversion.\n"
+"\n"
+"Does not load any of the protocols.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    # Get Elixir's ebin and retrieve all protocols\n"
+"    iex> path = :code.lib_dir(:elixir, :ebin)\n"
+"    iex> mods = Protocol.extract_protocols([path])\n"
+"    iex> Enumerable in mods\n"
+"    true\n"
+"\n"
+msgstr ""
+"与えられたパスから全てのプロトコルを抽出します。\n"
+"\n"
+"パスは文字のリストでも文字列でもよいです。内部的には文字のリストとして\n"
+"動きますので、リストを渡すと、余分な変換は無視されます。\n"
+"\n"
+"どんな実装もロードはされません。\n"
+"\n"
+"## 例\n"
+"\n"
+"    # Elixirのebinディレクトリを取得し、全てのプロトコルを取り出します。\n"
+"    iex> path = :code.lib_dir(:elixir, :ebin)\n"
+"    iex> mods = Protocol.extract_protocols([path])\n"
+"    iex> Enumerable in mods\n"
+"    true\n"
+"\n"
 
 #. TRANSLATORS: def Protocol.assert_impl!(protocol, base)
 #: lib/protocol.ex:82
@@ -39,21 +71,6 @@ msgstr ""
 "\n"
 "もしそうなら`:ok`を返し、さもなくば`ArgumentError`を上げます。\n"
 
-#. TRANSLATORS: defmacro Protocol.def(signature)
-#: lib/protocol.ex:6
-msgid ""
-"Defines a new protocol function.\n"
-"\n"
-"Protocols do not allow functions to be defined directly, instead, the\n"
-"regular `Kernel.def/*` macros are replaced by this macro which\n"
-"defines the protocol functions with the appropriate callbacks.\n"
-msgstr ""
-"新しいプロトコル関数を定義します。\n"
-"\n"
-"プロトコルは関数を直接定義することは許されていません。代りに、\n"
-"適切なコールバックでプロトコル関数を定義するこのマクロと、\n"
-"標準の`Kernel.def/*`マクロが取り替えられます。\n"
-
 #. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
 #: lib/protocol.ex:117
 msgid "Derives the `protocol` for `module` with the given options.\n"
@@ -61,12 +78,13 @@ msgstr "与えられたオプションで、`module`のために`protocol`を導
 
 #. TRANSLATORS: def Protocol.extract_impls(protocol, paths)
 #: lib/protocol.ex:158
+#, fuzzy
 msgid ""
 "Extracts all types implemented for the given protocol from\n"
 "the given paths.\n"
 "\n"
-"The paths can be either a char list or a string. Internally\n"
-"they are worked on as char lists, so passing them as lists\n"
+"The paths can be either a charlist or a string. Internally\n"
+"they are worked on as charlists, so passing them as lists\n"
 "avoid extra conversion.\n"
 "\n"
 "Does not load any of the implementations.\n"
@@ -102,41 +120,20 @@ msgstr ""
 msgid "Returns `true` if the protocol was consolidated.\n"
 msgstr "プロトコルが統合(consolidate)されていれば`true`を返します。\n"
 
-#. TRANSLATORS: def Protocol.extract_protocols(paths)
-#: lib/protocol.ex:129
+#. TRANSLATORS: defmacro Protocol.def(signature)
+#: lib/protocol.ex:6
 msgid ""
-"Extracts all protocols from the given paths.\n"
+"Defines a new protocol function.\n"
 "\n"
-"The paths can be either a char list or a string. Internally\n"
-"they are worked on as char lists, so passing them as lists\n"
-"avoid extra conversion.\n"
-"\n"
-"Does not load any of the protocols.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    # Get Elixir's ebin and retrieve all protocols\n"
-"    iex> path = :code.lib_dir(:elixir, :ebin)\n"
-"    iex> mods = Protocol.extract_protocols([path])\n"
-"    iex> Enumerable in mods\n"
-"    true\n"
-"\n"
+"Protocols do not allow functions to be defined directly, instead, the\n"
+"regular `Kernel.def/*` macros are replaced by this macro which\n"
+"defines the protocol functions with the appropriate callbacks.\n"
 msgstr ""
-"与えられたパスから全てのプロトコルを抽出します。\n"
+"新しいプロトコル関数を定義します。\n"
 "\n"
-"パスは文字のリストでも文字列でもよいです。内部的には文字のリストとして\n"
-"動きますので、リストを渡すと、余分な変換は無視されます。\n"
-"\n"
-"どんな実装もロードはされません。\n"
-"\n"
-"## 例\n"
-"\n"
-"    # Elixirのebinディレクトリを取得し、全てのプロトコルを取り出します。\n"
-"    iex> path = :code.lib_dir(:elixir, :ebin)\n"
-"    iex> mods = Protocol.extract_protocols([path])\n"
-"    iex> Enumerable in mods\n"
-"    true\n"
-"\n"
+"プロトコルは関数を直接定義することは許されていません。代りに、\n"
+"適切なコールバックでプロトコル関数を定義するこのマクロと、\n"
+"標準の`Kernel.def/*`マクロが取り替えられます。\n"
 
 #. TRANSLATORS: def Protocol.consolidate(protocol, types)
 #: lib/protocol.ex:228
@@ -184,3 +181,8 @@ msgstr ""
 "この関数はいかなるプロトコルもロードしませんし、コンパイルされたモジュー\n"
 "ルの新しいバイトコードもロードしません。しかしながら、それぞれの実装は\n"
 "有効にされるはずで、それはロードされるでしょう。\n"
+
+#. TRANSLATORS: Elixir.Protocol Summary
+#: lib/protocol.ex:2
+msgid "Functions for working with protocols.\n"
+msgstr "プロトコルで動く関数です。\n"

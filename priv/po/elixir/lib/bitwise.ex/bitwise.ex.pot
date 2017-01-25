@@ -13,15 +13,6 @@ msgid ""
 "    -1\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: defmacro Bitwise.bor(left, right)
-#: lib/bitwise.ex:102 
-msgid ""
-"Calculates the bitwise OR of its arguments.\n"
-"\n"
-"    iex> bor(9, 3)\n"
-"    11\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: defmacro Bitwise.^^^(left, right)
 #: lib/bitwise.ex:135 
 msgid ""
@@ -55,6 +46,15 @@ msgid ""
 "    -4\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: defmacro Bitwise.bor(left, right)
+#: lib/bitwise.ex:102 
+msgid ""
+"Calculates the bitwise OR of its arguments.\n"
+"\n"
+"    iex> bor(9, 3)\n"
+"    11\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: Elixir.Bitwise Summary
 #: lib/bitwise.ex:2 
 msgid ""
@@ -72,8 +72,8 @@ msgid ""
 "If you prefer to use only operators or skip them, you can\n"
 "pass the following options:\n"
 "\n"
-"  * `:only_operators` - include only operators\n"
-"  * `:skip_operators` - skip operators\n"
+"  * `:only_operators` - includes only operators\n"
+"  * `:skip_operators` - skips operators\n"
 "\n"
 "For example:\n"
 "\n"
@@ -118,6 +118,15 @@ msgid ""
 "    1\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: defmacro Bitwise.|||(left, right)
+#: lib/bitwise.ex:113 
+msgid ""
+"Infix operator; calculates the bitwise OR of its arguments.\n"
+"\n"
+"    iex> 9 ||| 3\n"
+"    11\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: defmacro Bitwise.<<<(left, right)
 #: lib/bitwise.ex:163 
 msgid ""
@@ -131,15 +140,6 @@ msgid ""
 "    -4\n"
 "    iex> -1 <<< -2\n"
 "    -1\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: defmacro Bitwise.|||(left, right)
-#: lib/bitwise.ex:113 
-msgid ""
-"Infix operator; calculates the bitwise OR of its arguments.\n"
-"\n"
-"    iex> 9 ||| 3\n"
-"    11\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: defmacro Bitwise.band(left, right)

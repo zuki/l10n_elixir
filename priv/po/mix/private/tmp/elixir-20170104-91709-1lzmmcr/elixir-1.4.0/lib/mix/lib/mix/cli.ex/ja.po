@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: elixir 1.4.0\n"
+"PO-Revision-Date: 2017-01-24 15:47+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"POT-Creation-Date: \n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. TRANSLATORS: def Mix.CLI.main(args \\ System.argv())
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/cli.ex:4
+msgid "Runs Mix according to the command line arguments.\n"
+msgstr "コマンドライン引数にしたがってMIXを実行します。\n"

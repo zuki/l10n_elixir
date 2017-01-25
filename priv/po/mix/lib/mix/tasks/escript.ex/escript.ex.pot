@@ -1,0 +1,8 @@
+#. TRANSLATORS: Elixir.Mix.Tasks.Escript Summary
+#: lib/mix/tasks/escript.ex:6 
+msgid ""
+"Lists all installed escripts.\n"
+"\n"
+"Escripts are installed at `~/.mix/escripts`. Add that path to your `PATH` environment variable\n"
+"to be able to run installed escripts from any directory.\n"
+msgstr ""

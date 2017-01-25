@@ -1,0 +1,5 @@
+#. TRANSLATORS: Elixir.Mix.Tasks.Iex Summary
+#: lib/mix/tasks/iex.ex:4 
+msgid ""
+"A task that simply instructs users to run `iex -S mix`.\n"
+msgstr ""

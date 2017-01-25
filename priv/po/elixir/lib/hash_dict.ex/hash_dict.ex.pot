@@ -1,12 +1,12 @@
+#. TRANSLATORS: def HashDict.new()
+#: lib/hash_dict.ex:25 
+msgid ""
+"Creates a new empty dict.\n"
+msgstr ""
 #. TRANSLATORS: Elixir.HashDict Summary
 #: lib/hash_dict.ex:2 
 msgid ""
 "WARNING: this module is deprecated.\n"
 "\n"
 "Use the `Map` module instead.\n"
-msgstr ""
-#. TRANSLATORS: def HashDict.new()
-#: lib/hash_dict.ex:23 
-msgid ""
-"Creates a new empty dict.\n"
 msgstr ""

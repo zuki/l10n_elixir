@@ -1,0 +1,8 @@
+#. TRANSLATORS: Elixir.Mix.Tasks.Escript.Uninstall Summary
+#: lib/mix/tasks/escript.uninstall.ex:6 
+msgid ""
+"Uninstalls local escripts:\n"
+"\n"
+"    mix escript.uninstall escript_name\n"
+"\n"
+msgstr ""

@@ -1,0 +1,15 @@
+#. TRANSLATORS: Elixir.Mix.Tasks.Do Summary
+#: lib/mix/tasks/do.ex:6 
+msgid ""
+"Executes the tasks separated by comma.\n"
+"\n"
+"The comma should be followed by a space.\n"
+"\n"
+"## Examples\n"
+"\n"
+"The example below prints the available compilers and\n"
+"then the list of dependencies.\n"
+"\n"
+"    mix do compile --list, deps\n"
+"\n"
+msgstr ""

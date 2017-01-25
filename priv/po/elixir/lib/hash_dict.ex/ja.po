@@ -10,6 +10,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def HashDict.new()
+#: lib/hash_dict.ex:25
+msgid "Creates a new empty dict.\n"
+msgstr "新しい、空のdictを作成します。\n"
+
 #. TRANSLATORS: Elixir.HashDict Summary
 #: lib/hash_dict.ex:2
 msgid ""
@@ -20,11 +25,6 @@ msgstr ""
 "WARNING: this module is deprecated.\n"
 "\n"
 "Use the `Map` module instead.\n"
-
-#. TRANSLATORS: def HashDict.new()
-#: lib/hash_dict.ex:23
-msgid "Creates a new empty dict.\n"
-msgstr "新しい、空のdictを作成します。\n"
 
 #~ msgid ""
 #~ "A key-value store.\n"

@@ -1,0 +1,8 @@
+#. TRANSLATORS: def Mix.Compilers.Test.require_and_run(test_patterns, matched_test_files, test_paths, opts)
+#: lib/mix/compilers/test.ex:18 
+msgid ""
+"Requires and runs test files.\n"
+"\n"
+"It expects all of the test patterns, the test files that were matched for the\n"
+"test patterns, the test paths, and the opts from the test task.\n"
+msgstr ""

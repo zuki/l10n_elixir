@@ -1,3 +1,16 @@
+#. TRANSLATORS: def Node.spawn(node, module, fun, args, opts)
+#: lib/node.ex:202 
+msgid ""
+"Returns the PID of a new process started by the application of\n"
+"`module.function(args)` on `node`.\n"
+"\n"
+"If `node` does not exist, a useless PID is returned.\n"
+"\n"
+"For the list of available options, see\n"
+"[`:erlang.spawn/5`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-5).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
 #. TRANSLATORS: def Node.monitor(node, flag)
 #: lib/node.ex:84 
 msgid ""
@@ -45,17 +58,6 @@ msgid ""
 "This functionality starts the `:net_kernel` and other\n"
 "related processes.\n"
 msgstr ""
-#. TRANSLATORS: def Node.spawn_link(node, fun)
-#: lib/node.ex:218 
-msgid ""
-"Returns the pid of a new linked process started by the application of `fun` on `node`.\n"
-"\n"
-"A link is created between the calling process and the new process, atomically.\n"
-"If `node` does not exist, a useless pid is returned (and due to the link, an exit\n"
-"signal with exit reason `:noconnection` will be received).\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
 #. TRANSLATORS: def Node.disconnect(node)
 #: lib/node.ex:126 
 msgid ""
@@ -78,27 +80,16 @@ msgid ""
 "For more information, see\n"
 "[`:erlang.monitor_node/3`](http://www.erlang.org/doc/man/erlang.html#monitor_node-3).\n"
 msgstr ""
-#. TRANSLATORS: def Node.spawn(node, fun)
-#: lib/node.ex:156 
+#. TRANSLATORS: def Node.spawn(node, fun, opts)
+#: lib/node.ex:170 
 msgid ""
-"Returns the pid of a new process started by the application of `fun`\n"
-"on `node`. If `node` does not exist, a useless pid is returned.\n"
+"Returns the PID of a new process started by the application of `fun`\n"
+"on `node`.\n"
+"\n"
+"If `node` does not exist, a useless PID is returned.\n"
 "\n"
 "For the list of available options, see\n"
-"[`:erlang.spawn/2`](http://www.erlang.org/doc/man/erlang.html#spawn-2).\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Node.spawn(node, module, fun, args, opts)
-#: lib/node.ex:202 
-msgid ""
-"Returns the pid of a new process started by the application of\n"
-"`module.function(args)` on `node`.\n"
-"\n"
-"If `node` does not exist, a useless pid is returned.\n"
-"\n"
-"For the list of available options, see\n"
-"[`:erlang.spawn/5`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-5).\n"
+"[`:erlang.spawn_opt/3`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-3).\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
@@ -112,6 +103,17 @@ msgid ""
 "marked in their docs as \"inlined by the compiler\". For more information\n"
 "about inlined functions, check out the `Kernel` module.\n"
 msgstr ""
+#. TRANSLATORS: def Node.spawn_link(node, fun)
+#: lib/node.ex:218 
+msgid ""
+"Returns the PID of a new linked process started by the application of `fun` on `node`.\n"
+"\n"
+"A link is created between the calling process and the new process, atomically.\n"
+"If `node` does not exist, a useless PID is returned (and due to the link, an exit\n"
+"signal with exit reason `:noconnection` will be received).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
 #. TRANSLATORS: def Node.list()
 #: lib/node.ex:58 
 msgid ""
@@ -120,18 +122,16 @@ msgid ""
 "\n"
 "Same as `list(:visible)`.\n"
 msgstr ""
-#. TRANSLATORS: def Node.spawn(node, fun, opts)
-#: lib/node.ex:170 
+#. TRANSLATORS: def Node.connect(node)
+#: lib/node.ex:142 
 msgid ""
-"Returns the pid of a new process started by the application of `fun`\n"
-"on `node`.\n"
+"Establishes a connection to `node`.\n"
 "\n"
-"If `node` does not exist, a useless pid is returned.\n"
+"Returns `true` if successful, `false` if not, and the atom\n"
+"`:ignored` if the local node is not alive.\n"
 "\n"
-"For the list of available options, see\n"
-"[`:erlang.spawn_opt/3`](http://www.erlang.org/doc/man/erlang.html#spawn_opt-3).\n"
-"\n"
-"Inlined by the compiler.\n"
+"For more information, see\n"
+"[`:net_kernel.connect_node/1`](http://www.erlang.org/doc/man/net_kernel.html#connect_node-1).\n"
 msgstr ""
 #. TRANSLATORS: def Node.stop()
 #: lib/node.ex:25 
@@ -142,6 +142,13 @@ msgid ""
 "Only possible when the node was started with `Node.start/3`, otherwise\n"
 "returns `{:error, :not_allowed}`. Returns `{:error, :not_found}` if the\n"
 "local node is not alive.\n"
+msgstr ""
+#. TRANSLATORS: def Node.alive?()
+#: lib/node.ex:48 
+msgid ""
+"Returns `true` if the local node is alive.\n"
+"\n"
+"That is, if the node can be part of a distributed system.\n"
 msgstr ""
 #. TRANSLATORS: def Node.ping(node)
 #: lib/node.ex:110 
@@ -156,48 +163,30 @@ msgid ""
 "    :pang\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Node.alive?()
-#: lib/node.ex:48 
+#. TRANSLATORS: def Node.spawn_link(node, module, fun, args)
+#: lib/node.ex:232 
 msgid ""
-"Returns `true` if the local node is alive.\n"
+"Returns the PID of a new linked process started by the application of\n"
+"`module.function(args)` on `node`.\n"
 "\n"
-"That is, if the node can be part of a distributed system.\n"
+"A link is created between the calling process and the new process, atomically.\n"
+"If `node` does not exist, a useless PID is returned (and due to the link, an exit\n"
+"signal with exit reason `:noconnection` will be received).\n"
+"\n"
+"Inlined by the compiler.\n"
 msgstr ""
 #. TRANSLATORS: def Node.spawn(node, module, fun, args)
 #: lib/node.ex:186 
 msgid ""
-"Returns the pid of a new process started by the application of\n"
+"Returns the PID of a new process started by the application of\n"
 "`module.function(args)` on `node`.\n"
 "\n"
-"If `node` does not exist, a useless pid is returned.\n"
+"If `node` does not exist, a useless PID is returned.\n"
 "\n"
 "For the list of available options, see\n"
 "[`:erlang.spawn/4`](http://www.erlang.org/doc/man/erlang.html#spawn-4).\n"
 "\n"
 "Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Node.spawn_link(node, module, fun, args)
-#: lib/node.ex:232 
-msgid ""
-"Returns the pid of a new linked process started by the application of\n"
-"`module.function(args)` on `node`.\n"
-"\n"
-"A link is created between the calling process and the new process, atomically.\n"
-"If `node` does not exist, a useless pid is returned (and due to the link, an exit\n"
-"signal with exit reason `:noconnection` will be received).\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Node.connect(node)
-#: lib/node.ex:142 
-msgid ""
-"Establishes a connection to `node`.\n"
-"\n"
-"Returns `true` if successful, `false` if not, and the atom\n"
-"`:ignored` if the local node is not alive.\n"
-"\n"
-"For more information, see\n"
-"[`:erlang.connect_node/1`](http://www.erlang.org/doc/man/net_kernel.html#connect_node-1).\n"
 msgstr ""
 #. TRANSLATORS: def Node.self()
 #: lib/node.ex:38 
@@ -205,4 +194,15 @@ msgid ""
 "Returns the current node.\n"
 "\n"
 "It returns the same as the built-in `node()`.\n"
+msgstr ""
+#. TRANSLATORS: def Node.spawn(node, fun)
+#: lib/node.ex:156 
+msgid ""
+"Returns the PID of a new process started by the application of `fun`\n"
+"on `node`. If `node` does not exist, a useless PID is returned.\n"
+"\n"
+"For the list of available options, see\n"
+"[`:erlang.spawn/2`](http://www.erlang.org/doc/man/erlang.html#spawn-2).\n"
+"\n"
+"Inlined by the compiler.\n"
 msgstr ""

@@ -1,0 +1,18 @@
+#. TRANSLATORS: def Mix.ProjectStack.recursing()
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/project_stack.ex:143 
+msgid ""
+"Returns the module that started the recursion.\n"
+"\n"
+"Returns nil if not recursive.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.ProjectStack.recur(fun)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/project_stack.ex:124 
+msgid ""
+"Enables the recursion for the project at the top of the stack\n"
+"during the given function.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.ProjectStack.root(fun)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/project_stack.ex:75 
+msgid ""
+"Runs the given function in the recursing root.\n"
+msgstr ""

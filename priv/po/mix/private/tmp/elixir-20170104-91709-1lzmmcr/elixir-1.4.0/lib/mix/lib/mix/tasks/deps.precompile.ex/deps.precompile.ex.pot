@@ -1,0 +1,16 @@
+#. TRANSLATORS: Elixir.Mix.Tasks.Deps.Precompile Summary
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/tasks/deps.precompile.ex:4 
+msgid ""
+"Extension point for precompiling dependencies.\n"
+"\n"
+"This is a task that can be aliased by projects\n"
+"that need to execute certain tasks before\n"
+"compiling dependencies:\n"
+"\n"
+"    aliases: [\"deps.precompile\": [\"nerves.precompile\", \"deps.precompile\"]]\n"
+"\n"
+"By default, this task's single responsibility\n"
+"is to load all dependency paths. Dependency\n"
+"loading is deliberately ad-hoc, loading as much as\n"
+"possible without validating the files.\n"
+msgstr ""

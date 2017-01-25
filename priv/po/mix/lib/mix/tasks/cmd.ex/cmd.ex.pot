@@ -1,0 +1,17 @@
+#. TRANSLATORS: Elixir.Mix.Tasks.Cmd Summary
+#: lib/mix/tasks/cmd.ex:7 
+msgid ""
+"Executes the given command.\n"
+"\n"
+"Useful in umbrella applications to execute a command\n"
+"on each child app:\n"
+"\n"
+"    mix cmd echo pwd\n"
+"\n"
+"You can limit which apps the cmd runs in by passing the app names\n"
+"before the cmd using --app:\n"
+"\n"
+"    mix cmd --app app1 --app app2 echo pwd\n"
+"\n"
+"Aborts when a command exits with a non-zero status.\n"
+msgstr ""

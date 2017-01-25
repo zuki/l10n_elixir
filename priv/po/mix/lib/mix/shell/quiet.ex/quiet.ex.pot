@@ -1,0 +1,42 @@
+#. TRANSLATORS: def Mix.Shell.Quiet.print_app()
+#: lib/mix/shell/quiet.ex:11 
+msgid ""
+"Prints the current application if it\n"
+"was not printed yet.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Shell.Quiet.error(message)
+#: lib/mix/shell/quiet.ex:29 
+msgid ""
+"Prints the error to the shell followed by a newline.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Shell.Quiet.yes?(message)
+#: lib/mix/shell/quiet.ex:40 
+msgid ""
+"Receives a message and asks the user if they want to proceed.\n"
+"The user must press enter or type anything that matches the \"yes\"\n"
+"regex `~r/^Y(es)?$/i`.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Shell.Quiet.info(message)
+#: lib/mix/shell/quiet.ex:24 
+msgid ""
+"Writes nothing to the shell.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Shell.Quiet.cmd(command, opts \\ [])
+#: lib/mix/shell/quiet.ex:17 
+msgid ""
+"Executes the given command quietly without outputting anything.\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Mix.Shell.Quiet Summary
+#: lib/mix/shell/quiet.ex:2 
+msgid ""
+"This is Mix's default shell when the `MIX_QUIET` environment\n"
+"variable is set.\n"
+"\n"
+"It's just like `Mix.Shell.IO`, but prints far less.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Shell.Quiet.prompt(message)
+#: lib/mix/shell/quiet.ex:34 
+msgid ""
+"Prints a message and prompts the user for\n"
+"input. Input will be consumed until Enter is pressed.\n"
+msgstr ""

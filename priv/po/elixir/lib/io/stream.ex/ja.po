@@ -12,6 +12,7 @@ msgstr ""
 
 #. TRANSLATORS: Elixir.IO.Stream Summary
 #: lib/io/stream.ex:12
+#, fuzzy
 msgid ""
 "Defines an `IO.Stream` struct returned by `IO.stream/2` and `IO."
 "binstream/2`.\n"
@@ -23,8 +24,12 @@ msgid ""
 "  * `line_or_bytes` - if reading should read lines or a given amount of "
 "bytes\n"
 "\n"
+"It is worth noting that an IO stream has side effects and every time you go\n"
+"over the stream you may get different results.\n"
+"\n"
 msgstr ""
-"`IO.stream/2`と`IO.binstream/2`によって返される、`IO.Stream`構造体を定義します。\n"
+"`IO.stream/2`と`IO.binstream/2`によって返される、`IO.Stream`構造体を定義しま"
+"す。\n"
 "\n"
 "以下のフィールドがパブリックです:\n"
 "\n"

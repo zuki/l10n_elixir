@@ -1,5 +1,23 @@
+#. TRANSLATORS: def Exception.format_file_line(file, line, suffix \\ "")
+#: lib/exception.ex:455 
+msgid ""
+"Formats the given `file` and `line` as shown in stacktraces.\n"
+"If any of the values are `nil`, they are omitted.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Exception.format_file_line(\"foo\", 1)\n"
+"    \"foo:1:\"\n"
+"\n"
+"    iex> Exception.format_file_line(\"foo\", nil)\n"
+"    \"foo:\"\n"
+"\n"
+"    iex> Exception.format_file_line(nil, nil)\n"
+"    \"\"\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Exception.format_mfa(module, fun, arity)
-#: lib/exception.ex:406 
+#: lib/exception.ex:411 
 msgid ""
 "Receives a module, fun and arity and formats it\n"
 "as shown in stacktraces. The arity may also be a list\n"
@@ -20,26 +38,8 @@ msgid ""
 "where func is the name of the enclosing function. Convert to\n"
 "\"anonymous fn in func/arity\"\n"
 msgstr ""
-#. TRANSLATORS: def Exception.format_file_line(file, line)
-#: lib/exception.ex:450 
-msgid ""
-"Formats the given `file` and `line` as shown in stacktraces.\n"
-"If any of the values are `nil`, they are omitted.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Exception.format_file_line(\"foo\", 1)\n"
-"    \"foo:1:\"\n"
-"\n"
-"    iex> Exception.format_file_line(\"foo\", nil)\n"
-"    \"foo:\"\n"
-"\n"
-"    iex> Exception.format_file_line(nil, nil)\n"
-"    \"\"\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Exception.format_stacktrace(trace \\ nil)
-#: lib/exception.ex:375 
+#: lib/exception.ex:380 
 msgid ""
 "Formats the stacktrace.\n"
 "\n"
@@ -47,7 +47,7 @@ msgid ""
 "is retrieved from `Process.info/2`.\n"
 msgstr ""
 #. TRANSLATORS: def Exception.format_exit(reason)
-#: lib/exception.ex:157 
+#: lib/exception.ex:161 
 msgid ""
 "Formats an exit. It returns a string.\n"
 "\n"
@@ -57,22 +57,22 @@ msgid ""
 "and stacktrace.\n"
 msgstr ""
 #. TRANSLATORS: def Exception.format_stacktrace_entry(entry)
-#: lib/exception.ex:338 
+#: lib/exception.ex:343 
 msgid ""
 "Receives a stacktrace entry and formats it into a string.\n"
 msgstr ""
 #. TRANSLATORS: @type kind
-#: lib/exception.ex:20 
+#: lib/exception.ex:24 
 msgid ""
 "The kind handled by formatting functions"
 msgstr ""
 #. TRANSLATORS: def Exception.exception?(term)
-#: lib/exception.ex:34 
+#: lib/exception.ex:38 
 msgid ""
 "Returns `true` if the given `term` is an exception.\n"
 msgstr ""
 #. TRANSLATORS: def Exception.normalize(kind, payload, stacktrace \\ nil)
-#: lib/exception.ex:63 
+#: lib/exception.ex:67 
 msgid ""
 "Normalizes an exception, converting Erlang exceptions\n"
 "to Elixir exceptions.\n"
@@ -88,13 +88,8 @@ msgid ""
 "not return the stacktrace corresponding to the exception\n"
 "an empty stacktrace, `[]`, must be used.\n"
 msgstr ""
-#. TRANSLATORS: def Exception.message(exception)
-#: lib/exception.ex:44 
-msgid ""
-"Gets the message for an `exception`.\n"
-msgstr ""
 #. TRANSLATORS: def Exception.format_fa(fun, arity)
-#: lib/exception.ex:392 
+#: lib/exception.ex:397 
 msgid ""
 "Receives an anonymous function and arity and formats it as\n"
 "shown in stacktraces. The arity may also be a list of arguments.\n"
@@ -105,8 +100,13 @@ msgid ""
 "    #=> \"#Function<...>/1\"\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Exception.message(exception)
+#: lib/exception.ex:48 
+msgid ""
+"Gets the message for an `exception`.\n"
+msgstr ""
 #. TRANSLATORS: def Exception.format(kind, payload, stacktrace \\ nil)
-#: lib/exception.ex:130 
+#: lib/exception.ex:134 
 msgid ""
 "Normalizes and formats throw/errors/exits and stacktraces.\n"
 "\n"
@@ -115,6 +115,11 @@ msgid ""
 "\n"
 "Note that `{:EXIT, pid}` do not generate a stacktrace though\n"
 "(as they are retrieved as messages without stacktraces).\n"
+msgstr ""
+#. TRANSLATORS: @type t
+#: lib/exception.ex:17 
+msgid ""
+"The exception type"
 msgstr ""
 #. TRANSLATORS: Elixir.Exception Summary
 #: lib/exception.ex:2 
@@ -126,19 +131,14 @@ msgid ""
 "`System.stacktrace/0` will return the stacktrace for the\n"
 "last throw/error/exit that occurred in the current process.\n"
 "\n"
-"Do not rely on the particular format returned by the `format`\n"
+"Do not rely on the particular format returned by the `format*`\n"
 "functions in this module. They may be changed in future releases\n"
 "in order to better suit Elixir's tool chain. In other words,\n"
 "by using the functions in this module it is guaranteed you will\n"
 "format exceptions as in the current Elixir version being used.\n"
 msgstr ""
-#. TRANSLATORS: @type t
-#: lib/exception.ex:17 
-msgid ""
-"The exception type"
-msgstr ""
 #. TRANSLATORS: def Exception.format_banner(kind, exception, stacktrace \\ nil)
-#: lib/exception.ex:97 
+#: lib/exception.ex:101 
 msgid ""
 "Normalizes and formats any throw/error/exit.\n"
 "\n"

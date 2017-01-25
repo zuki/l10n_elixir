@@ -10,10 +10,86 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def Calendar.ISO.days_in_month(year, month)
+#: lib/calendar/iso.ex:19
+msgid ""
+"Returns how many days there are in the given year-month.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Calendar.ISO.days_in_month(1900, 1)\n"
+"    31\n"
+"    iex> Calendar.ISO.days_in_month(1900, 2)\n"
+"    28\n"
+"    iex> Calendar.ISO.days_in_month(2000, 2)\n"
+"    29\n"
+"    iex> Calendar.ISO.days_in_month(2001, 2)\n"
+"    28\n"
+"    iex> Calendar.ISO.days_in_month(2004, 2)\n"
+"    29\n"
+"    iex> Calendar.ISO.days_in_month(2004, 4)\n"
+"    30\n"
+"\n"
+msgstr ""
+
+#. TRANSLATORS: def Calendar.ISO.leap_year?(year)
+#: lib/calendar/iso.ex:47
+msgid ""
+"Returns if the given year is a leap year.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Calendar.ISO.leap_year?(2000)\n"
+"    true\n"
+"    iex> Calendar.ISO.leap_year?(2001)\n"
+"    false\n"
+"    iex> Calendar.ISO.leap_year?(2004)\n"
+"    true\n"
+"    iex> Calendar.ISO.leap_year?(1900)\n"
+"    false\n"
+"\n"
+msgstr ""
+
+#. TRANSLATORS: def Calendar.ISO.datetime_to_string(year, month, day, hour, minute, second, microsecond, time_zone, zone_abbr, utc_offset, std_offset)
+#: lib/calendar/iso.ex:109
+msgid "Convers the datetime (with time zone) into a string.\n"
+msgstr ""
+
+#. TRANSLATORS: def Calendar.ISO.naive_datetime_to_string(year, month, day, hour, minute, second, microsecond)
+#: lib/calendar/iso.ex:102
+msgid "Converts the datetime (without time zone) into a string.\n"
+msgstr ""
+
+#. TRANSLATORS: def Calendar.ISO.day_of_week(year, month, day)
+#: lib/calendar/iso.ex:67
+msgid ""
+"Calculates the day of the week from the given `year`, `month`, and `day`.\n"
+"\n"
+"It is an integer from 1 to 7, where 1 is Monday and 7 is Sunday.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Calendar.ISO.day_of_week(2016, 10, 31)\n"
+"    1\n"
+"    iex> Calendar.ISO.day_of_week(2016, 11, 01)\n"
+"    2\n"
+"    iex> Calendar.ISO.day_of_week(2016, 11, 02)\n"
+"    3\n"
+"    iex> Calendar.ISO.day_of_week(2016, 11, 03)\n"
+"    4\n"
+"    iex> Calendar.ISO.day_of_week(2016, 11, 04)\n"
+"    5\n"
+"    iex> Calendar.ISO.day_of_week(2016, 11, 05)\n"
+"    6\n"
+"    iex> Calendar.ISO.day_of_week(2016, 11, 06)\n"
+"    7\n"
+msgstr ""
+
 #. TRANSLATORS: Elixir.Calendar.ISO Summary
 #: lib/calendar/iso.ex:2
+#, fuzzy
 msgid ""
-"A calendar implentation that follows to ISO8601.\n"
+"A calendar implementation that follows to ISO8601.\n"
 "\n"
 "This calendar implements the proleptic Gregorian calendar and\n"
 "is therefore compatible with the calendar used in most countries\n"
@@ -29,3 +105,8 @@ msgstr ""
 "レゴリオルールが永久に適用されることを意味します。従っ\n"
 "て、日付はグレゴリオ歴が採用された1583年以前には異る結\n"
 "果を与えます。\n"
+
+#. TRANSLATORS: def Calendar.ISO.date_to_string(year, month, day)
+#: lib/calendar/iso.ex:95
+msgid "Converts the given date into a string.\n"
+msgstr ""

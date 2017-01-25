@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2017-01-23 11:04+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Mix.Compilers.Test.require_and_run(test_patterns, matched_test_files, test_paths, opts)
+#: lib/mix/compilers/test.ex:18
+msgid ""
+"Requires and runs test files.\n"
+"\n"
+"It expects all of the test patterns, the test files that were matched for "
+"the\n"
+"test patterns, the test paths, and the opts from the test task.\n"
+msgstr ""

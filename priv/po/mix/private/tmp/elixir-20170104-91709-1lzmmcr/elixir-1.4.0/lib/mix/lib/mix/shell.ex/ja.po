@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: elixir 1.4.0\n"
+"PO-Revision-Date: 2017-01-24 18:04+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"POT-Creation-Date: \n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. TRANSLATORS: @callback prompt/1
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/shell.ex:16
+msgid "Prompts the user for input.\n"
+msgstr "ユーザに入力を促します。\n"
+
+#. TRANSLATORS: @callback cmd/1
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/shell.ex:26
+msgid "Executes the given command and returns its exit status.\n"
+msgstr "指定したコマンドを実行し、終了ステータスを返します。\n"
+
+#. TRANSLATORS: def Mix.Shell.printable_app_name()
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/shell.ex:55
+msgid ""
+"Returns the printable app name.\n"
+"\n"
+"This function returns the current application name,\n"
+"but only if the application name should be printed.\n"
+"\n"
+"Calling this function automatically toggles its value\n"
+"to `false` until the current project is re-entered. The\n"
+"goal is to avoid printing the application name\n"
+"multiple times.\n"
+msgstr ""
+"表示可能なapp名を返します。\n"
+"\n"
+"この関数は、アプリケーション名が表示される\n"
+"べき場合にのみ、現在のアプリケーション名を返します。\n"
+"\n"
+"この関数を呼び出すと、カレントプロジェクトが\n"
+"再投入されるまで、自動的にその値を`false`にトグルします。\n"
+"その目的はアプリケーション名を複数回表示するのを\n"
+"避けることです。\n"
+
+#. TRANSLATORS: def Mix.Shell.cmd(command, options \\ [], callback)
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/shell.ex:70
+msgid ""
+"An implementation of the command callback that\n"
+"is shared across different shells.\n"
+msgstr ""
+"複数のシェルで共有されるコマンド\n"
+"コールバックの実装です。\n"
+
+#. TRANSLATORS: @callback cmd/2
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/shell.ex:31
+msgid ""
+"Executes the given command and returns its exit status.\n"
+"\n"
+"## Options\n"
+"\n"
+"  * `:print_app` - when `false`, does not print the app name\n"
+"    when the command outputs something\n"
+"\n"
+"  * `:stderr_to_stdout` - when `false`, does not redirect\n"
+"    stderr to stdout\n"
+"\n"
+"  * `:quiet` - when `true`, do not print the command output\n"
+"\n"
+"  * `:env` - environment options to the executed command\n"
+"\n"
+msgstr ""
+"指定したコマンドを実行し、終了ステータスを返します。\n"
+"\n"
+"## オプション\n"
+"\n"
+"  * `:print_app` - `false`の場合、コマンドが何らかを出力する際\n"
+"    アプリ名を表示しません\n"
+"\n"
+"  * `:stderr_to_stdout` - `false`の場合、stderrをstdoutに\n"
+"    リダイレクトしません\n"
+"\n"
+"  * `:quiet` - `true`の場合、コマンドの出力を表示しません\n"
+"\n"
+"  * `:env` - 実行されるコマンドへの環境オプション\n"
+"\n"
+
+#. TRANSLATORS: @callback error/1
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/shell.ex:11
+msgid "Prints the given error to the shell.\n"
+msgstr "指定したエラーをシェルに表示します。\n"
+
+#. TRANSLATORS: Elixir.Mix.Shell Summary
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/shell.ex:2
+msgid "Defines `Mix.Shell` contract.\n"
+msgstr "`Mix.Shell`の協定を定義します。\n"
+
+#. TRANSLATORS: @callback info/1
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/shell.ex:6
+msgid "Prints the given message to the shell.\n"
+msgstr "指定したメッセージをシェルに表示します。\n"
+
+#. TRANSLATORS: @callback print_app/0
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/shell.ex:49
+msgid ""
+"Prints the current application to the shell if\n"
+"it was not printed yet.\n"
+msgstr ""
+"カレントアプリケーションがまだ表示されていなかった場合\n"
+"シェルに表示します。\n"
+
+#. TRANSLATORS: @callback yes?/1
+#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/shell.ex:21
+msgid "Prompts the user for confirmation.\n"
+msgstr "ユーザに確認を促します。\n"

@@ -12,6 +12,7 @@ msgstr ""
 
 #. TRANSLATORS: Elixir.Inspect Summary
 #: lib/inspect.ex:5
+#, fuzzy
 msgid ""
 "The `Inspect` protocol is responsible for converting any Elixir\n"
 "data structure into an algebra document. This document is then\n"
@@ -37,7 +38,7 @@ msgid ""
 "      end\n"
 "    end\n"
 "\n"
-"The `concat` function comes from `Inspect.Algebra` and it\n"
+"The `concat/1` function comes from `Inspect.Algebra` and it\n"
 "concatenates algebra documents together. In the example above,\n"
 "it is concatenating the string `\"MapSet<\"` (all strings are\n"
 "valid algebra documents that keep their formatting when pretty\n"

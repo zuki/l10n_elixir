@@ -11,14 +11,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. TRANSLATORS: def Kernel.Typespec.beam_types(module)
-#: lib/kernel/typespec.ex:217
+#: lib/kernel/typespec.ex:234
+#, fuzzy
 msgid ""
-"Returns all types available from the module's beam code.\n"
+"Returns all types available from the module's BEAM code.\n"
 "\n"
 "The result is returned as a list of tuples where the first\n"
 "element is the type (`:typep`, `:type` and `:opaque`).\n"
 "\n"
-"The module must have a corresponding beam file which can be\n"
+"The module must have a corresponding BEAM file which can be\n"
 "located by the runtime system.\n"
 msgstr ""
 "モジュールのbeamコードから全ての有効なタイプを返します。\n"
@@ -30,7 +31,7 @@ msgstr ""
 "持っていなければなりません。\n"
 
 #. TRANSLATORS: def Kernel.Typespec.defines_spec?(module, name, arity)
-#: lib/kernel/typespec.ex:122
+#: lib/kernel/typespec.ex:131
 msgid ""
 "Returns `true` if the current module defines a given spec.\n"
 "This function is only available for modules being compiled.\n"
@@ -38,10 +39,10 @@ msgstr ""
 "現在のモジュールが所定のspecを定義していれば、`true`を返します。\n"
 "この関数はコンパイルしているモジュールにのみ有効です。\n"
 
-#. TRANSLATORS: def Kernel.Typespec.define_spec(kind, expr, env)
-#: lib/kernel/typespec.ex:102
-msgid "Defines a `spec` by receiving a typespec expression.\n"
-msgstr "typespec式を受け取り、`spec`を定義します。\n"
+#. TRANSLATORS: def Kernel.Typespec.spec_to_ast(name, spec)
+#: lib/kernel/typespec.ex:157
+msgid "Converts a spec clause back to Elixir AST.\n"
+msgstr "spec節をElixir ASTへコンバートします。\n"
 
 #. TRANSLATORS: defmacro Kernel.Typespec.defmacrocallback(spec)
 #: lib/kernel/typespec.ex:80
@@ -62,25 +63,21 @@ msgstr ""
 "    @macrocallback add(number, number) :: Macro.t\n"
 "\n"
 
-#. TRANSLATORS: def Kernel.Typespec.type_to_ast(type)
-#: lib/kernel/typespec.ex:192
-msgid "Converts a type clause back to Elixir AST.\n"
-msgstr "タイプ節をElixir ASTへ変換します。\n"
-
-#. TRANSLATORS: def Kernel.Typespec.spec_to_ast(name, spec)
-#: lib/kernel/typespec.ex:144
-msgid "Converts a spec clause back to Elixir AST.\n"
-msgstr "spec節をElixir ASTへコンバートします。\n"
+#. TRANSLATORS: def Kernel.Typespec.define_spec(kind, expr, env)
+#: lib/kernel/typespec.ex:108
+msgid "Defines a `spec` by receiving a typespec expression.\n"
+msgstr "typespec式を受け取り、`spec`を定義します。\n"
 
 #. TRANSLATORS: def Kernel.Typespec.beam_callbacks(module)
-#: lib/kernel/typespec.ex:259
+#: lib/kernel/typespec.ex:276
+#, fuzzy
 msgid ""
-"Returns all callbacks available from the module's beam code.\n"
+"Returns all callbacks available from the module's BEAM code.\n"
 "\n"
 "The result is returned as a list of tuples where the first\n"
 "element is spec name and arity and the second is the spec.\n"
 "\n"
-"The module must have a corresponding beam file\n"
+"The module must have a corresponding BEAM file\n"
 "which can be located by the runtime system.\n"
 msgstr ""
 "モジュールのbeamコードから全ての有効なコールバックを返します。\n"
@@ -91,33 +88,10 @@ msgstr ""
 "モジュールは実行時システムによって配置された対応するbeamファイルを\n"
 "持っていなければなりません。\n"
 
-#. TRANSLATORS: def Kernel.Typespec.defines_callback?(module, name, arity)
-#: lib/kernel/typespec.ex:133
-msgid ""
-"Returns `true` if the current module defines a callback.\n"
-"This function is only available for modules being compiled.\n"
-msgstr ""
-"現在のモジュールがコールバックを定義していれば、`true`を返します。\n"
-"この関数はコンパイルしているモジュールにのみ有効です。\n"
-
-#. TRANSLATORS: defmacro Kernel.Typespec.defspec(spec)
-#: lib/kernel/typespec.ex:49
-msgid ""
-"Defines a spec.\n"
-"This macro is responsible for handling the attribute `@spec`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    @spec add(number, number) :: number\n"
-"\n"
-msgstr ""
-"specを定義します。\n"
-"このマクロは属性`@spec`をハンドルする役割りを果します。\n"
-"\n"
-"## 例\n"
-"\n"
-"    @spec add(number, number) :: number\n"
-"\n"
+#. TRANSLATORS: def Kernel.Typespec.type_to_ast(type)
+#: lib/kernel/typespec.ex:208
+msgid "Converts a type clause back to Elixir AST.\n"
+msgstr "タイプ節をElixir ASTへ変換します。\n"
 
 #. TRANSLATORS: defmacro Kernel.Typespec.deftypep(type)
 #: lib/kernel/typespec.ex:34
@@ -138,11 +112,39 @@ msgstr ""
 "    @typep my_type :: atom\n"
 "\n"
 
+#. TRANSLATORS: defmacro Kernel.Typespec.defspec(spec)
+#: lib/kernel/typespec.ex:49
+msgid ""
+"Defines a spec.\n"
+"This macro is responsible for handling the attribute `@spec`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    @spec add(number, number) :: number\n"
+"\n"
+msgstr ""
+"specを定義します。\n"
+"このマクロは属性`@spec`をハンドルする役割りを果します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    @spec add(number, number) :: number\n"
+"\n"
+
 #. TRANSLATORS: def Kernel.Typespec.define_type(kind, expr, doc \\ nil, env)
-#: lib/kernel/typespec.ex:95
+#: lib/kernel/typespec.ex:101
 msgid ""
 "Defines a `type`, `typep` or `opaque` by receiving a typespec expression.\n"
 msgstr "typespec式を受け取り、`type`、 `typep`または`opaque`を定義します。\n"
+
+#. TRANSLATORS: def Kernel.Typespec.defines_callback?(module, name, arity)
+#: lib/kernel/typespec.ex:144
+msgid ""
+"Returns `true` if the current module defines a callback.\n"
+"This function is only available for modules being compiled.\n"
+msgstr ""
+"現在のモジュールがコールバックを定義していれば、`true`を返します。\n"
+"この関数はコンパイルしているモジュールにのみ有効です。\n"
 
 #. TRANSLATORS: defmacro Kernel.Typespec.defcallback(spec)
 #: lib/kernel/typespec.ex:64
@@ -164,14 +166,15 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Kernel.Typespec.beam_specs(module)
-#: lib/kernel/typespec.ex:245
+#: lib/kernel/typespec.ex:262
+#, fuzzy
 msgid ""
-"Returns all specs available from the module's beam code.\n"
+"Returns all specs available from the module's BEAM code.\n"
 "\n"
 "The result is returned as a list of tuples where the first\n"
 "element is spec name and arity and the second is the spec.\n"
 "\n"
-"The module must have a corresponding beam file which can be\n"
+"The module must have a corresponding BEAM file which can be\n"
 "located by the runtime system.\n"
 msgstr ""
 "モジュールのbeamコードから全ての有効なspecを返します。\n"
@@ -181,17 +184,6 @@ msgstr ""
 "\n"
 "モジュールは実行時システムによって配置された対応するbeamファイルを\n"
 "持っていなければなりません。\n"
-
-#. TRANSLATORS: def Kernel.Typespec.defines_type?(module, name, arity)
-#: lib/kernel/typespec.ex:109
-msgid ""
-"Returns `true` if the current module defines a given type\n"
-"(private, opaque or not). This function is only available\n"
-"for modules being compiled.\n"
-msgstr ""
-"現在のモジュールが所定のタイプ(private, opaqueかどうか)\n"
-"を定義していれば、`true`を返します。\n"
-"この関数はコンパイルしているモジュールにのみ有効です。\n"
 
 #. TRANSLATORS: defmacro Kernel.Typespec.defopaque(type)
 #: lib/kernel/typespec.ex:19
@@ -211,6 +203,17 @@ msgstr ""
 "\n"
 "    @opaque my_type :: atom\n"
 "\n"
+
+#. TRANSLATORS: def Kernel.Typespec.defines_type?(module, name, arity)
+#: lib/kernel/typespec.ex:116
+msgid ""
+"Returns `true` if the current module defines a given type\n"
+"(private, opaque or not). This function is only available\n"
+"for modules being compiled.\n"
+msgstr ""
+"現在のモジュールが所定のタイプ(private, opaqueかどうか)\n"
+"を定義していれば、`true`を返します。\n"
+"この関数はコンパイルしているモジュールにのみ有効です。\n"
 
 #. TRANSLATORS: defmacro Kernel.Typespec.deftype(type)
 #: lib/kernel/typespec.ex:4
