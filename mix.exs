@@ -5,14 +5,14 @@ defmodule L10nElixir.Mixfile do
     [
       app: :l10n_elixir,
       version: "0.0.4",
-      compilers: Mix.compilers,
+      compilers: Mix.compilers ++ [:po],
       source_url: "https://github.com/elixir-lang/elixir",
       exgettext: [ extra: Extrans ],
       aliases: aliases(),
       docs: fn() -> docs() end,
+      deps: deps(),
       switches: [eex: :string, elixir: :string, ex_unit: :string,
         iex: :string, logger: :string, mix: :string],
-      deps: deps()
     ]
   end
 
@@ -40,16 +40,16 @@ defmodule L10nElixir.Mixfile do
   end
 
   def docs do
-    [
-       extras: [
-                "pages/Behaviours.md",
-                "pages/Guards.md",
-                "pages/Naming Conventions.md",
-                "pages/Operators.md",
-                "pages/Typespecs.md",
-                "pages/Writing Documentation.md"
-               ]
-    ]
+    Keyword.put(subapp_docs({"elixir", "Elixir", "Kernel"}),
+       :extras, [
+                  "pages/Behaviours.md",
+                  "pages/Guards.md",
+                  "pages/Naming Conventions.md",
+                  "pages/Operators.md",
+                  "pages/Typespecs.md",
+                  "pages/Writing Documentation.md"
+                ]
+    )
   end
 
   # Configuration for the OTP application
@@ -63,7 +63,7 @@ defmodule L10nElixir.Mixfile do
   end
 
   def docs_all(opts \\ []) do
-    apps = [{"eex", "EEx", "EEx"}, {"elixir", "Elixir", "Kernel"}, {"ex_unit", "ExUnit", "ExUnit"}, {"iex", "IEx", "IEx"}, {"logger", "Logger", "Logger"}, {"mix", "Mix", "Mix"}]
+    apps = [{"eex", "EEx", "EEx"}, {"ex_unit", "ExUnit", "ExUnit"}, {"iex", "IEx", "IEx"}, {"logger", "Logger", "Logger"}, {"mix", "Mix", "Mix"}]
 
     subapp = List.first(opts)
     if subapp do
@@ -78,7 +78,7 @@ defmodule L10nElixir.Mixfile do
     end
   end
 
-  defp make_doc({app, proj, main}) do
+  defp subapp_docs({app, proj, main}) do
     source_dir = "deps/elixir"
     sref = if (File.exists?(source_dir)) do
          make_source_ref(source_dir)
@@ -94,28 +94,34 @@ defmodule L10nElixir.Mixfile do
     Code.append_path("_build/dev/lib/ex_doc/ebin")
     Code.append_path("_build/dev/lib/exgettext/ebin")
     sr = abs_path([source_dir, "lib/#{app}/ebin"])
-    lang = Regex.replace(~r/(..).*/, System.get_env("LANG"), "\\1")
+
+    [
+       project: proj,
+       app: app,
+       version: version,
+       formatter: Exgettext.HTML,
+       source_root: abs_path("deps/elixir"),
+       logo: "logo.png",
+       logo_url: "http://elixir-lang.org/docs/logo.png",
+       source_beam: sr,
+       source_ref: sref,
+       output: "doc/#{version}/#{app}",
+       main: main,
+       deps: deps()
+    ]
+  end
+
+  defp make_doc({app, proj, main}) do
+    docs = subapp_docs({app, proj, main})
     b = String.to_atom(app)
-    docs =
-      [
-         project: proj,
-         app: app,
-         version: version,
-         formatter: Exgettext.HTML,
-         source_root: abs_path("deps/elixir"),
-         logo: "logo.png",
-         logo_url: "http://elixir-lang.org/docs/logo.png",
-         source_beam: sr,
-         source_ref: sref,
-         output: "doc/#{version}/#{app}",
-         main: main,
-         deps: [exgettext: [path: "../exgettext"]]
-      ]
+    lang = Regex.replace(~r/(..).*/, System.get_env("LANG"), "\\1")
+
     l10napp =
       [
          name: b,
          compilers: Mix.compilers ++ [:po],
-         version: version,
+         exgettext: [ extra: Extrans ],
+         version: Keyword.get(docs, :version),
          source_url: "https://github.com/elixir-lang/elixir",
          docs: docs,
          lang: lang
@@ -139,8 +145,9 @@ defmodule L10nElixir.Mixfile do
                           # IO.inspect [r: r]
                           r
                         end)
+#    IO.inspect [l10napp: l10napp]
+#    exit(:normal)
     fmt(l10napp)
-#      IO.inspect [l10napp: l10napp]
     Mix.Tasks.Docs.run([], l10napp)
   end
 
@@ -169,7 +176,9 @@ defmodule L10nElixir.Mixfile do
      {:ex_doc, "~> 0.14.5"},
      {:earmark, "~> 1.0.0"},
      {:exgettext, git: "git@bitbucket.org:zuki_ebetsu/exgettext.git"},
-     {:extrans, git: "git@bitbucket.org:zuki_ebetsu/extrans"}
+     {:extrans, git: "git@bitbucket.org:zuki_ebetsu/extrans.git"}
+#     {:exgettext, path: "../exgettext"},
+#     {:extrans, path: "../extrans"}
     ]
   end
 end
