@@ -1,0 +1,361 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: l 10n_elixir\n"
+"PO-Revision-Date: 2017-01-26 09:24+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: deps/elixir/lib/elixir/pages/Guards.md:1
+msgid "# Guards"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:3
+msgid ""
+"Guards are a way to augment pattern matching with more complex checks; they "
+"are allowed in a predefined set of constructs where pattern matching is "
+"allowed."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:5
+msgid "## List of allowed expressions"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:7
+msgid ""
+"For reference, the following is a comprehensive list of all expressions "
+"allowed in guards:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:9
+msgid ""
+"  * comparison operators (`==`, `!=`, `===`, `!==`, `>`, `>=`, `<`, `<=`)\n"
+"  * strictly boolean operators (`and`, `or`, `not`) (the `&&`, `||`, and `!` "
+"sibling operators are not allowed as they're not *strictly* boolean - "
+"meaning they don't require both sides to be booleans)\n"
+"  * arithmetic binary operators (`+`, `-`, `*`, `/`)\n"
+"  * arithmetic unary operators (`+`, `-`)\n"
+"  * binary concatenation operator (`<>`)\n"
+"  * `in` operator (as long as the right-hand side is a list or a range)\n"
+"  * the following \"type-check\" functions (all documented in the `Kernel` "
+"module):\n"
+"    * `is_atom/1`\n"
+"    * `is_binary/1`\n"
+"    * `is_bitstring/1`\n"
+"    * `is_boolean/1`\n"
+"    * `is_float/1`\n"
+"    * `is_function/1`\n"
+"    * `is_function/2`\n"
+"    * `is_integer/1`\n"
+"    * `is_list/1`\n"
+"    * `is_map/1`\n"
+"    * `is_nil/1`\n"
+"    * `is_number/1`\n"
+"    * `is_pid/1`\n"
+"    * `is_port/1`\n"
+"    * `is_reference/1`\n"
+"    * `is_tuple/1`\n"
+"  * the following guard-friendly functions (all documented in the `Kernel` "
+"module):\n"
+"    * `abs/1`\n"
+"    * `binary_part/3`\n"
+"    * `bit_size/1`\n"
+"    * `byte_size/1`\n"
+"    * `div/2`\n"
+"    * `elem/2`\n"
+"    * `hd/1`\n"
+"    * `length/1`\n"
+"    * `map_size/1`\n"
+"    * `node/0`\n"
+"    * `node/1`\n"
+"    * `rem/2`\n"
+"    * `round/1`\n"
+"    * `self/0`\n"
+"    * `tl/1`\n"
+"    * `trunc/1`\n"
+"    * `tuple_size/1`\n"
+"  * the following handful of Erlang bitwise operations, if imported from the "
+"`Bitwise` module:\n"
+"    * `band/2` or the `&&&` operator\n"
+"    * `bor/2` or the `|||` operator\n"
+"    * `bnot/1` or the `~~~` operator\n"
+"    * `bsl/1` or the `<<<` operator\n"
+"    * `bsr/1` or the `>>>` operator\n"
+"    * `bxor/2` or the `^^^` operator"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:58
+msgid "## Why guards"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:60
+msgid "Let's see an example of a guard used in a function clause:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:62
+msgid ""
+"```elixir\n"
+"def empty_map?(map) when map_size(map) == 0, do: true\n"
+"def empty_map?(map) when is_map(map), do: false\n"
+"```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:67
+msgid ""
+"Guards start with the `when` keyword, which is followed by a boolean "
+"expression (we will define the grammar of guards more formally later on)."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:69
+msgid ""
+"Writing the `empty_map?/1` function by only using pattern matching would not "
+"be possible (as pattern matching on `%{}` would match *every* map, not empty "
+"maps)."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:71
+msgid "## Where guards can be used"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:73
+msgid ""
+"In the example above, we show how guards can be used in function clauses. "
+"There are several constructs that allow guards; for example:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:75
+msgid "  * function clauses:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:77
+msgid ""
+"  ```elixir\n"
+"  def foo(term) when is_integer(term), do: term\n"
+"  def foo(term) when is_float(term), do: round(term)\n"
+"  ```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:82
+msgid "  * `case` expressions:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:84
+msgid ""
+"  ```elixir\n"
+"  case x do\n"
+"    1 -> :one\n"
+"    2 -> :two\n"
+"    n when is_integer(n) and n > 2 -> :larger_than_two\n"
+"  end\n"
+"  ```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:92
+msgid "  * anonymous functions (`fn`s):"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:94
+msgid ""
+"  ```elixir\n"
+"  larger_than_two? = fn\n"
+"    n when is_integer(n) and n > 2 -> true\n"
+"    n when is_integer(n) -> false\n"
+"  end\n"
+"  ```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:101
+msgid ""
+"Other constructs are `for`, `with`, `try`/`rescue`/`catch`/`else`/, and the "
+"`match?/2` macro in the `Kernel` module."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:103
+msgid "## Failing guards"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:105
+msgid ""
+"Errors in guards do not result in a runtime error, but in the erroring guard "
+"fail. For example, the `length/1` function only works with lists, and if we "
+"use it on anything else it fails:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:107
+msgid ""
+"```elixir\n"
+"iex> length(\"hello\")\n"
+"** (ArgumentError) argument error\n"
+"```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:112
+msgid ""
+"However, when used in guards, it simply makes the corresponding clause fail "
+"(i.e., not match):"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:114
+msgid ""
+"```elixir\n"
+"iex> case \"hello\" do\n"
+"...>   something when length(something) > 0 ->\n"
+"...>     :length_worked\n"
+"...>   _anything_else ->\n"
+"...>     :length_failed\n"
+"...> end\n"
+":length_failed\n"
+"```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:124
+msgid ""
+"In many cases, we can take advantage of this: in the code above, for "
+"example, we can use `length/1` to both check that the given thing is a list "
+"*and* check some properties of its length (instead of using "
+"`is_list(something) and length(something) > 0`)."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:126
+msgid "## Expressions in guard clauses"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:128
+msgid ""
+"Not all expressions are allowed in guard clauses, but only a handful of "
+"them. This is a deliberate choice: only a predefined set of side-effect-free "
+"functions are allowed. This way, Elixir (and Erlang) can make sure that "
+"nothing bad happens while executing guards and no mutations happen anywhere. "
+"This behaviour is also coherent with pattern match, which is a naturally a "
+"side-effect-free operation. Finally, keeping expressions allowed in clauses "
+"to a close set of predefined ones allows the compiler to optimize the code "
+"related to choosing the right clause."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:130
+msgid "## Defining custom guard expressions"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:132
+msgid ""
+"As mentioned before, only the expressions listed in this page are allowed in "
+"guards. However, we can take advantage of macros to write custom guards that "
+"can simplify our programs or make them more domain-specific. At the end of "
+"the day, what matters is that the *output* of the macros (which is what will "
+"be compiled) boils down to a combinations of the allowed expressions."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:134
+msgid ""
+"Let's look at a quick case study: we want to check that a function argument "
+"is an even or odd integer. With pattern matching, this is impossible to do "
+"since there are infinite integers, and thus we can't pattern match on the "
+"single even/odd numbers. Let's focus on checking for even numbers since "
+"checking for odd ones is almost identical."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:136
+msgid "Such a guard would look like this:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:138
+msgid ""
+"```elixir\n"
+"def my_function(number) when is_integer(number) and rem(number, 2) == 0 do\n"
+"  # do stuff\n"
+"end\n"
+"```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:144
+msgid ""
+"This would be repetitive to write everytime we need this check, so, as "
+"mentioned at the beginning of this section, we can abstract this away using "
+"a macro. Remember that defining a function that performs this check wouldn't "
+"work because we can't use custom functions in guards. Our macro would look "
+"like this:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:146
+msgid ""
+"```elixir\n"
+"defmodule MyInteger do\n"
+"  defmacro is_even(number) do\n"
+"    quote do\n"
+"      is_integer(unquote(number)) and rem(unquote(number), 2) == 0\n"
+"    end\n"
+"  end\n"
+"end\n"
+"```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:156
+msgid "and then:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:158
+msgid ""
+"```elixir\n"
+"import MyInteger, only: [is_even: 1]"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:161
+msgid ""
+"def my_function(number) when is_even(number) do\n"
+"  # do stuff\n"
+"end\n"
+"```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:166
+msgid "## Multiple guards in the same clause"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:168
+msgid ""
+"There exists an additional way to simplify a chain of `or`s in guards: "
+"Elixir supports writing \"multiple guards\" in the same clause. This:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:170
+msgid ""
+"```elixir\n"
+"def foo(term) when is_integer(term) or is_float(term) or is_nil(term),\n"
+"  do: :maybe_number\n"
+"def foo(_other),\n"
+"  do: :something_else\n"
+"```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:177
+msgid "can be alternatively written as:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:179
+msgid ""
+"```elixir\n"
+"def foo(term)\n"
+"    when is_integer(term)\n"
+"    when is_float(term)\n"
+"    when is_nil(term) do\n"
+"  :maybe_number\n"
+"end"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:187
+msgid ""
+"def foo(_other) do\n"
+"  :something_else\n"
+"end\n"
+"```"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Guards.md:192
+msgid ""
+"The two forms are exactly the same semantically but there are cases where "
+"the latter one may be more aesthetically pleasing.\n"
+msgstr ""

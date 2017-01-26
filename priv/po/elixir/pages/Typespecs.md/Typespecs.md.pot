@@ -1,0 +1,178 @@
+#: deps/elixir/lib/elixir/pages/Typespecs.md:1
+msgid "# Typespecs"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:3
+msgid "Elixir comes with a notation for declaring types and specifications. Elixir is a dynamically typed language, and as such, type specifications are never used by the compiler to optimize or modify code. Still, using type specifications is useful because"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:5
+msgid ""
+"  * they provide documentation (for example, tools such as [ExDoc](https://github.com/elixir-lang/ex_doc) show type specifications in the documentation)\n"
+"  * they're used by tools such as [Dialyzer](http://www.erlang.org/doc/man/dialyzer.html), that can analyze code with typespec to find type inconsistencies and possible bugs"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:8
+msgid "Type specifications (sometimes referred to as *typespecs*) are defined in different contexts using the following attributes:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:10
+msgid ""
+"  * `@type`\n"
+"  * `@opaque`\n"
+"  * `@typep`\n"
+"  * `@spec`\n"
+"  * `@callback`\n"
+"  * `@macrocallback`"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:17
+msgid "See the \"Defining a type\" and \"Defining a specification\" sub-sections below for more information on defining types and typespecs."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:19
+msgid "## Types and their syntax"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:21
+msgid "The syntax Elixir provides for type specifications is similar to [the one in Erlang](http://www.erlang.org/doc/reference_manual/typespec.html). Most of the built-in types provided in Erlang (for example, `pid()`) are expressed in the same way: `pid()` (or simply `pid`). Parametrized types (such as `list(integer)`) are supported as well and so are remote types (such as `Enum.t`). Integers and atom literals are allowed as types (e.g., `1`, `:atom`, or `false`). All other types are built out of unions of predefined types. Some shorthands are allowed, such as `[...]`, `<<>>`, and `{...}`."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:23
+msgid "### Basic types"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:53
+msgid "### Literals"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:55
+msgid "The following literals are also supported in typespecs:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:94
+msgid "### Built-in types"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:96
+msgid "The following types are also provided by Elixir as shortcuts on top of the basic and literal types described above."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:98
+msgid ""
+"Built-in type           | Defined as\n"
+":---------------------- | :---------\n"
+"`term()`                | `any()`\n"
+"`arity()`               | `0..255`\n"
+"`as_boolean(t)`         | `t`\n"
+"`binary()`              | `<<_::_*8>>`\n"
+"`bitstring()`           | `<<_::_*1>>`\n"
+"`boolean()`             | `false` \\| `true`\n"
+"`byte()`                | `0..255`\n"
+"`char()`                | `0..0x10FFFF`\n"
+"`charlist()`            | `[char()]`\n"
+"`fun()`                 | `(... -> any)`\n"
+"`identifier()`          | `pid()` \\| `port()` \\| `reference()`\n"
+"`iodata()`              | `iolist()` \\| `binary()`\n"
+"`iolist()`              | `maybe_improper_list(byte() \\| binary() \\| iolist(), binary() \\| [])`\n"
+"`keyword()`             | `[{atom(), any()}]`\n"
+"`keyword(t)`            | `[{atom(), t}]`\n"
+"`list()`                | `[any()]`\n"
+"`nonempty_list()`       | `nonempty_list(any())`\n"
+"`maybe_improper_list()` | `maybe_improper_list(any(), any())`\n"
+"`nonempty_maybe_improper_list()` | `nonempty_maybe_improper_list(any(), any())`\n"
+"`mfa()`                 | `{module(), atom(), arity()}`\n"
+"`module()`              | `atom()`\n"
+"`no_return()`           | `none()`\n"
+"`node()`                | `atom()`\n"
+"`number()`              | `integer()` \\| `float()`\n"
+"`struct()`              | `%{:__struct__ => atom(), optional(atom()) => any()}`\n"
+"`timeout()`             | `:infinity` \\| `non_neg_integer()`"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:127
+msgid "### Remote types"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:129
+msgid "Any module is also able to define its own types and the modules in Elixir are no exception. For example, the `Range` module defines a `t/0` type that represents a range: this type can be referred to as `t:Range.t/0`. In a similar fashion, a string is `t:String.t/0`, any enumerable can be `t:Enum.t/0`, and so on."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:131
+msgid "### Maps"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:133
+msgid ""
+"The key types in maps are allowed to overlap, and if they do, the leftmost key takes precedence.\n"
+"A map value does not belong to this type if it contains a key that is not in the allowed map keys."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:136
+msgid ""
+"If you want to denote that keys that were not previously defined in the map are allowed,\n"
+"it is common to end a map type with `optional(any) => any`."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:139
+msgid "Notice that the syntactic representation of `map()` is `%{optional(any) => any}`, not `%{}`. The notation `%{}` specifies the singleton type for the empty map."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:141
+msgid "## Defining a type"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:143
+msgid "The `@type`, `@typep`, and `@opaque` module attributes can be used to define new types:"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:149
+msgid "A type defined with `@typep` is private. An opaque type, defined with `@opaque` is a type where the internal structure of the type will not be visible, but the type is still public."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:151
+msgid "Types can be parameterized by defining variables as parameters; these variables can then be used to define the type."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:155
+msgid "## Defining a specification"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:161
+msgid "Callbacks are used to define the callbacks functions of behaviours (see the [\"Behaviours\"](behaviours.html) page in the documentation for more information on behaviours)."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:163
+msgid "Guards can be used to restrict type variables given as arguments to the function."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:167
+msgid "If you want to specify more than one variable, you separate them by a comma."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:171
+msgid "Type variables with no restriction can also be defined."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:175
+msgid "You can also name your arguments in a typespec using `arg_name :: arg_type` syntax. This is particularly useful in documentation as a way to differentiate multiple arguments of the same type (or multiple elements of the same type in a type definition):"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:180
+msgid "Specifications can be overloaded just like ordinary functions."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:185
+msgid "## Notes"
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:187
+msgid "Elixir discourages the use of type `t:string/0` as it might be confused with binaries which are referred to as \"strings\" in Elixir (as opposed to character lists). In order to use the type that is called `t:string/0` in Erlang, one has to use the `t:charlist/0` type which is a synonym for `string`. If you use `string`, you'll get a warning from the compiler."
+msgstr ""
+
+#: deps/elixir/lib/elixir/pages/Typespecs.md:189
+msgid ""
+"If you want to refer to the \"string\" type (the one operated on by functions in the `String` module), use `t:String.t/0` type instead.\n"
+""
+msgstr ""
+
