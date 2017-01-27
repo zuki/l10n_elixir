@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2017-01-26 09:24+0900\n"
+"PO-Revision-Date: 2017-01-26 15:02+0900\n"
 "Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9,10 +9,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"POT-Creation-Date: \n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:1
 msgid "# Behaviours"
-msgstr ""
+msgstr "# ビヘイビア"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:3
 msgid ""
@@ -20,6 +22,9 @@ msgid ""
 "generic part of a component (which becomes the *behaviour module*) from the "
 "specific part (which becomes the *callback module*)."
 msgstr ""
+"Elixir（およびErlang）におけるビヘイビアとは、コンポーネントの一般的な部分"
+"（これは*ビヘイビアモジュール*になります）を個別な部分（これは*コールバックモ"
+"ジュール*になります）から分離して抽象化する方法です。"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:5
 msgid ""
@@ -31,6 +36,13 @@ msgid ""
 "\" process will likely want to implement from the specific parts such as the "
 "actions that this server process has to perform."
 msgstr ""
+"ビヘイビアモジュールは、そのビヘイビアを実装するコールバックモジュールをエク"
+"スポートしなければならない、一連の関数とマクロ（以後、*コールバック*と呼びま"
+"す）を定義します。この「インターフェース」はコンポーネントの個別な部分を識別"
+"します。たとえば、`GenServer`ビヘイビアと関数は、「サーバー」プロセスが、自分"
+"のサーバープロセスで実行しなければならないアクションのような個別の部分とは切"
+"り離して実装したいと思われる、すべてのメッセージのやり取り（送信と受信）やエ"
+"ラーの報告を抽象化します。"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:7
 msgid ""
@@ -39,16 +51,21 @@ msgid ""
 "notified through warnings during the compilation process (no errors will "
 "happen)."
 msgstr ""
+"指定のビヘイビアを実装するコールバックモジュールが、そのビヘイビアが定義して"
+"いる関数とマクロをすべてエクスポートしていない場合は、コンパイルプロセスのお"
+"いて警告としてユーザに通知されます（エラーは発生しません）。"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:9
 msgid ""
 "Elixir's standard library contains a few frequently used behaviours such as "
 "`GenServer`, `Supervisor`, and `Application`."
 msgstr ""
+"Elilxirの標準ライブラリは`GenServer`や`Supervisor`、`Application`など、少数の"
+"よく使われるビヘイビアを含んでいます。"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:11
 msgid "## Defining a behaviour"
-msgstr ""
+msgstr "## ビヘイビアの定義"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:13
 msgid ""
@@ -58,12 +75,20 @@ msgid ""
 "define callbacks, the `@callback` and `@macrocallback` module attributes can "
 "be used (for function callbacks and macro callbacks respectively)."
 msgstr ""
+"ビヘイビアは常にモジュールを背景とします（これによりビヘイビアは識別されま"
+"す）。コールバックが定義されているモジュールです。ビヘイビアモジュールを定義"
+"するには、モジュール内で1つ以上のコールバックを定義するだけで十分です。コール"
+"バックを定義するには `@callback` と`@macrocallback`の2つのモジュール属性を使"
+"うことができます（前者は関数コールバック用で、後者はマクロコールバック用で"
+"す）。"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:20
 msgid ""
 "As seen in the example above, defining a callback is a matter of defining a "
 "specification for that callback, made of:"
 msgstr ""
+"上の例からわかるように、コールバックの定義とはコールバックの仕様を定義するこ"
+"とにほかなりません。次の要素からなります:"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:22
 msgid ""
@@ -72,6 +97,9 @@ msgid ""
 "example)\n"
 "  * the *expected* type of the callback return value"
 msgstr ""
+"* コールバック名（例では、`my_fun` と`my_macro`）\n"
+"* コールバックが受け取らなければならない引数（例では、`arg :: any`）\n"
+"* コールバックの返り値の*想定される*型"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:26
 msgid ""
@@ -80,10 +108,14 @@ msgid ""
 "specification are only annotations used by documentation and tools, so "
 "defining such specifications for behaviours serves mostly for such purposes."
 msgstr ""
+"型仕様に関するさらなる情報は、Elixirのドキュメントの [“型仕様”](typespecs."
+"html) のページにあたってください。このページでも触れられているように、型仕様"
+"はドキュメントとツールで使用されるアノテーションにすぎません。したがって、ビ"
+"ヘイビアにおけるそのような仕様の定義もほとんどがその目的のためです。"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:28
 msgid "### Optional callbacks"
-msgstr ""
+msgstr "### オプションのコールバック"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:30
 msgid ""
@@ -96,22 +128,34 @@ msgid ""
 "attribute, which has to be a keyword list with function or macro name as key "
 "and arity as value. For example:"
 msgstr ""
+"オプションのコールバックは、欲しければ実装してもよいが、実装する必要はない"
+"コールバックモジュールです。\n"
+"通常、ビヘイビアモジュールはこれらのコールバックをコールすべきか否かを構成に"
+"基いて判断します。そうでなければ、コールバックが定義されているか"
+"`function_exported?/3`または`macro_exported?/3`でチェックします。\n"
+"オプションのコールバックは`@optional_callbacks`モジュール属性を使って定義でき"
+"ます。これはキーとして関数名またはマクロ名を、値としてアリティを持つキーワー"
+"ドリストでなければなりません。たとえば:"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:41
 msgid ""
 "One example of optional callback in Elixir's standard library is `c:"
 "GenServer.format_status/2`."
 msgstr ""
+"Elixirの標準ライブラリにおけるオプションのコールバックの例には`c:GenServer."
+"format_status/2`があります。"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:43
 msgid "## Implementing behaviours"
-msgstr ""
+msgstr "## ビヘイビアの実装"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:45
 msgid ""
 "To specify that a module implements a given behaviour, the `@behaviour` "
 "attribute must be used:"
 msgstr ""
+"モジュールが指定のビヘイビアを実装することを示すには、`@behaviour`属性を使わ"
+"なければなりません:"
 
 #: deps/elixir/lib/elixir/pages/Behaviours.md:51
 msgid ""

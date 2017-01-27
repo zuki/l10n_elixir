@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2016-04-02 22:55+0900\n"
+"PO-Revision-Date: 2017-01-27 12:24+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9,25 +9,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"POT-Creation-Date: \n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:1
 msgid "# Typespecs"
-msgstr "# Typespecs"
+msgstr "# 型仕様"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:3
-#, fuzzy
 msgid ""
 "Elixir comes with a notation for declaring types and specifications. Elixir "
 "is a dynamically typed language, and as such, type specifications are never "
 "used by the compiler to optimize or modify code. Still, using type "
 "specifications is useful because"
 msgstr ""
-"Elixirにはtypeとspecificationの宣言の為の記法があります。Elixirは動的に\n"
-"型付けされ、だから、typespecはコンパイラによって最適化のためやコードの\n"
-"変更のためには決して使われません。でも、typespecを使うことは文書化とバ\n"
-"グを見付けるためにtypespecを使ってコードを解析する\n"
-"[Dialyzer](http://www.erlang.org/doc/man/dialyzer.html) のようなツール\n"
-"にとって役に立ちます。"
+"Elixirには型と仕様を宣言するための記法があります。Elixirは動的に型付けされた"
+"言語です。したがって、コンパイラが型仕様を使って最適化を行ったり、コードを変"
+"更したりすることは決してありません。それでも、型仕様の仕様は次のような理由で"
+"役に立ちます。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:5
 msgid ""
@@ -38,12 +37,18 @@ msgid ""
 "dialyzer.html), that can analyze code with typespec to find type "
 "inconsistencies and possible bugs"
 msgstr ""
+"  * ドキュメントを提供する（たとえば、[ExDoc](https://github.com/elixir-lang/"
+"ex_doc) のようなツールはドキュメント中の型仕様を表示します）\n"
+"  * 型仕様を使ってコードを分析し、型の不整合やバグを発見する[Dialyzer]"
+"(http://www.erlang.org/doc/man/dialyzer.html)のようなツールに使用される"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:8
 msgid ""
 "Type specifications (sometimes referred to as *typespecs*) are defined in "
 "different contexts using the following attributes:"
 msgstr ""
+"型仕様（時には*typespecs*と呼ばれます）は次の属性を使うことで異なるコンテキス"
+"トで定義されます:"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:10
 msgid ""
@@ -54,16 +59,24 @@ msgid ""
 "  * `@callback`\n"
 "  * `@macrocallback`"
 msgstr ""
+"  * `@type`\n"
+"  * `@opaque`\n"
+"  * `@typep`\n"
+"  * `@spec`\n"
+"  * `@callback`\n"
+"  * `@macrocallback`"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:17
 msgid ""
 "See the \"Defining a type\" and \"Defining a specification\" sub-sections "
 "below for more information on defining types and typespecs."
 msgstr ""
+"型と型仕様の定義に関する詳細は下の「型の定義」と「仕様の定義」を参照してくだ"
+"さい。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:19
 msgid "## Types and their syntax"
-msgstr "## Types and their syntax"
+msgstr "## 型とその構文"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:21
 msgid ""
@@ -76,34 +89,40 @@ msgid ""
 "atom`, or `false`). All other types are built out of unions of predefined "
 "types. Some shorthands are allowed, such as `[...]`, `<<>>`, and `{...}`."
 msgstr ""
+"Elixirが型指定のために提供する構文は [Erlangの構文](http://www.erlang.org/"
+"doc/reference_manual/typespec.html)と似ています。Erlangで提供されている組み込"
+"み型の大部分（たとえば、pid()）は、同じ方法で表現されます: `pid()`（または単"
+"純に`pid`）。パラメタライズされた型（`list(integer)`など）やリモート型（Enum."
+"tなど）もサポートされています。 整数とアトムリテラルは型として許されます（た"
+"とえば、`1`, `:atom`, `false`）。 他のすべての型は、あらかじめ定義されている"
+"型の和集合で構築されます。`[…]`, `<<>>`, `{…}`などの簡略表記も許されていま"
+"す。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:23
 msgid "### Basic types"
-msgstr "### Basic types"
+msgstr "### 基本型"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:53
 msgid "### Literals"
-msgstr "### Literals"
+msgstr "### リテラル"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:55
 msgid "The following literals are also supported in typespecs:"
-msgstr "typespecsでは以下のリテラルがサポートされます:"
+msgstr "型仕様では以下のリテラルもサポートされます:"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:94
 msgid "### Built-in types"
-msgstr "### Built-in types"
+msgstr "### 組み込み型"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:96
-#, fuzzy
 msgid ""
 "The following types are also provided by Elixir as shortcuts on top of the "
 "basic and literal types described above."
 msgstr ""
-"いくつかのタイプもまた、基本的かつリテラルのタイプの上にショートカット\n"
-"としてElixirにより供給されます。"
+"上で述べた基本型とリテラル型に加えてショートカットとして次の方もElixirにより"
+"提供されています。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:98
-#, fuzzy
 msgid ""
 "Built-in type           | Defined as\n"
 ":---------------------- | :---------\n"
@@ -137,41 +156,43 @@ msgid ""
 "any()}`\n"
 "`timeout()`             | `:infinity` \\| `non_neg_integer()`"
 msgstr ""
-"Built-in type           | Defined as\n"
+"埋込み型          | 定義\n"
 ":---------------------- | :---------\n"
 "`term()`                | `any()`\n"
-"`binary()`              | `<<_::_ * 8>>`\n"
-"`bitstring()`           | `<<_::_ * 1>>`\n"
+"`arity()`               | `0..255`\n"
+"`as_boolean(t)`         | `t`\n"
+"`binary()`              | `<<_::_*8>>`\n"
+"`bitstring()`           | `<<_::_*1>>`\n"
 "`boolean()`             | `false` \\| `true`\n"
 "`byte()`                | `0..255`\n"
-"`char()`                | `0..0x10ffff`\n"
-"`number()`              | `integer()` \\| `float()`\n"
-"`char_list()`           | `[char()]`\n"
-"`list()`                | `[any()]`\n"
-"`maybe_improper_list()` | `maybe_improper_list(any(), any())`\n"
-"`nonempty_list()`       | `nonempty_list(any())`\n"
+"`char()`                | `0..0x10FFFF`\n"
+"`charlist()`            | `[char()]`\n"
+"`fun()`                 | `(... -> any)`\n"
+"`identifier()`          | `pid()` \\| `port()` \\| `reference()`\n"
+"`iodata()`              | `iolist()` \\| `binary()`\n"
 "`iolist()`              | `maybe_improper_list(byte() \\| binary() \\| "
 "iolist(), binary() \\| [])`\n"
-"`iodata()`              | `iolist()` \\| `binary()`\n"
-"`module()`              | `atom()` \\| `tuple()`\n"
-"`arity()`               | `0..255`\n"
-"`mfa()`                 | `{atom(), atom(), arity()}`\n"
-"`identifier()`          | `pid()` \\| `port()` \\| `reference()`\n"
-"`node()`                | `atom()`\n"
-"`timeout()`             | `:infinity` \\| `non_neg_integer()`\n"
-"`no_return()`           | `none()`\n"
-"`fun()`                 | `(... -> any)`\n"
-"`struct()`              | `%{__struct__: atom()}`\n"
-"`as_boolean(t)`         | `t`\n"
 "`keyword()`             | `[{atom(), any()}]`\n"
-"`keyword(t)`            | `[{atom(), t}]`"
+"`keyword(t)`            | `[{atom(), t}]`\n"
+"`list()`                | `[any()]`\n"
+"`nonempty_list()`       | `nonempty_list(any())`\n"
+"`maybe_improper_list()` | `maybe_improper_list(any(), any())`\n"
+"`nonempty_maybe_improper_list()` | `nonempty_maybe_improper_list(any(), "
+"any())`\n"
+"`mfa()`                 | `{module(), atom(), arity()}`\n"
+"`module()`              | `atom()`\n"
+"`no_return()`           | `none()`\n"
+"`node()`                | `atom()`\n"
+"`number()`              | `integer()` \\| `float()`\n"
+"`struct()`              | `%{:__struct__ => atom(), optional(atom()) => "
+"any()}`\n"
+"`timeout()`             | `:infinity` \\| `non_neg_integer()`"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:127
 msgid "### Remote types"
-msgstr "### Remote types"
+msgstr "### リモート型"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:129
-#, fuzzy
 msgid ""
 "Any module is also able to define its own types and the modules in Elixir "
 "are no exception. For example, the `Range` module defines a `t/0` type that "
@@ -179,14 +200,14 @@ msgid ""
 "similar fashion, a string is `t:String.t/0`, any enumerable can be `t:Enum."
 "t/0`, and so on."
 msgstr ""
-"任意のモジュールもまたそれ自身のタイプの定義をすることが出来、\n"
-"Elixirのモジュールも例外ではありません。例えば、文字列は`String.t`、\n"
-"rangeは`Range.t`、任意のenumerableは`Enum.t`などとなります。"
+"すべてのモジュールは独自の型を定義することもでき、Elixirのモジュールも例外で"
+"はありません。たとえば、`Range`モジュールは範囲を表す`t/0`型を定義していま"
+"す。この型は`t:Range.t/0`で参照できます。同様に、文字列は`t:String.t/0`、すべ"
+"てのenumerableは`t:Enum.t/0`などで参照できます。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:131
-#, fuzzy
 msgid "### Maps"
-msgstr "### Basic types"
+msgstr "### マップ"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:133
 msgid ""
@@ -195,6 +216,10 @@ msgid ""
 "A map value does not belong to this type if it contains a key that is not in "
 "the allowed map keys."
 msgstr ""
+"マップのキー型は重複が許されています。その場合、もっとも左のキーが優先されま"
+"す。\n"
+"マップの値は、マップがマップキーに許されていないキーを含んでいる場合はこの型"
+"には属しません。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:136
 msgid ""
@@ -202,6 +227,8 @@ msgid ""
 "are allowed,\n"
 "it is common to end a map type with `optional(any) => any`."
 msgstr ""
+"以前にマップで定義されていなかったキーが許されていることを示したい場合は、"
+"マップ型を`optional(any) => any`で終わらせることが一般的です。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:139
 msgid ""
@@ -209,16 +236,19 @@ msgid ""
 "any}`, not `%{}`. The notation `%{}` specifies the singleton type for the "
 "empty map."
 msgstr ""
+"`map()`の構文表現は、`%{}`ではなく`%{optional(any) => any)`であることに注意し"
+"てください。`%{}`表記は空のマップのための特異型を示すものです。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:141
 msgid "## Defining a type"
-msgstr "## Defining a type"
+msgstr "## 型の定義"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:143
 msgid ""
 "The `@type`, `@typep`, and `@opaque` module attributes can be used to define "
 "new types:"
 msgstr ""
+"新しい型の定義にはモジュール属性 `@type`, `@typep`,, `@opaque`を使用できます:"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:149
 msgid ""
@@ -226,49 +256,45 @@ msgid ""
 "`@opaque` is a type where the internal structure of the type will not be "
 "visible, but the type is still public."
 msgstr ""
-"`@typep`で定義されたタイプはプライベートです。`@opaque`によって\n"
-"定義されたopaqueタイプはタイプの内部構造が不可視となりますが、\n"
-"タイプはパブリックのままです。"
+"`@typep`で定義された型はプライベートです。`@opaque`で定義されたopaque型は、型"
+"の内部構造は不可視ですが、型は公開されます。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:151
-#, fuzzy
 msgid ""
 "Types can be parameterized by defining variables as parameters; these "
 "variables can then be used to define the type."
 msgstr ""
-"変数はタイプを定義するために使うことができ、タイプは、変数を\n"
-"使ってパラメタ化することもできます。"
+"型は変数をパラメタとして定義することによりパラメタライズすることができます。"
+"これらの変数はその後、型の定義に使用できます。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:155
 msgid "## Defining a specification"
-msgstr "## Defining a specification"
+msgstr "## 仕様の定義"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:161
-#, fuzzy
 msgid ""
 "Callbacks are used to define the callbacks functions of behaviours (see the "
 "[\"Behaviours\"](behaviours.html) page in the documentation for more "
 "information on behaviours)."
 msgstr ""
-"callbacksはビヘイビアのコールバック関数を定義するために使われます\n"
-"(`Behaviour`を参照してください)。"
+"コールバックはビヘイビアのコールバック関数の定義に使用されます（ビヘイビアの"
+"詳細についてはドキュメントの[“ビヘイビア”](behaviours.html) のページを参照し"
+"てください）。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:163
 msgid ""
 "Guards can be used to restrict type variables given as arguments to the "
 "function."
-msgstr ""
-"Guardsは関数の引数として与えられる変数の型を制限するために\n"
-"使うことができます。"
+msgstr "ガードは関数への引数として与えられる型変数の制限に使用できます。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:167
 msgid ""
 "If you want to specify more than one variable, you separate them by a comma."
-msgstr ""
+msgstr "2つ以上の変数を指定したい場合は、変数をカンマで分割します。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:171
 msgid "Type variables with no restriction can also be defined."
-msgstr "タイプ変数は制限なしで定義することもできます。"
+msgstr "制約なしの型変数も定義できます。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:175
 msgid ""
@@ -277,17 +303,19 @@ msgid ""
 "differentiate multiple arguments of the same type (or multiple elements of "
 "the same type in a type definition):"
 msgstr ""
+"`arg_name :: arg_type`構文を使用して型仕様の引数に名前を付けることもできま"
+"す。 これは、同じ型の複数の引数（または型定義内の同じ型の複数の要素）を区別す"
+"る方法として、ドキュメントで特に役に立ちます。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:180
 msgid "Specifications can be overloaded just like ordinary functions."
-msgstr "specificationは普通の関数のようにオーバーロードすることが出来ます。"
+msgstr "仕様は普通の関数のようにオーバーロードすることもできます。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:185
 msgid "## Notes"
-msgstr "## Notes"
+msgstr "## 注記"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:187
-#, fuzzy
 msgid ""
 "Elixir discourages the use of type `t:string/0` as it might be confused with "
 "binaries which are referred to as \"strings\" in Elixir (as opposed to "
@@ -295,21 +323,18 @@ msgid ""
 "Erlang, one has to use the `t:charlist/0` type which is a synonym for "
 "`string`. If you use `string`, you'll get a warning from the compiler."
 msgstr ""
-"Elixirは(文字のリストではなく)Elixirでの\"strings\"(文字列)として\n"
-"参照されるバイナリと混同される可能性があるので、`string`タイプの\n"
-"使用を推奨していません。Erlangで`string`と呼ばれているタイプを使\n"
-"うためには、`string`のシノニムである`char_list`タイプを使う必要\n"
-"があります。もし`string`を使用したらコンパイラから警告を受けるで\n"
-"しょう。"
+"Elixirでは`t:string/0`の使用は推奨されません。Elixirでは（文字リストではな"
+"く）「文字列」呼ばれるバイナリと混同される可能性があるからです。Erlangで`t:"
+"string/0`と呼ばれる型を使用するには`string`の同義語である`t:charlist/0`型を使"
+"用する必要があります。 `string`を使用すると、コンパイラから警告を受けます。"
 
 #: deps/elixir/lib/elixir/pages/Typespecs.md:189
-#, fuzzy
 msgid ""
 "If you want to refer to the \"string\" type (the one operated on by "
 "functions in the `String` module), use `t:String.t/0` type instead.\n"
 msgstr ""
-"もし(`String`モジュールの関数により操作される)\"string\"タイプを\n"
-"好むなら、`String.t`タイプを代りに使ってください。"
+"（`String`モジュールの関数で操作される）「文字列」型を参照したい場合は、`t:"
+"String.t/0`型を使用します。\n"
 
 #~ msgid ""
 #~ "The attributes `@type`, `@opaque`, `@typep`, `@spec`, `@callback` and "
