@@ -40,7 +40,7 @@ defmodule L10nElixir.Mixfile do
   end
 
   def docs do
-    Keyword.put(subapp_docs({"elixir", "Elixir", "Kernel"}),
+    docs = Keyword.put(subapp_docs({"elixir", "Elixir", "Kernel"}),
        :extras, [
                   "pages/Behaviours.md",
                   "pages/Guards.md",
@@ -49,6 +49,24 @@ defmodule L10nElixir.Mixfile do
                   "pages/Typespecs.md",
                   "pages/Writing Documentation.md"
                 ]
+    )
+    b = :elixir
+    case Application.load(b) do
+      :ok -> :ok
+      {:error, {:already_loaded, _m}} -> :ok
+    end
+    b = Application.spec(b)
+      |> Keyword.get(:modules)
+      |> hd
+      |> Module.concat(nil)
+    update_in(docs,
+      [:source_root],
+      fn(_) ->
+        d = Path.dirname(b.__info__(:compile)[:source])
+        r = Path.join([d, "..", "..", ".."])
+        |> Path.expand
+        r
+      end
     )
   end
 
