@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: elixir 1.4.0\n"
+"PO-Revision-Date: 2017-01-23 11:05+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Mix.Shell.IO.cmd(command, opts \\ [])
+#: lib/mix/shell/io.ex:20
+msgid ""
+"Executes the given command and prints its output\n"
+"to stdout as it comes.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Shell.IO.yes?(message)
+#: lib/mix/shell/io.ex:57
+msgid ""
+"Prints a message and asks the user if they want to proceed.\n"
+"The user must press Enter or type anything that matches the \"yes\"\n"
+"regex `~r/^Y(es)?$/i`.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Shell.IO.info(message)
+#: lib/mix/shell/io.ex:32
+msgid "Prints the given message to the shell followed by a newline.\n"
+msgstr ""
+
+#. TRANSLATORS: Elixir.Mix.Shell.IO Summary
+#: lib/mix/shell/io.ex:2
+msgid ""
+"This is Mix's default shell.\n"
+"\n"
+"It simply prints messages to stdio and stderr.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Shell.IO.print_app()
+#: lib/mix/shell/io.ex:10
+msgid ""
+"Prints the current application to the shell if it\n"
+"was not printed yet.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Shell.IO.error(message)
+#: lib/mix/shell/io.ex:40
+msgid "Prints the given error to the shell followed by a newline.\n"
+msgstr ""

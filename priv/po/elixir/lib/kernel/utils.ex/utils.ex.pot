@@ -1,0 +1,25 @@
+#. TRANSLATORS: def Kernel.Utils.announce_struct(module)
+#: lib/kernel/utils.ex:100 
+msgid ""
+"Announcing callback for defstruct.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Utils.destructure(list, count)
+#: lib/kernel/utils.ex:6 
+msgid ""
+"Callback for destructure.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Utils.defdelegate(fun, opts)
+#: lib/kernel/utils.ex:21 
+msgid ""
+"Callback for defdelegate.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Utils.defstruct(module, fields)
+#: lib/kernel/utils.ex:68 
+msgid ""
+"Callback for defstruct.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Utils.raise(msg)
+#: lib/kernel/utils.ex:110 
+msgid ""
+"Callback for raise.\n"
+msgstr ""

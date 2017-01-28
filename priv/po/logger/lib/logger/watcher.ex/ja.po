@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: elixir 1.4.0\n"
+"PO-Revision-Date: 2017-01-23 11:04+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Logger.Watcher.start_link(m, f, a)
+#: lib/logger/watcher.ex:8
+msgid "Starts the watcher supervisor.\n"
+msgstr "観測者スーパバイザを開始します。\n"
+
+#. TRANSLATORS: def Logger.Watcher.watcher(mod, handler, args)
+#: lib/logger/watcher.ex:54
+msgid ""
+"Starts a watcher server.\n"
+"\n"
+"This is useful when there is a need to start a handler\n"
+"outside of the handler supervision tree.\n"
+msgstr ""
+"観測者サーバを開始します。\n"
+"\n"
+"ハンドラスーパビジョンツリーの外側でハンドラを開始\n"
+"する必要があるとき、役に立ちます。\n"
+
+#. TRANSLATORS: def Logger.Watcher.watch(mod, handler, args)
+#: lib/logger/watcher.ex:38
+msgid "Watches the given handler as part of the watcher supervision tree.\n"
+msgstr "指定したハンドラを観測者スーパビジョンツリーの一部として監視します。\n"
+
+#. TRANSLATORS: def Logger.Watcher.unwatch(mod, handler)
+#: lib/logger/watcher.ex:24
+msgid "Removes the given handler.\n"
+msgstr "指定したハンドラを取り除きます。\n"

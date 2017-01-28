@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: elixir 1.4.0\n"
+"PO-Revision-Date: 2017-01-23 11:05+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Mix.Hex.mirror()
+#: lib/mix/hex.ex:63
+msgid "Returns the URL to the Hex mirror.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Hex.ensure_installed?(app)
+#: lib/mix/hex.ex:6
+msgid ""
+"Returns `true` if `Hex` is loaded or installed. Otherwise returns `false`.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Hex.start()
+#: lib/mix/hex.ex:48
+msgid "Ensures `Hex` is started.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Hex.ensure_updated?()
+#: lib/mix/hex.ex:25
+msgid ""
+"Returns `true` if it has the required `Hex`. If an update is performed, it "
+"then exits.\n"
+"Otherwise returns `false` without updating anything.\n"
+msgstr ""

@@ -1,0 +1,17 @@
+#. TRANSLATORS: Elixir.Mix.Tasks.Deps.Loadpaths Summary
+#: lib/mix/tasks/deps.loadpaths.ex:7 
+msgid ""
+"Checks and loads all dependencies along the way.\n"
+"\n"
+"If there is an invalid dependency, its status is printed\n"
+"before aborting.\n"
+"\n"
+"Although this task does not show up in `mix help`, it is\n"
+"part of Mix public API and can be depended on.\n"
+"\n"
+"## Command line options\n"
+"\n"
+"  * `--no-deps-check` - does not check or compile deps, only load available ones\n"
+"  * `--no-compile` - does not compile dependencies\n"
+"\n"
+msgstr ""

@@ -1,0 +1,16 @@
+#. TRANSLATORS: def Kernel.LexicalTracker.remote_references(arg)
+#: lib/kernel/lexical_tracker.ex:12 
+msgid ""
+"Returns all remotes referenced in this lexical scope.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.LexicalTracker.remote_dispatches(arg)
+#: lib/kernel/lexical_tracker.ex:19 
+msgid ""
+"Returns all remote dispatches in this lexical scope.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.LexicalTracker.dest(arg)
+#: lib/kernel/lexical_tracker.ex:26 
+msgid ""
+"Gets the destination the lexical scope is meant to\n"
+"compile to.\n"
+msgstr ""

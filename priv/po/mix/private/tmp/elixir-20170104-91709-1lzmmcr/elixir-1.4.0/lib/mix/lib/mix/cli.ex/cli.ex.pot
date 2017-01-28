@@ -1,5 +1,0 @@
-#. TRANSLATORS: def Mix.CLI.main(args \\ System.argv())
-#: /private/tmp/elixir-20170104-91709-1lzmmcr/elixir-1.4.0/lib/mix/lib/mix/cli.ex:4 
-msgid ""
-"Runs Mix according to the command line arguments.\n"
-msgstr ""

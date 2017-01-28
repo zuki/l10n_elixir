@@ -1,0 +1,5 @@
+#. TRANSLATORS: def Logger.App.stop()
+#: lib/logger/app.ex:55 
+msgid ""
+"Stops the application without sending messages to error logger.\n"
+msgstr ""

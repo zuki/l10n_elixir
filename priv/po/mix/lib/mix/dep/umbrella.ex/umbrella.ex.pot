@@ -1,0 +1,15 @@
+#. TRANSLATORS: def Mix.Dep.Umbrella.unloaded()
+#: lib/mix/dep/umbrella.ex:4 
+msgid ""
+"Gets all umbrella dependencies in unloaded format.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Dep.Umbrella.loaded()
+#: lib/mix/dep/umbrella.ex:38 
+msgid ""
+"Gets all umbrella dependencies in the loaded format.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Dep.Umbrella.cached()
+#: lib/mix/dep/umbrella.ex:26 
+msgid ""
+"Gets all umbrella dependencies in the loaded format from cache (if available).\n"
+msgstr ""

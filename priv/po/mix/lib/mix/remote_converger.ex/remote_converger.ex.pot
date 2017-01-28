@@ -1,0 +1,35 @@
+#. TRANSLATORS: @callback converge/2
+#: lib/mix/remote_converger.ex:14 
+msgid ""
+"Runs the remote converger.\n"
+"\n"
+"Return updated lock.\n"
+msgstr ""
+#. TRANSLATORS: @callback deps/2
+#: lib/mix/remote_converger.ex:21 
+msgid ""
+"Returns child dependencies the converger has for the\n"
+"dependency. This list should filter the loaded children.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.RemoteConverger.get()
+#: lib/mix/remote_converger.ex:33 
+msgid ""
+"Gets registered remote converger.\n"
+msgstr ""
+#. TRANSLATORS: @callback post_converge/0
+#: lib/mix/remote_converger.ex:27 
+msgid ""
+"Called after all convergers have run so that the remote\n"
+"converger can perform clean up.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.RemoteConverger.register(mod)
+#: lib/mix/remote_converger.ex:40 
+msgid ""
+"Registers a remote converger.\n"
+msgstr ""
+#. TRANSLATORS: @callback remote?/1
+#: lib/mix/remote_converger.ex:8 
+msgid ""
+"Returns `true` if given dependency is handled by\n"
+"remote converger.\n"
+msgstr ""

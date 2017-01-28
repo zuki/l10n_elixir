@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: elixir 1.4.0\n"
+"PO-Revision-Date: 2017-01-23 11:05+0900\n"
+"Last-Translator: Keiji Suzuki <EMAIL@ADDRESS>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. TRANSLATORS: def Mix.Dep.Loader.children()
+#: lib/mix/dep/loader.ex:9
+msgid ""
+"Gets all direct children of the current `Mix.Project`\n"
+"as a `Mix.Dep` struct. Umbrella project dependencies\n"
+"are included as children.\n"
+"\n"
+"By default, it will filter all dependencies that does not match\n"
+"current environment, behaviour can be overridden via options.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Dep.Loader.partition_by_env(deps, env)
+#: lib/mix/dep/loader.ex:21
+msgid "Partitions loaded dependencies by environment.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Dep.Loader.skip?(dep, env)
+#: lib/mix/dep/loader.ex:27
+msgid "Checks if a dependency must be skipped according to the environment.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Dep.Loader.vsn_match(req, actual, app)
+#: lib/mix/dep/loader.ex:72
+msgid ""
+"Checks if a requirement from a dependency matches\n"
+"the given version.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Dep.Loader.load(dep, children)
+#: lib/mix/dep/loader.ex:38
+msgid ""
+"Loads the given dependency information, including its\n"
+"latest status and children.\n"
+msgstr ""
