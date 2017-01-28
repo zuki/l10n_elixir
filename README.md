@@ -16,18 +16,18 @@ po file(Portable Object)に準拠しています。
 自動的にダウンロードされます。
 
     $ git clone https://github.com/k1complete/l10n_elixir
-    $ mix deps.get 
+    $ mix deps.get
     $ mix compile
     $ ls -l priv/lang/ja/l10n_elixir.exmo
     $ sh mix_doc.sh
     --2015-09-26 18:58:38--  http://elixir-lang.org/docs/logo.png
-    Resolving elixir-lang.org... 
+    Resolving elixir-lang.org...
     (snip)
     2015-09-26 18:58:39 (202 MB/s) - ‘logo.png’ saved [7636/7636]
 
     Docs successfully generated.
     View them at "doc/elixir/index.html".
-    $ 
+    $
 
 使いかた
 --------
@@ -43,10 +43,10 @@ l10n_helper.exsは以下のようになっています。
 iex -S mixで実行してみます。
 
     $ iex -S mix
-    iex> h Code           
-    
-                                          Code                                      
-    
+    iex> h Code
+
+                                          Code
+
     コードコンパイル、コード評価、コードローディングの管理のためのユーティ リティです。
 
     このモジュールは Erlangのcodeモジュー ル (http://www.erlang.org/doc/man/code.html)
@@ -60,7 +60,7 @@ Ex_doc
 
 ex_docとの連携は、Exgettext側である程度準備していますので、
 
-    $> sh mix_doc.sh 
+    $> sh mix_doc.sh
 
 mix_doc.shは以下のようになっています:
 
@@ -94,42 +94,62 @@ elixirソース変更への追随
 elixir本体のソースが変更されたら、トークンの拾い出しを行います。
 これは、l10n_elixirのプロジェクトディレクトリで行います。
 
-     $ mix l10n.xgettext --elixir deps/elixir/lib/elixir
+### 各アプリ（eex, ellixir, ex_unit, iex, mix）を個別に処理
+
+#### POT作成
+
+     $ (. ./env.sh; mix l10n.xgettext --app deps/elixir/lib/#{app})
      xgettext for l10n_elixir
      clean l10n_elixir.pot_db
-    
+
      Compiled lib/l10n_elixir.ex
      Generated l10n_elixir.app
      xgettext l10n_elixir.pot_db --output=priv/po/l10n_elixir.pot
      collecting document for l10n_elixir
      collecting document for elixir
 
+#### POの作成
 priv/po/l10n_elixir.potファイルが生成されます。モジュール毎にpotファイル
 が別れていますので、新規モジュール用のpoファイルを生成します:
 
-     $ (. ./env.sh;  mix l10n.msginit)
+     $ (. ./env.sh;  mix l10n.msginit --subapp app)
      ....
      $
 
+#### 新旧POのマージ
+
 その後、既存のpoファイルとをマージします:
 
-     $ mix l10n.msgmerge
+     $ (. ./env.sh; mix l10n.msgmerge --subapp app)
      msgmerge -o priv/po/ja.pox priv/po/ja.po priv/po/l10n_elixir.pot
      .............................................................
      .................................. 完了.
-     $ diff priv/po/ja.po priv/po/ja.pox    
+     $ diff priv/po/ja.po priv/po/ja.pox
 
 いろいろ差分がでますので、目視で確認してOKならja.poxをja.poへリネーム
 します。あるいは、
-   
-     $ mix l10n.msgmerge --update
+
+     $ (. ./env.sh; mix l10n.msgmerge --update --subapp app)
 
 でもよいです。その後、追加エントリの翻訳を行います。fuzzyエントリ
 とuntranslatedエントリを探しながら行います。emacs の po-modeが
 便利です。
 
+#### ドキュメントの作成
+
 翻訳後、言語リソースをビルドします。
 
-     $ (. ./env.sh; mix docs)
+     $ (. ./env.sh; mix docs)              # elixirの場合
+     $ (. ./env.sh; mix docs_all "app")    # その他のappの場合
 
 logo.pngがない場合は、mix_doc.shなどで取得してください。
+
+### 全アプリを一括操作
+
+以下のコマンドで全アプリのPOTの作成から新旧POのマージまでを行います。
+
+     $ sh mix_new_version.sh
+
+### 全アプリのドキュメント作成
+
+     $ sh mix_doc.sh
