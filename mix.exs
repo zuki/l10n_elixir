@@ -4,7 +4,7 @@ defmodule L10nElixir.Mixfile do
   def project do
     [
       app: :l10n_elixir,
-      version: "0.0.4",
+      version: "0.1.0",
       compilers: Mix.compilers ++ [:po],
       source_url: "https://github.com/elixir-lang/elixir",
       exgettext: [ extra: Extrans ],
@@ -193,8 +193,8 @@ defmodule L10nElixir.Mixfile do
     [{:elixir, github: "elixir-lang/elixir", tag: "v1.4.0"}, # tag: "v1.2.0"},
      {:ex_doc, "~> 0.14.5"},
      {:earmark, "~> 1.0.0"},
-     {:exgettext, git: "git@bitbucket.org:zuki_ebetsu/exgettext.git"},
-     {:extrans, git: "git@bitbucket.org:zuki_ebetsu/extrans.git"}
+     {:exgettext, github: "zuki/exgettext", tag: "v0.1.2"},
+     {:extrans, github: "zuki/extrans", tag: "v0.0.2"}
 #     {:exgettext, path: "../exgettext"},
 #     {:extrans, path: "../extrans"}
     ]
