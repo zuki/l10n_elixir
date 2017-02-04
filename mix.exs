@@ -193,8 +193,8 @@ defmodule L10nElixir.Mixfile do
     [{:elixir, github: "elixir-lang/elixir", tag: "v1.4.0"}, # tag: "v1.2.0"},
      {:ex_doc, "~> 0.14.5"},
      {:earmark, "~> 1.0.0"},
-     {:exgettext, github: "zuki/exgettext", tag: "v0.1.2"},
-     {:extrans, github: "zuki/extrans", tag: "v0.0.2"}
+     {:exgettext, github: "zuki/exgettext"},
+     {:extrans, github: "zuki/extrans"}
 #     {:exgettext, path: "../exgettext"},
 #     {:extrans, path: "../extrans"}
     ]
