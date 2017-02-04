@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2016-04-02 12:17+0900\n"
+"PO-Revision-Date: 2017-02-04 17:10+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9,6 +9,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"POT-Creation-Date: \n"
+"X-Generator: Poedit 1.8.11\n"
 
 #. TRANSLATORS: def Inspect.Algebra.glue(doc1, break_string, doc2)
 #: lib/inspect/algebra.ex:399
@@ -159,6 +161,7 @@ msgstr ""
 #: lib/inspect/algebra.ex:310
 msgid "Colors a document if the `color_key` has a color in the options.\n"
 msgstr ""
+"オプションの`color_key`にカラーがある場合、ドキュメントを色づけます。\n"
 
 #. TRANSLATORS: def Inspect.Algebra.concat(doc1, doc2)
 #: lib/inspect/algebra.ex:280
@@ -568,6 +571,9 @@ msgid ""
 "\n"
 "Same as calling `break/1` with the default break.\n"
 msgstr ""
+"デフォルトブレークを表すドキュメントエントリを返します。\n"
+"\n"
+"デフォルトブレークで`break/1`を呼び出すのと同じです。\n"
 
 #. TRANSLATORS: Elixir.Inspect.Opts Summary
 #: lib/inspect/algebra.ex:2
@@ -724,6 +730,20 @@ msgid ""
 "    \"hello\\nworld\"\n"
 "\n"
 msgstr ""
+"指定されたドキュメントを指定された幅でフォーマットします。\n"
+"\n"
+"最大の幅と印刷するドキュメントを引数として受け取り、\n"
+"指定された幅に収まるドキュメントの最適レイアウトの\n"
+"IOデータ表現を返します。\n"
+"\n"
+"## 例\n"
+"\n"
+"    iex> doc = Inspect.Algebra.glue(\"hello\", \" \", \"world\")\n"
+"    iex> Inspect.Algebra.format(doc, 30) |> IO.iodata_to_binary()\n"
+"    \"hello world\"\n"
+"    iex> Inspect.Algebra.format(doc, 10) |> IO.iodata_to_binary()\n"
+"    \"hello\\nworld\"\n"
+"\n"
 
 #. TRANSLATORS: def Inspect.Algebra.to_doc(term, opts)
 #: lib/inspect/algebra.ex:214
