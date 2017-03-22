@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"PO-Revision-Date: 2017-03-22 18:10+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9,16 +9,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"POT-Creation-Date: \n"
+"X-Generator: Poedit 1.8.12\n"
 
 #. TRANSLATORS: def List.Chars.BitString.to_charlist(term)
 #: lib/list/chars.ex:26
-#, fuzzy
 msgid "Returns the given binary `term` converted to a charlist.\n"
-msgstr "与えられたバイナリを文字のリストに変換したものを返します。\n"
+msgstr "指定したバイナリ`term`を文字のリストに変換して返します。\n"
 
 #. TRANSLATORS: Elixir.List.Chars Summary
 #: lib/list/chars.ex:2
-#, fuzzy
 msgid ""
 "The List.Chars protocol is responsible for\n"
 "converting a structure to a list (only if applicable).\n"
@@ -28,8 +28,9 @@ msgid ""
 "The `to_charlist/1` function automatically imported\n"
 "by `Kernel` invokes this protocol.\n"
 msgstr ""
-"List.Charsプロトコルは、構造をリスト(適用できるときだけ)へ変換する役割\n"
-"りを果します。要求される関数は変換を行う`to_char_list`の実装だけです。\n"
+"List.Charsプロトコルは、何からの構造をリストに変換する（適用可能な場合のみ）\n"
+"役割りを果します。実装が要求される関数は変換を行う`to_char_list`\n"
+"だけです。\n"
 "\n"
-"`to_char_list`関数は自動的にカーネルによってインポートされ、このプロト\n"
-"コルが実行します。\n"
+"`Kernel`により自動的にインポートされる`to_charlist/1`関数が\n"
+"このプロトコルを実行します。\n"
