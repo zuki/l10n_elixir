@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2017-02-04 12:48+0900\n"
+"PO-Revision-Date: 2017-03-27 10:27+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "POT-Creation-Date: \n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 1.8.12\n"
 
 #. TRANSLATORS: def IO.ANSI.light_magenta()
 #: lib/io/ansi.ex:138
@@ -185,7 +185,7 @@ msgstr ""
 "ANSIエスケープシーケンスをレンダリングする関数です。\n"
 "\n"
 "[ANSIエスケープシーケンス](https://en.wikipedia.org/wiki/ANSI_escape_code)\n"
-"とは、ビデオ・テキスト端末上のフォーマット、色、その他出力オプションを\n"
+"とは、ビデオ・テキスト端末上のフォーマットや色、その他の出力オプションを\n"
 "制御するためにテキストに埋め込まれる文字です。\n"
 
 #. TRANSLATORS: def IO.ANSI.light_red()
