@@ -184,19 +184,6 @@ msgstr ""
 msgid ""
 "Raises a Mix error that is nicely formatted.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.env(env)
-#: lib/mix.ex:207 
-msgid ""
-"Changes the current Mix environment to `env`.\n"
-"\n"
-"Be careful when invoking this function as any project\n"
-"configuration won't be reloaded.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.debug(debug)
-#: lib/mix.ex:264 
-msgid ""
-"Sets Mix debug mode.\n"
-msgstr ""
 #. TRANSLATORS: def Mix.shell()
 #: lib/mix.ex:232 
 msgid ""
@@ -209,6 +196,19 @@ msgid ""
 "performing IO (see `Mix.Shell.Process`).\n"
 "\n"
 "By default, this returns `Mix.Shell.IO`.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.env(env)
+#: lib/mix.ex:207 
+msgid ""
+"Changes the current Mix environment to `env`.\n"
+"\n"
+"Be careful when invoking this function as any project\n"
+"configuration won't be reloaded.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.debug(debug)
+#: lib/mix.ex:264 
+msgid ""
+"Sets Mix debug mode.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.debug?()
 #: lib/mix.ex:257 

@@ -1,14 +1,14 @@
-#. TRANSLATORS: def MapSet.member?(map_set, value)
-#: lib/map_set.ex:241 
+#. TRANSLATORS: def MapSet.put(set, value)
+#: lib/map_set.ex:257 
 msgid ""
-"Checks if `set` contains `value`.\n"
+"Inserts `value` into `set` if `set` doesn't already contain it.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 2)\n"
-"    true\n"
-"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 4)\n"
-"    false\n"
+"    iex> MapSet.put(MapSet.new([1, 2, 3]), 3)\n"
+"    #MapSet<[1, 2, 3]>\n"
+"    iex> MapSet.put(MapSet.new([1, 2, 3]), 4)\n"
+"    #MapSet<[1, 2, 3, 4]>\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def MapSet.new(mapset)
@@ -22,19 +22,6 @@ msgid ""
 "    #MapSet<[3, :a, :b]>\n"
 "    iex> MapSet.new([3, 3, 3, 2, 2, 1])\n"
 "    #MapSet<[1, 2, 3]>\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def MapSet.put(set, value)
-#: lib/map_set.ex:257 
-msgid ""
-"Inserts `value` into `set` if `set` doesn't already contain it.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> MapSet.put(MapSet.new([1, 2, 3]), 3)\n"
-"    #MapSet<[1, 2, 3]>\n"
-"    iex> MapSet.put(MapSet.new([1, 2, 3]), 4)\n"
-"    #MapSet<[1, 2, 3, 4]>\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def MapSet.intersection(map_set1, map_set2)
@@ -66,6 +53,17 @@ msgid ""
 "    false\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def MapSet.size(map_set)
+#: lib/map_set.ex:273 
+msgid ""
+"Returns the number of elements in `set`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> MapSet.size(MapSet.new([1, 2, 3]))\n"
+"    3\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def MapSet.subset?(map_set1, map_set2)
 #: lib/map_set.ex:287 
 msgid ""
@@ -81,28 +79,6 @@ msgid ""
 "    false\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def MapSet.size(map_set)
-#: lib/map_set.ex:273 
-msgid ""
-"Returns the number of elements in `set`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> MapSet.size(MapSet.new([1, 2, 3]))\n"
-"    3\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def MapSet.union(map_set1, map_set2)
-#: lib/map_set.ex:334 
-msgid ""
-"Returns a set containing all members of `set1` and `set2`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> MapSet.union(MapSet.new([1, 2]), MapSet.new([2, 3, 4]))\n"
-"    #MapSet<[1, 2, 3, 4]>\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def MapSet.difference(mapset1, mapset2)
 #: lib/map_set.ex:132 
 msgid ""
@@ -114,15 +90,15 @@ msgid ""
 "    #MapSet<[1]>\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def MapSet.new(enumerable, transform)
-#: lib/map_set.ex:76 
+#. TRANSLATORS: def MapSet.to_list(map_set)
+#: lib/map_set.ex:320 
 msgid ""
-"Creates a mapset from an enumerable via the transformation function.\n"
+"Converts `set` to a list.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> MapSet.new([1, 2, 1], fn x -> 2 * x end)\n"
-"    #MapSet<[2, 4]>\n"
+"    iex> MapSet.to_list(MapSet.new([1, 2, 3]))\n"
+"    [1, 2, 3]\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def MapSet.disjoint?(map_set1, map_set2)
@@ -136,6 +112,17 @@ msgid ""
 "    true\n"
 "    iex> MapSet.disjoint?(MapSet.new([1, 2]), MapSet.new([2, 3]))\n"
 "    false\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def MapSet.new(enumerable, transform)
+#: lib/map_set.ex:76 
+msgid ""
+"Creates a mapset from an enumerable via the transformation function.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> MapSet.new([1, 2, 1], fn x -> 2 * x end)\n"
+"    #MapSet<[2, 4]>\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: def MapSet.delete(set, value)
@@ -154,26 +141,28 @@ msgid ""
 "    #MapSet<[1, 3]>\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def MapSet.to_list(map_set)
-#: lib/map_set.ex:320 
+#. TRANSLATORS: def MapSet.union(map_set1, map_set2)
+#: lib/map_set.ex:334 
 msgid ""
-"Converts `set` to a list.\n"
+"Returns a set containing all members of `set1` and `set2`.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> MapSet.to_list(MapSet.new([1, 2, 3]))\n"
-"    [1, 2, 3]\n"
+"    iex> MapSet.union(MapSet.new([1, 2]), MapSet.new([2, 3, 4]))\n"
+"    #MapSet<[1, 2, 3, 4]>\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def MapSet.new()
-#: lib/map_set.ex:42 
+#. TRANSLATORS: def MapSet.member?(map_set, value)
+#: lib/map_set.ex:241 
 msgid ""
-"Returns a new set.\n"
+"Checks if `set` contains `value`.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    iex> MapSet.new\n"
-"    #MapSet<[]>\n"
+"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 2)\n"
+"    true\n"
+"    iex> MapSet.member?(MapSet.new([1, 2, 3]), 4)\n"
+"    false\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: Elixir.MapSet Summary
@@ -209,4 +198,15 @@ msgid ""
 "\n"
 "Sets can also be constructed starting from other collection-type data\n"
 "structures: for example, see `MapSet.new/1` or `Enum.into/2`.\n"
+msgstr ""
+#. TRANSLATORS: def MapSet.new()
+#: lib/map_set.ex:42 
+msgid ""
+"Returns a new set.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> MapSet.new\n"
+"    #MapSet<[]>\n"
+"\n"
 msgstr ""

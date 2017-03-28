@@ -13,7 +13,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.11\n"
 
 #. TRANSLATORS: def Mix.Project.app_path(config \\ config())
-#: lib/mix/project.ex:419
+#: lib/mix/project.ex:420
 msgid ""
 "Returns the application path inside the build.\n"
 "\n"
@@ -50,7 +50,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Mix.Project.build_path(config \\ config())
-#: lib/mix/project.ex:356
+#: lib/mix/project.ex:357
 msgid ""
 "Returns the build path for this project.\n"
 "\n"
@@ -89,6 +89,28 @@ msgstr ""
 "    #=> \"/path/to/project/_build/dev\"\n"
 "\n"
 
+#. TRANSLATORS: def Mix.Project.consolidation_path(config \\ config())
+#: lib/mix/project.ex:461
+msgid "Returns the path where protocol consolidations are stored.\n"
+msgstr "プロトコルコンソリデーションが格納されているパスを返します。\n"
+
+#. TRANSLATORS: def Mix.Project.build_structure(config \\ config(), opts \\ [])
+#: lib/mix/project.ex:492
+msgid ""
+"Builds the project structure for the current application.\n"
+"\n"
+"## Options\n"
+"\n"
+"  * `:symlink_ebin` - symlink ebin instead of copying it\n"
+"\n"
+msgstr ""
+"現在のアプリケーションのプロジェクト構造をビルドします。\n"
+"\n"
+"## オプション\n"
+"\n"
+"  * `:symlink_ebin` - ebinをコピーする代わりにシンボリックリンクする\n"
+"\n"
+
 #. TRANSLATORS: def Mix.Project.config_files()
 #: lib/mix/project.ex:193
 msgid ""
@@ -108,30 +130,8 @@ msgstr ""
 "デフォルトでは、mix.exsファイル、ロックマニフェスト、`config`ディレクトリの\n"
 "すべての構成ファイルを含んでいます。\n"
 
-#. TRANSLATORS: def Mix.Project.consolidation_path(config \\ config())
-#: lib/mix/project.ex:460
-msgid "Returns the path where protocol consolidations are stored.\n"
-msgstr "プロトコルコンソリデーションが格納されているパスを返します。\n"
-
-#. TRANSLATORS: def Mix.Project.build_structure(config \\ config(), opts \\ [])
-#: lib/mix/project.ex:491
-msgid ""
-"Builds the project structure for the current application.\n"
-"\n"
-"## Options\n"
-"\n"
-"  * `:symlink_ebin` - symlink ebin instead of copying it\n"
-"\n"
-msgstr ""
-"現在のアプリケーションのプロジェクト構造をビルドします。\n"
-"\n"
-"## オプション\n"
-"\n"
-"  * `:symlink_ebin` - ebinをコピーする代わりにシンボリックリンクする\n"
-"\n"
-
 #. TRANSLATORS: def Mix.Project.deps_paths()
-#: lib/mix/project.ex:340
+#: lib/mix/project.ex:341
 msgid ""
 "Returns the full path of all dependencies as a map.\n"
 "\n"
@@ -150,7 +150,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Mix.Project.compile(args, config \\ config())
-#: lib/mix/project.ex:467
+#: lib/mix/project.ex:468
 msgid ""
 "Compiles the given project.\n"
 "\n"
@@ -216,51 +216,8 @@ msgstr ""
 "発生します。\n"
 "\n"
 
-#. TRANSLATORS: def Mix.Project.in_project(app, path, post_config \\ [], fun)
-#: lib/mix/project.ex:278
-msgid ""
-"Runs the given `fun` inside the given project.\n"
-"\n"
-"This function changes the current working directory and\n"
-"loads the project at the given directory onto the project\n"
-"stack.\n"
-"\n"
-"A `post_config` can be passed that will be merged into\n"
-"the project configuration.\n"
-"\n"
-"`fun` is called with the module name of the given `Mix.Project`.\n"
-"The return value of this function is the return value of `fun`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    Mix.Project.in_project :my_app, \"/path/to/my_app\", fn module ->\n"
-"      \"Mixfile is: #{inspect module}\"\n"
-"    end\n"
-"    #=> \"Mixfile is: MyApp.Mixfile\"\n"
-"\n"
-msgstr ""
-"指定した`fun`を指定したプロジェクトで実行します。\n"
-"\n"
-"この関数はカレントワーキングディレクトリを変更し、\n"
-"指定したディレクトリにあるプロジェクトをプロジェクト\n"
-"スタックにロードします。\n"
-"\n"
-"プロジェクトの構成にマージされる`post_config`を\n"
-"渡すことができます。\n"
-"\n"
-"`fun`は指定した`Mix.Project`のモジュール名を引数に\n"
-"呼びされます。この関数の返り値は`fun`の返り値です。\n"
-"\n"
-"## 例\n"
-"\n"
-"    Mix.Project.in_project :my_app, \"/path/to/my_app\", fn module ->\n"
-"      \"Mixfile is: #{inspect module}\"\n"
-"    end\n"
-"    #=> \"Mixfile is: MyApp.Mixfile\"\n"
-"\n"
-
 #. TRANSLATORS: def Mix.Project.manifest_path(config \\ config())
-#: lib/mix/project.ex:393
+#: lib/mix/project.ex:394
 msgid ""
 "Returns the path where manifests are stored.\n"
 "\n"
@@ -314,36 +271,8 @@ msgstr ""
 "それがカレントタスクの要件である場合は、この関数ではなく`get!/0`を\n"
 "呼び出すべきです。\n"
 
-#. TRANSLATORS: def Mix.Project.umbrella?(config \\ config())
-#: lib/mix/project.ex:219
-msgid "Returns `true` if project is an umbrella project.\n"
-msgstr "プロジェクトがアンプレラプロジェクトの場合、`true`を返します。\n"
-
-#. TRANSLATORS: def Mix.Project.deps_path(config \\ config())
-#: lib/mix/project.ex:324
-msgid ""
-"Returns the path where dependencies are stored for this project.\n"
-"\n"
-"The returned path will be expanded.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    Mix.Project.deps_path\n"
-"    #=> \"/path/to/project/deps\"\n"
-"\n"
-msgstr ""
-"このプロジェクトの依存関係が格納されるパスを返します。\n"
-"\n"
-"返されるパスは展開されます。\n"
-"\n"
-"## 例\n"
-"\n"
-"    Mix.Project.deps_path\n"
-"    #=> \"/path/to/project/deps\"\n"
-"\n"
-
 #. TRANSLATORS: def Mix.Project.compile_path(config \\ config())
-#: lib/mix/project.ex:444
+#: lib/mix/project.ex:445
 msgid ""
 "Returns the paths this project compiles to.\n"
 "\n"
@@ -366,7 +295,7 @@ msgstr ""
 "\n"
 
 #. TRANSLATORS: def Mix.Project.ensure_structure(config \\ config(), opts \\ [])
-#: lib/mix/project.ex:533
+#: lib/mix/project.ex:534
 msgid ""
 "Ensures the project structure exists.\n"
 "\n"
@@ -375,6 +304,77 @@ msgstr ""
 "プロジェクト構造が存在することを保証します。\n"
 "\n"
 "プロジェクトが存在する場合は何もしません。そうでない場合はビルドします。\n"
+
+#. TRANSLATORS: def Mix.Project.deps_path(config \\ config())
+#: lib/mix/project.ex:325
+msgid ""
+"Returns the path where dependencies are stored for this project.\n"
+"\n"
+"The returned path will be expanded.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    Mix.Project.deps_path\n"
+"    #=> \"/path/to/project/deps\"\n"
+"\n"
+msgstr ""
+"このプロジェクトの依存関係が格納されるパスを返します。\n"
+"\n"
+"返されるパスは展開されます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    Mix.Project.deps_path\n"
+"    #=> \"/path/to/project/deps\"\n"
+"\n"
+
+#. TRANSLATORS: def Mix.Project.umbrella?(config \\ config())
+#: lib/mix/project.ex:219
+msgid "Returns `true` if project is an umbrella project.\n"
+msgstr "プロジェクトがアンプレラプロジェクトの場合、`true`を返します。\n"
+
+#. TRANSLATORS: def Mix.Project.in_project(app, path, post_config \\ [], fun)
+#: lib/mix/project.ex:279
+msgid ""
+"Runs the given `fun` inside the given project.\n"
+"\n"
+"This function changes the current working directory and\n"
+"loads the project at the given directory onto the project\n"
+"stack.\n"
+"\n"
+"A `post_config` can be passed that will be merged into\n"
+"the project configuration.\n"
+"\n"
+"`fun` is called with the module name of the given `Mix.Project`.\n"
+"The return value of this function is the return value of `fun`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    Mix.Project.in_project :my_app, \"/path/to/my_app\", fn module ->\n"
+"      \"Mixfile is: #{inspect module}\"\n"
+"    end\n"
+"    #=> \"Mixfile is: MyApp.Mixfile\"\n"
+"\n"
+msgstr ""
+"指定した`fun`を指定したプロジェクトで実行します。\n"
+"\n"
+"この関数はカレントワーキングディレクトリを変更し、\n"
+"指定したディレクトリにあるプロジェクトをプロジェクト\n"
+"スタックにロードします。\n"
+"\n"
+"プロジェクトの構成にマージされる`post_config`を\n"
+"渡すことができます。\n"
+"\n"
+"`fun`は指定した`Mix.Project`のモジュール名を引数に\n"
+"呼びされます。この関数の返り値は`fun`の返り値です。\n"
+"\n"
+"## 例\n"
+"\n"
+"    Mix.Project.in_project :my_app, \"/path/to/my_app\", fn module ->\n"
+"      \"Mixfile is: #{inspect module}\"\n"
+"    end\n"
+"    #=> \"Mixfile is: MyApp.Mixfile\"\n"
+"\n"
 
 #. TRANSLATORS: Elixir.Mix.Project Summary
 #: lib/mix/project.ex:2
@@ -592,6 +592,6 @@ msgstr ""
 "されないようにします。\n"
 
 #. TRANSLATORS: def Mix.Project.load_paths(config \\ config())
-#: lib/mix/project.ex:547
+#: lib/mix/project.ex:548
 msgid "Returns all load paths for this project.\n"
 msgstr "このプロジェクトのすべてのロードパスを返します。\n"

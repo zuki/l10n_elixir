@@ -5,6 +5,14 @@ msgid ""
 "\n"
 "Returns `:ok` if so, otherwise raises `ArgumentError`.\n"
 msgstr ""
+#. TRANSLATORS: def Protocol.assert_impl!(protocol, base)
+#: lib/protocol.ex:82 
+msgid ""
+"Checks if the given module is loaded and is an implementation\n"
+"of the given protocol.\n"
+"\n"
+"Returns `:ok` if so, otherwise raises `ArgumentError`.\n"
+msgstr ""
 #. TRANSLATORS: def Protocol.extract_protocols(paths)
 #: lib/protocol.ex:129 
 msgid ""
@@ -25,18 +33,29 @@ msgid ""
 "    true\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Protocol.assert_impl!(protocol, base)
-#: lib/protocol.ex:82 
-msgid ""
-"Checks if the given module is loaded and is an implementation\n"
-"of the given protocol.\n"
-"\n"
-"Returns `:ok` if so, otherwise raises `ArgumentError`.\n"
-msgstr ""
 #. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
 #: lib/protocol.ex:117 
 msgid ""
 "Derives the `protocol` for `module` with the given options.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Protocol.def(signature)
+#: lib/protocol.ex:6 
+msgid ""
+"Defines a new protocol function.\n"
+"\n"
+"Protocols do not allow functions to be defined directly, instead, the\n"
+"regular `Kernel.def/*` macros are replaced by this macro which\n"
+"defines the protocol functions with the appropriate callbacks.\n"
+msgstr ""
+#. TRANSLATORS: def Protocol.consolidated?(protocol)
+#: lib/protocol.ex:220 
+msgid ""
+"Returns `true` if the protocol was consolidated.\n"
+msgstr ""
+#. TRANSLATORS: Elixir.Protocol Summary
+#: lib/protocol.ex:2 
+msgid ""
+"Functions for working with protocols.\n"
 msgstr ""
 #. TRANSLATORS: def Protocol.extract_impls(protocol, paths)
 #: lib/protocol.ex:158 
@@ -58,20 +77,6 @@ msgid ""
 "    iex> List in mods\n"
 "    true\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def Protocol.consolidated?(protocol)
-#: lib/protocol.ex:220 
-msgid ""
-"Returns `true` if the protocol was consolidated.\n"
-msgstr ""
-#. TRANSLATORS: defmacro Protocol.def(signature)
-#: lib/protocol.ex:6 
-msgid ""
-"Defines a new protocol function.\n"
-"\n"
-"Protocols do not allow functions to be defined directly, instead, the\n"
-"regular `Kernel.def/*` macros are replaced by this macro which\n"
-"defines the protocol functions with the appropriate callbacks.\n"
 msgstr ""
 #. TRANSLATORS: def Protocol.consolidate(protocol, types)
 #: lib/protocol.ex:228 
@@ -98,9 +103,4 @@ msgid ""
 "nor loads the new bytecode for the compiled module.\n"
 "However each implementation must be available and\n"
 "it will be loaded.\n"
-msgstr ""
-#. TRANSLATORS: Elixir.Protocol Summary
-#: lib/protocol.ex:2 
-msgid ""
-"Functions for working with protocols.\n"
 msgstr ""

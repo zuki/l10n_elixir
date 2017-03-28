@@ -41,18 +41,6 @@ msgid ""
 "read. If `file` exists in `loaded_paths`, a `Mix.Config.LoadError` exception\n"
 "will be raised.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Config.read_wildcard!(path, loaded_paths \\ [])
-#: lib/mix/config.ex:201 
-msgid ""
-"Reads many configuration files given by wildcard into a single config.\n"
-"\n"
-"Raises an error if `path` is a concrete filename (with no wildcards)\n"
-"but the corresponding file does not exist; if `path` matches no files,\n"
-"no errors are raised.\n"
-"\n"
-"`loaded_paths` is a list of configuration files that have been previously\n"
-"read.\n"
-msgstr ""
 #. TRANSLATORS: defmacro Mix.Config.config(app, key, opts)
 #: lib/mix/config.ex:85 
 msgid ""
@@ -84,6 +72,18 @@ msgid ""
 "\n"
 "    Application.get_env(:ecto, Repo)\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Config.read_wildcard!(path, loaded_paths \\ [])
+#: lib/mix/config.ex:201 
+msgid ""
+"Reads many configuration files given by wildcard into a single config.\n"
+"\n"
+"Raises an error if `path` is a concrete filename (with no wildcards)\n"
+"but the corresponding file does not exist; if `path` matches no files,\n"
+"no errors are raised.\n"
+"\n"
+"`loaded_paths` is a list of configuration files that have been previously\n"
+"read.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.Config.persist(config)
 #: lib/mix/config.ex:220 

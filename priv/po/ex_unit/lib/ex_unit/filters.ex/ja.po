@@ -10,6 +10,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def ExUnit.Filters.parse_path(file)
+#: lib/ex_unit/filters.ex:8
+msgid ""
+"Parses filters out of a path.\n"
+"\n"
+"Determines whether a given file path (supplied to ExUnit/Mix as arguments\n"
+"on the command line) includes a line number filter, and if so returns the\n"
+"appropriate ExUnit configuration options.\n"
+msgstr ""
+"パスからフィルタをパースします。\n"
+"\n"
+"(コマンドライン引数としてExUnit/Mixに供給される)与えられた\n"
+"ファイルパスが行番号フィルタを含んでいるか判定します。\n"
+"含んでいる場合は、適切なExUnit構成オプションを返します。\n"
+
 #. TRANSLATORS: def ExUnit.Filters.normalize(include, exclude)
 #: lib/ex_unit/filters.ex:25
 msgid ""
@@ -80,8 +95,8 @@ msgid ""
 msgstr ""
 "指定された`tags`に対して`include`と`exclude`フィルタを評価します。\n"
 "\n"
-"`:line`など、最も近い行を見つけるためにテストコレクション全体を必要とする"
-"フィルタも\n"
+"`:line`など、最も近い行を見つけるためにテストコレクション全体を必要とするフィ"
+"ルタも\n"
 "あります。それが引数としてコレクションも渡されなければならない理由です。\n"
 "\n"
 "フィルタは正規表現、または、フィルタとタグ値が比較される前に\n"
@@ -96,21 +111,6 @@ msgstr ""
 "    iex> ExUnit.Filters.eval([foo: \"bar\"], [:foo], %{foo: \"baz\"}, [])\n"
 "    {:error, \"due to foo filter\"}\n"
 "\n"
-
-#. TRANSLATORS: def ExUnit.Filters.parse_path(file)
-#: lib/ex_unit/filters.ex:8
-msgid ""
-"Parses filters out of a path.\n"
-"\n"
-"Determines whether a given file path (supplied to ExUnit/Mix as arguments\n"
-"on the command line) includes a line number filter, and if so returns the\n"
-"appropriate ExUnit configuration options.\n"
-msgstr ""
-"パスからフィルタをパースします。\n"
-"\n"
-"(コマンドライン引数としてExUnit/Mixに供給される)与えられた\n"
-"ファイルパスが行番号フィルタを含んでいるか判定します。\n"
-"含んでいる場合は、適切なExUnit構成オプションを返します。\n"
 
 #. TRANSLATORS: Elixir.ExUnit.Filters Summary
 #: lib/ex_unit/filters.ex:2

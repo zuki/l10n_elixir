@@ -3,11 +3,6 @@
 msgid ""
 "Receives a test and formats its failure.\n"
 msgstr ""
-#. TRANSLATORS: def ExUnit.Formatter.format_test_case_failure(test_case, failures, counter, width, formatter)
-#: lib/ex_unit/formatter.ex:153 
-msgid ""
-"Receives a test case and formats its failure.\n"
-msgstr ""
 #. TRANSLATORS: def ExUnit.Formatter.format_time(run_us, load_us)
 #: lib/ex_unit/formatter.ex:41 
 msgid ""
@@ -38,6 +33,11 @@ msgid ""
 "    iex> format_filters([run: true, slow: false], :include)\n"
 "    \"Including tags: [run: true, slow: false]\"\n"
 "\n"
+msgstr ""
+#. TRANSLATORS: def ExUnit.Formatter.format_test_case_failure(test_case, failures, counter, width, formatter)
+#: lib/ex_unit/formatter.ex:153 
+msgid ""
+"Receives a test case and formats its failure.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.ExUnit.Formatter Summary
 #: lib/ex_unit/formatter.ex:2 

@@ -25,16 +25,16 @@ msgid ""
 "dependency. This list should filter the loaded children.\n"
 msgstr ""
 
-#. TRANSLATORS: def Mix.RemoteConverger.get()
-#: lib/mix/remote_converger.ex:33
-msgid "Gets registered remote converger.\n"
-msgstr ""
-
 #. TRANSLATORS: @callback post_converge/0
 #: lib/mix/remote_converger.ex:27
 msgid ""
 "Called after all convergers have run so that the remote\n"
 "converger can perform clean up.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.RemoteConverger.get()
+#: lib/mix/remote_converger.ex:33
+msgid "Gets registered remote converger.\n"
 msgstr ""
 
 #. TRANSLATORS: def Mix.RemoteConverger.register(mod)

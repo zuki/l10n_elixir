@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: 2017-03-16 10:35+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
@@ -9,7 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"POT-Creation-Date: \n"
 "X-Generator: Poedit 1.8.12\n"
 
 #. TRANSLATORS: def Protocol.assert_protocol!(module)
@@ -19,7 +19,22 @@ msgid ""
 "\n"
 "Returns `:ok` if so, otherwise raises `ArgumentError`.\n"
 msgstr ""
-"指定したモジュールがロードされ、それがプロトコルであるか否かをチェックします。\n"
+"指定したモジュールがロードされ、それがプロトコルであるか否かをチェックしま"
+"す。\n"
+"\n"
+"そうである場合は`:ok`を、そうでなければ`ArgumentError`を発生させます。\n"
+
+#. TRANSLATORS: def Protocol.assert_impl!(protocol, base)
+#: lib/protocol.ex:82
+msgid ""
+"Checks if the given module is loaded and is an implementation\n"
+"of the given protocol.\n"
+"\n"
+"Returns `:ok` if so, otherwise raises `ArgumentError`.\n"
+msgstr ""
+"指定したモジュールがロードされ、それが指定したプロトコルの実装であるか否か"
+"を\n"
+"チェックします。\n"
 "\n"
 "そうである場合は`:ok`を、そうでなければ`ArgumentError`を発生させます。\n"
 
@@ -60,23 +75,35 @@ msgstr ""
 "    true\n"
 "\n"
 
-#. TRANSLATORS: def Protocol.assert_impl!(protocol, base)
-#: lib/protocol.ex:82
-msgid ""
-"Checks if the given module is loaded and is an implementation\n"
-"of the given protocol.\n"
-"\n"
-"Returns `:ok` if so, otherwise raises `ArgumentError`.\n"
-msgstr ""
-"指定したモジュールがロードされ、それが指定したプロトコルの実装であるか否かを\n"
-"チェックします。\n"
-"\n"
-"そうである場合は`:ok`を、そうでなければ`ArgumentError`を発生させます。\n"
-
 #. TRANSLATORS: defmacro Protocol.derive(protocol, module, options \\ [])
 #: lib/protocol.ex:117
 msgid "Derives the `protocol` for `module` with the given options.\n"
 msgstr "指定したオプションで`module`のための`protocol`を導出します。\n"
+
+#. TRANSLATORS: defmacro Protocol.def(signature)
+#: lib/protocol.ex:6
+msgid ""
+"Defines a new protocol function.\n"
+"\n"
+"Protocols do not allow functions to be defined directly, instead, the\n"
+"regular `Kernel.def/*` macros are replaced by this macro which\n"
+"defines the protocol functions with the appropriate callbacks.\n"
+msgstr ""
+"新しいプロトコル関数を定義します。\n"
+"\n"
+"プロトコルは関数を直接定義することはできます。代わりに、通常の\n"
+"`Kernel.def/*`マクロは、適切なコールバックでプロトコル関数を\n"
+"定義するこのマクロに置き換えられます。\n"
+
+#. TRANSLATORS: def Protocol.consolidated?(protocol)
+#: lib/protocol.ex:220
+msgid "Returns `true` if the protocol was consolidated.\n"
+msgstr "プロトコルが統合（consolidate）されている場合、`true`を返します。\n"
+
+#. TRANSLATORS: Elixir.Protocol Summary
+#: lib/protocol.ex:2
+msgid "Functions for working with protocols.\n"
+msgstr "プロトコルを処理する関数です。\n"
 
 #. TRANSLATORS: def Protocol.extract_impls(protocol, paths)
 #: lib/protocol.ex:158
@@ -115,26 +142,6 @@ msgstr ""
 "    iex> List in mods\n"
 "    true\n"
 "\n"
-
-#. TRANSLATORS: def Protocol.consolidated?(protocol)
-#: lib/protocol.ex:220
-msgid "Returns `true` if the protocol was consolidated.\n"
-msgstr "プロトコルが統合（consolidate）されている場合、`true`を返します。\n"
-
-#. TRANSLATORS: defmacro Protocol.def(signature)
-#: lib/protocol.ex:6
-msgid ""
-"Defines a new protocol function.\n"
-"\n"
-"Protocols do not allow functions to be defined directly, instead, the\n"
-"regular `Kernel.def/*` macros are replaced by this macro which\n"
-"defines the protocol functions with the appropriate callbacks.\n"
-msgstr ""
-"新しいプロトコル関数を定義します。\n"
-"\n"
-"プロトコルは関数を直接定義することはできます。代わりに、通常の\n"
-"`Kernel.def/*`マクロは、適切なコールバックでプロトコル関数を\n"
-"定義するこのマクロに置き換えられます。\n"
 
 #. TRANSLATORS: def Protocol.consolidate(protocol, types)
 #: lib/protocol.ex:228
@@ -180,8 +187,3 @@ msgstr ""
 "この関数は、いかなる時点においてもプロトコルをロードしません。また、\n"
 "コンパイルされたモジュールの新バイトコードをロードすることもありません。\n"
 "しかし、各実装は利用可能であり、ロードされます。\n"
-
-#. TRANSLATORS: Elixir.Protocol Summary
-#: lib/protocol.ex:2
-msgid "Functions for working with protocols.\n"
-msgstr "プロトコルを処理する関数です。\n"

@@ -8,15 +8,15 @@ msgstr ""
 msgid ""
 "Callback for destructure.\n"
 msgstr ""
-#. TRANSLATORS: def Kernel.Utils.defdelegate(fun, opts)
-#: lib/kernel/utils.ex:21 
-msgid ""
-"Callback for defdelegate.\n"
-msgstr ""
 #. TRANSLATORS: def Kernel.Utils.defstruct(module, fields)
 #: lib/kernel/utils.ex:68 
 msgid ""
 "Callback for defstruct.\n"
+msgstr ""
+#. TRANSLATORS: def Kernel.Utils.defdelegate(fun, opts)
+#: lib/kernel/utils.ex:21 
+msgid ""
+"Callback for defdelegate.\n"
 msgstr ""
 #. TRANSLATORS: def Kernel.Utils.raise(msg)
 #: lib/kernel/utils.ex:110 

@@ -1,3 +1,33 @@
+#. TRANSLATORS: def Port.list()
+#: lib/port.ex:256 
+msgid ""
+"Returns a list of all ports in the current node.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.info(port, spec)
+#: lib/port.ex:237 
+msgid ""
+"Returns information about the `port` or `nil` if the port is closed.\n"
+"\n"
+"For more information, see [`:erlang.port_info/2`](http://www.erlang.org/doc/man/erlang.html#port_info-2).\n"
+msgstr ""
+#. TRANSLATORS: def Port.command(port, data, options \\ [])
+#: lib/port.ex:204 
+msgid ""
+"Sends `data` to the port driver `port`.\n"
+"\n"
+"For more information, see [`:erlang.port_command/2`](http://www.erlang.org/doc/man/erlang.html#port_command-2).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.info(port)
+#: lib/port.ex:228 
+msgid ""
+"Returns information about the `port` or `nil` if the port is closed.\n"
+"\n"
+"For more information, see [`:erlang.port_info/1`](http://www.erlang.org/doc/man/erlang.html#port_info-1).\n"
+msgstr ""
 #. TRANSLATORS: def Port.open(name, settings)
 #: lib/port.ex:167 
 msgid ""
@@ -20,35 +50,21 @@ msgid ""
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
-#. TRANSLATORS: def Port.list()
-#: lib/port.ex:256 
-msgid ""
-"Returns a list of all ports in the current node.\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Port.command(port, data, options \\ [])
-#: lib/port.ex:204 
-msgid ""
-"Sends `data` to the port driver `port`.\n"
-"\n"
-"For more information, see [`:erlang.port_command/2`](http://www.erlang.org/doc/man/erlang.html#port_command-2).\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-#. TRANSLATORS: def Port.info(port)
-#: lib/port.ex:228 
-msgid ""
-"Returns information about the `port` or `nil` if the port is closed.\n"
-"\n"
-"For more information, see [`:erlang.port_info/1`](http://www.erlang.org/doc/man/erlang.html#port_info-1).\n"
-msgstr ""
 #. TRANSLATORS: def Port.close(port)
 #: lib/port.ex:192 
 msgid ""
 "Closes the `port`.\n"
 "\n"
 "For more information, see [`:erlang.port_close/1`](http://www.erlang.org/doc/man/erlang.html#port_close-1).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+#. TRANSLATORS: def Port.connect(port, pid)
+#: lib/port.ex:216 
+msgid ""
+"Associates the `port` identifier with a `pid`.\n"
+"\n"
+"For more information, see [`:erlang.port_connect/2`](http://www.erlang.org/doc/man/erlang.html#port_connect-2).\n"
 "\n"
 "Inlined by the compiler.\n"
 msgstr ""
@@ -212,20 +228,4 @@ msgid ""
 "    Port.open({:spawn_executable, \"/path/to/wrapper\"},\n"
 "              [args: [\"/path/to/program\", \"a\", \"b\", \"c\"]])\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def Port.info(port, spec)
-#: lib/port.ex:237 
-msgid ""
-"Returns information about the `port` or `nil` if the port is closed.\n"
-"\n"
-"For more information, see [`:erlang.port_info/2`](http://www.erlang.org/doc/man/erlang.html#port_info-2).\n"
-msgstr ""
-#. TRANSLATORS: def Port.connect(port, pid)
-#: lib/port.ex:216 
-msgid ""
-"Associates the `port` identifier with a `pid`.\n"
-"\n"
-"For more information, see [`:erlang.port_connect/2`](http://www.erlang.org/doc/man/erlang.html#port_connect-2).\n"
-"\n"
-"Inlined by the compiler.\n"
 msgstr ""

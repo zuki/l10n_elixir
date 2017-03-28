@@ -1,3 +1,17 @@
+#. TRANSLATORS: def StringIO.contents(pid)
+#: lib/string_io.ex:48 
+msgid ""
+"Returns the current input/output buffers for the given IO\n"
+"device.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> {:ok, pid} = StringIO.open(\"in\")\n"
+"    iex> IO.write(pid, \"out\")\n"
+"    iex> StringIO.contents(pid)\n"
+"    {\"in\", \"out\"}\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: Elixir.StringIO Summary
 #: lib/string_io.ex:2 
 msgid ""
@@ -67,19 +81,5 @@ msgid ""
 "    \"foo\"\n"
 "    iex> StringIO.contents(pid)\n"
 "    {\"\", \">\"}\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def StringIO.contents(pid)
-#: lib/string_io.ex:48 
-msgid ""
-"Returns the current input/output buffers for the given IO\n"
-"device.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> {:ok, pid} = StringIO.open(\"in\")\n"
-"    iex> IO.write(pid, \"out\")\n"
-"    iex> StringIO.contents(pid)\n"
-"    {\"in\", \"out\"}\n"
 "\n"
 msgstr ""

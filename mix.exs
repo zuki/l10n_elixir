@@ -190,7 +190,7 @@ defmodule L10nElixir.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:elixir, github: "elixir-lang/elixir", tag: "v1.4.0"}, # tag: "v1.2.0"},
+    [{:elixir, github: "elixir-lang/elixir", tag: "v1.4.2"}, # tag: "v1.2.0"},
      {:ex_doc, "~> 0.14.5"},
      {:earmark, "~> 1.0.0"},
      {:exgettext, github: "zuki/exgettext"},

@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: 2017-03-22 18:26+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
@@ -9,7 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"POT-Creation-Date: \n"
 "X-Generator: Poedit 1.8.12\n"
 
 #. TRANSLATORS: Elixir.Range Summary
@@ -85,6 +85,11 @@ msgstr ""
 "    true\n"
 "\n"
 
+#. TRANSLATORS: def Range.new(first, last)
+#: lib/range.ex:46
+msgid "Creates a new range.\n"
+msgstr "新しい範囲を作成します。\n"
+
 #. TRANSLATORS: def Range.range?(term)
 #: lib/range.ex:60
 msgid ""
@@ -109,11 +114,6 @@ msgstr ""
 "    iex> Range.range?(0)\n"
 "    false\n"
 "\n"
-
-#. TRANSLATORS: def Range.new(first, last)
-#: lib/range.ex:46
-msgid "Creates a new range.\n"
-msgstr "新しい範囲を作成します。\n"
 
 #~ msgid "Counts how many items are in the range.\n"
 #~ msgstr "範囲(range)のアイテムの数を数えます。\n"

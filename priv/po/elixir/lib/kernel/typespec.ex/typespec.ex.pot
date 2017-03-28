@@ -9,16 +9,27 @@ msgid ""
 "The module must have a corresponding BEAM file which can be\n"
 "located by the runtime system.\n"
 msgstr ""
+#. TRANSLATORS: def Kernel.Typespec.spec_to_ast(name, spec)
+#: lib/kernel/typespec.ex:157 
+msgid ""
+"Converts a spec clause back to Elixir AST.\n"
+msgstr ""
 #. TRANSLATORS: def Kernel.Typespec.defines_spec?(module, name, arity)
 #: lib/kernel/typespec.ex:131 
 msgid ""
 "Returns `true` if the current module defines a given spec.\n"
 "This function is only available for modules being compiled.\n"
 msgstr ""
-#. TRANSLATORS: def Kernel.Typespec.spec_to_ast(name, spec)
-#: lib/kernel/typespec.ex:157 
+#. TRANSLATORS: def Kernel.Typespec.beam_callbacks(module)
+#: lib/kernel/typespec.ex:276 
 msgid ""
-"Converts a spec clause back to Elixir AST.\n"
+"Returns all callbacks available from the module's BEAM code.\n"
+"\n"
+"The result is returned as a list of tuples where the first\n"
+"element is spec name and arity and the second is the spec.\n"
+"\n"
+"The module must have a corresponding BEAM file\n"
+"which can be located by the runtime system.\n"
 msgstr ""
 #. TRANSLATORS: defmacro Kernel.Typespec.defmacrocallback(spec)
 #: lib/kernel/typespec.ex:80 
@@ -36,17 +47,6 @@ msgstr ""
 msgid ""
 "Defines a `spec` by receiving a typespec expression.\n"
 msgstr ""
-#. TRANSLATORS: def Kernel.Typespec.beam_callbacks(module)
-#: lib/kernel/typespec.ex:276 
-msgid ""
-"Returns all callbacks available from the module's BEAM code.\n"
-"\n"
-"The result is returned as a list of tuples where the first\n"
-"element is spec name and arity and the second is the spec.\n"
-"\n"
-"The module must have a corresponding BEAM file\n"
-"which can be located by the runtime system.\n"
-msgstr ""
 #. TRANSLATORS: def Kernel.Typespec.type_to_ast(type)
 #: lib/kernel/typespec.ex:208 
 msgid ""
@@ -63,17 +63,6 @@ msgid ""
 "    @typep my_type :: atom\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: defmacro Kernel.Typespec.defspec(spec)
-#: lib/kernel/typespec.ex:49 
-msgid ""
-"Defines a spec.\n"
-"This macro is responsible for handling the attribute `@spec`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    @spec add(number, number) :: number\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Kernel.Typespec.define_type(kind, expr, doc \\ nil, env)
 #: lib/kernel/typespec.ex:101 
 msgid ""
@@ -84,6 +73,17 @@ msgstr ""
 msgid ""
 "Returns `true` if the current module defines a callback.\n"
 "This function is only available for modules being compiled.\n"
+msgstr ""
+#. TRANSLATORS: defmacro Kernel.Typespec.defspec(spec)
+#: lib/kernel/typespec.ex:49 
+msgid ""
+"Defines a spec.\n"
+"This macro is responsible for handling the attribute `@spec`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    @spec add(number, number) :: number\n"
+"\n"
 msgstr ""
 #. TRANSLATORS: defmacro Kernel.Typespec.defcallback(spec)
 #: lib/kernel/typespec.ex:64 
@@ -107,17 +107,6 @@ msgid ""
 "The module must have a corresponding BEAM file which can be\n"
 "located by the runtime system.\n"
 msgstr ""
-#. TRANSLATORS: defmacro Kernel.Typespec.defopaque(type)
-#: lib/kernel/typespec.ex:19 
-msgid ""
-"Defines an opaque type.\n"
-"This macro is responsible for handling the attribute `@opaque`.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    @opaque my_type :: atom\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Kernel.Typespec.defines_type?(module, name, arity)
 #: lib/kernel/typespec.ex:116 
 msgid ""
@@ -134,5 +123,16 @@ msgid ""
 "## Examples\n"
 "\n"
 "    @type my_type :: atom\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: defmacro Kernel.Typespec.defopaque(type)
+#: lib/kernel/typespec.ex:19 
+msgid ""
+"Defines an opaque type.\n"
+"This macro is responsible for handling the attribute `@opaque`.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    @opaque my_type :: atom\n"
 "\n"
 msgstr ""

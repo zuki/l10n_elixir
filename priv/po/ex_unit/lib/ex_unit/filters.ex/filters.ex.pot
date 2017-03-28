@@ -1,3 +1,12 @@
+#. TRANSLATORS: def ExUnit.Filters.parse_path(file)
+#: lib/ex_unit/filters.ex:8 
+msgid ""
+"Parses filters out of a path.\n"
+"\n"
+"Determines whether a given file path (supplied to ExUnit/Mix as arguments\n"
+"on the command line) includes a line number filter, and if so returns the\n"
+"appropriate ExUnit configuration options.\n"
+msgstr ""
 #. TRANSLATORS: def ExUnit.Filters.normalize(include, exclude)
 #: lib/ex_unit/filters.ex:25 
 msgid ""
@@ -44,15 +53,6 @@ msgid ""
 "    iex> ExUnit.Filters.eval([foo: \"bar\"], [:foo], %{foo: \"baz\"}, [])\n"
 "    {:error, \"due to foo filter\"}\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def ExUnit.Filters.parse_path(file)
-#: lib/ex_unit/filters.ex:8 
-msgid ""
-"Parses filters out of a path.\n"
-"\n"
-"Determines whether a given file path (supplied to ExUnit/Mix as arguments\n"
-"on the command line) includes a line number filter, and if so returns the\n"
-"appropriate ExUnit configuration options.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.ExUnit.Filters Summary
 #: lib/ex_unit/filters.ex:2 

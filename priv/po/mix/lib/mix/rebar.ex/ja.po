@@ -10,31 +10,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def Mix.Rebar.merge_config(old, new)
-#: lib/mix/rebar.ex:64
-msgid "Merges a rebar3 parent config with a child config.\n"
-msgstr ""
-
-#. TRANSLATORS: def Mix.Rebar.recur(config, fun)
-#: lib/mix/rebar.ex:201
-msgid ""
-"Runs `fun` for the given config and for each `sub_dirs` in the\n"
-"given Rebar config.\n"
+#. TRANSLATORS: def Mix.Rebar.apply_overrides(app, config, overrides)
+#: lib/mix/rebar.ex:223
+msgid "Applies the given overrides for app config.\n"
 msgstr ""
 
 #. TRANSLATORS: def Mix.Rebar.dependency_config(config)
-#: lib/mix/rebar.ex:173
+#: lib/mix/rebar.ex:71
 msgid ""
 "Update Rebar configuration to be more suitable for dependencies.\n"
 "\n"
 "Drops `warnings_as_errors` from `erl_opts`.\n"
-msgstr ""
-
-#. TRANSLATORS: def Mix.Rebar.global_rebar_cmd(manager)
-#: lib/mix/rebar.ex:11
-msgid ""
-"Returns the path to the global copy of `rebar`, defined by the\n"
-"environment variables `MIX_REBAR` or `MIX_REBAR3`.\n"
 msgstr ""
 
 #. TRANSLATORS: def Mix.Rebar.local_rebar_cmd(manager)
@@ -42,14 +28,14 @@ msgstr ""
 msgid "Returns the path to the local copy of `rebar`, if one exists.\n"
 msgstr ""
 
-#. TRANSLATORS: def Mix.Rebar.deps(app, config, overrides)
-#: lib/mix/rebar.ex:187
+#. TRANSLATORS: def Mix.Rebar.deps(config)
+#: lib/mix/rebar.ex:85
 msgid ""
 "Parses the dependencies in given `rebar.config` to Mix's dependency format.\n"
 msgstr ""
 
 #. TRANSLATORS: def Mix.Rebar.serialize_config(config)
-#: lib/mix/rebar.ex:166
+#: lib/mix/rebar.ex:64
 msgid "Serializes a Rebar config to a term file.\n"
 msgstr ""
 
@@ -63,6 +49,24 @@ msgstr ""
 #. TRANSLATORS: def Mix.Rebar.local_rebar_path(manager)
 #: lib/mix/rebar.ex:4
 msgid "Returns the path supposed to host the local copy of `rebar`.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.recur(config, fun)
+#: lib/mix/rebar.ex:98
+msgid ""
+"Runs `fun` for the given config and for each `sub_dirs` in the\n"
+"given Rebar config.\n"
+"\n"
+"`sub_dirs` is only supported in Rebar 2. In Rebar 3, the equivalent\n"
+"to umbrella apps cannot be used as dependencies, so we don't need\n"
+"to worry about such cases in Mix.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Rebar.global_rebar_cmd(manager)
+#: lib/mix/rebar.ex:11
+msgid ""
+"Returns the path to the global copy of `rebar`, defined by the\n"
+"environment variables `MIX_REBAR` or `MIX_REBAR3`.\n"
 msgstr ""
 
 #. TRANSLATORS: def Mix.Rebar.rebar_cmd(manager)

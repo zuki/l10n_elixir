@@ -389,24 +389,6 @@ msgstr "Mix環境を返します。\n"
 msgid "Raises a Mix error that is nicely formatted.\n"
 msgstr "きれいにフォーマットされたMixエラーを発生させます。\n"
 
-#. TRANSLATORS: def Mix.env(env)
-#: lib/mix.ex:207
-msgid ""
-"Changes the current Mix environment to `env`.\n"
-"\n"
-"Be careful when invoking this function as any project\n"
-"configuration won't be reloaded.\n"
-msgstr ""
-"現在のMix環境を`env`に変更します。\n"
-"\n"
-"この関数の実行には注意が必要です。プロジェクトの設定は\n"
-"リロードされないからです。\n"
-
-#. TRANSLATORS: def Mix.debug(debug)
-#: lib/mix.ex:264
-msgid "Sets Mix debug mode.\n"
-msgstr "Mixデバッグモードを設定します。\n"
-
 #. TRANSLATORS: def Mix.shell()
 #: lib/mix.ex:232
 msgid ""
@@ -433,6 +415,24 @@ msgstr ""
 "（`Mix.Shell.Process`を参照）。\n"
 "\n"
 "デフォルトでは、`Mix.Shell.IO`を返します。\n"
+
+#. TRANSLATORS: def Mix.env(env)
+#: lib/mix.ex:207
+msgid ""
+"Changes the current Mix environment to `env`.\n"
+"\n"
+"Be careful when invoking this function as any project\n"
+"configuration won't be reloaded.\n"
+msgstr ""
+"現在のMix環境を`env`に変更します。\n"
+"\n"
+"この関数の実行には注意が必要です。プロジェクトの設定は\n"
+"リロードされないからです。\n"
+
+#. TRANSLATORS: def Mix.debug(debug)
+#: lib/mix.ex:264
+msgid "Sets Mix debug mode.\n"
+msgstr "Mixデバッグモードを設定します。\n"
 
 #. TRANSLATORS: def Mix.debug?()
 #: lib/mix.ex:257

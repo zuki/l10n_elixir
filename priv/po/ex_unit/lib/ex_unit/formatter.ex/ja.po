@@ -15,11 +15,6 @@ msgstr ""
 msgid "Receives a test and formats its failure.\n"
 msgstr "テストを受け取り、その失敗をフォーマットします。\n"
 
-#. TRANSLATORS: def ExUnit.Formatter.format_test_case_failure(test_case, failures, counter, width, formatter)
-#: lib/ex_unit/formatter.ex:153
-msgid "Receives a test case and formats its failure.\n"
-msgstr "テストケースを受け取り、その失敗をフォーマットします。\n"
-
 #. TRANSLATORS: def ExUnit.Formatter.format_time(run_us, load_us)
 #: lib/ex_unit/formatter.ex:41
 msgid ""
@@ -76,6 +71,11 @@ msgstr ""
 "    \"Including tags: [run: true, slow: false]\"\n"
 "\n"
 
+#. TRANSLATORS: def ExUnit.Formatter.format_test_case_failure(test_case, failures, counter, width, formatter)
+#: lib/ex_unit/formatter.ex:153
+msgid "Receives a test case and formats its failure.\n"
+msgstr "テストケースを受け取り、その失敗をフォーマットします。\n"
+
 #. TRANSLATORS: Elixir.ExUnit.Formatter Summary
 #: lib/ex_unit/formatter.ex:2
 msgid ""
@@ -121,10 +121,12 @@ msgstr ""
 "    実行とロードにかかったマイクロ秒単位の時間です。\n"
 "\n"
 "  * `{:case_started, test_case}` -\n"
-"    テストケースが開始しました。詳細は、`ExUnit.TestCase`を参照してください。\n"
+"    テストケースが開始しました。詳細は、`ExUnit.TestCase`を参照してくださ"
+"い。\n"
 "\n"
 "  * `{:case_finished, test_case}` -\n"
-"    テストケースが終了しました。詳細は、`ExUnit.TestCase`を参照してください。\n"
+"    テストケースが終了しました。詳細は、`ExUnit.TestCase`を参照してくださ"
+"い。\n"
 "\n"
 "  * `{:test_started, test}` -\n"
 "    テストが開始しました。詳細は、`ExUnit.Test`を参照してください。\n"

@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: 2017-03-24 18:07+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
@@ -9,7 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"POT-Creation-Date: \n"
 "X-Generator: Poedit 1.8.12\n"
 
 #. TRANSLATORS: def Macro.Env.in_match?(env)
@@ -26,17 +26,17 @@ msgid ""
 "information as keys.\n"
 msgstr "ファイルと行番号情報をキーとして含むキーワードリストを返します。\n"
 
+#. TRANSLATORS: def Macro.Env.stacktrace(env)
+#: lib/macro/env.ex:125
+msgid "Returns the environment stacktrace.\n"
+msgstr "環境のスタックトレースを返します。\n"
+
 #. TRANSLATORS: def Macro.Env.in_guard?(env)
 #: lib/macro/env.ex:109
 msgid ""
 "Returns whether the compilation environment is currently\n"
 "inside a guard.\n"
 msgstr "コンパイル環境が現在、ガードの内部か否かを返します。\n"
-
-#. TRANSLATORS: def Macro.Env.stacktrace(env)
-#: lib/macro/env.ex:125
-msgid "Returns the environment stacktrace.\n"
-msgstr "環境のスタックトレースを返します。\n"
 
 #. TRANSLATORS: Elixir.Macro.Env Summary
 #: lib/macro/env.ex:2
@@ -118,7 +118,8 @@ msgstr ""
 "  * `macros` - 各モジュールからimportされたマクロのリスト\n"
 "  * `macro_aliases` - 現在のマクロの内側で定義されたエイリアスのリスト\n"
 "  * `context_modules` - 現在のコンテキストで定義されたモジュールのリスト\n"
-"  * `vars` - 定義されているすべての変数を`{var, context}`形式で保持するリスト\n"
+"  * `vars` - 定義されているすべての変数を`{var, context}`形式で保持するリス"
+"ト\n"
 "  * `export_vars` - constructでexportされているすべての変数を保持するリスト\n"
 "    （`nil`の場合もある）\n"
 "  * `lexical_tracker` - ユーザ情報を保つことを責務とするレキシカル\n"

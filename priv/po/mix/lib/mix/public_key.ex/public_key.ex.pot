@@ -1,8 +1,3 @@
-#. TRANSLATORS: def Mix.PublicKey.verify(binary, hash, signature)
-#: lib/mix/public_key.ex:51 
-msgid ""
-"Verifies the given binary has the proper signature using the system public keys.\n"
-msgstr ""
 #. TRANSLATORS: def Mix.PublicKey.public_keys()
 #: lib/mix/public_key.ex:21 
 msgid ""
@@ -12,6 +7,11 @@ msgstr ""
 #: lib/mix/public_key.ex:16 
 msgid ""
 "Returns the filesystem path for public keys.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.PublicKey.verify(binary, hash, signature)
+#: lib/mix/public_key.ex:51 
+msgid ""
+"Verifies the given binary has the proper signature using the system public keys.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.PublicKey.decode!(id, key)
 #: lib/mix/public_key.ex:34 

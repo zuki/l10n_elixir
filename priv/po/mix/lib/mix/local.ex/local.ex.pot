@@ -3,13 +3,10 @@
 msgid ""
 "Returns the name of an archive given a path.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Local.find_matching_versions_from_signed_csv!(name, path)
-#: lib/mix/local.ex:111 
+#. TRANSLATORS: def Mix.Local.path_for(atom)
+#: lib/mix/local.ex:33 
 msgid ""
-"Fetches the given signed CSV files, verifies and returns the matching\n"
-"Elixir version, artifact version and artifact's checksum.\n"
-"\n"
-"Used to install both Rebar and Hex from S3.\n"
+"The path for local archives or escripts.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.Local.name_for(atom, project)
 #: lib/mix/local.ex:8 
@@ -30,29 +27,32 @@ msgstr ""
 msgid ""
 "Returns all tasks in local archives.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Local.path_for(atom)
-#: lib/mix/local.ex:33 
-msgid ""
-"The path for local archives or escripts.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.Local.append_archives()
-#: lib/mix/local.ex:45 
-msgid ""
-"Appends archives paths into Erlang code path.\n"
-msgstr ""
 #. TRANSLATORS: def Mix.Local.check_elixir_version_in_ebin(ebin)
 #: lib/mix/local.ex:92 
 msgid ""
 "Checks Elixir version requirement stored in the ebin directory\n"
 "and print a warning if it is not satisfied.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Local.append_paths()
-#: lib/mix/local.ex:54 
+#. TRANSLATORS: def Mix.Local.find_matching_versions_from_signed_csv!(name, path)
+#: lib/mix/local.ex:111 
 msgid ""
-"Appends Mix paths into Erlang code path.\n"
+"Fetches the given signed CSV files, verifies and returns the matching\n"
+"Elixir version, artifact version and artifact's checksum.\n"
+"\n"
+"Used to install both Rebar and Hex from S3.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Local.append_archives()
+#: lib/mix/local.ex:45 
+msgid ""
+"Appends archives paths into Erlang code path.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.Local.archive_ebin(path)
 #: lib/mix/local.ex:77 
 msgid ""
 "Returns the ebin path of an archive.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Local.append_paths()
+#: lib/mix/local.ex:54 
+msgid ""
+"Appends Mix paths into Erlang code path.\n"
 msgstr ""

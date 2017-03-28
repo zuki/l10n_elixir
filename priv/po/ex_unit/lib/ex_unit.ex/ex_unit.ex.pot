@@ -15,6 +15,13 @@ msgstr ""
 msgid ""
 "The error state returned by ExUnit.Test and ExUnit.TestCase"
 msgstr ""
+#. TRANSLATORS: def ExUnit.plural_rule(word)
+#: lib/ex_unit.ex:232 
+msgid ""
+"Returns the pluralization for `word`.\n"
+"\n"
+"If one is not registered, returns the word appended with an \"s\".\n"
+msgstr ""
 #. TRANSLATORS: def ExUnit.configure(options)
 #: lib/ex_unit.ex:169 
 msgid ""
@@ -67,12 +74,14 @@ msgid ""
 "  * `:timeout` - sets the timeout for the tests (default 60_000ms)\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def ExUnit.plural_rule(word)
-#: lib/ex_unit.ex:232 
+#. TRANSLATORS: def ExUnit.start(options \\ [])
+#: lib/ex_unit.ex:141 
 msgid ""
-"Returns the pluralization for `word`.\n"
+"Starts ExUnit and automatically runs tests right before the\n"
+"VM terminates. It accepts a set of options to configure `ExUnit`\n"
+"(the same ones accepted by `configure/1`).\n"
 "\n"
-"If one is not registered, returns the word appended with an \"s\".\n"
+"If you want to run tests manually, you can set `:autorun` to `false`.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.ExUnit Summary
 #: lib/ex_unit.ex:2 
@@ -141,15 +150,6 @@ msgid ""
 "\n"
 "Returns a map containing the total number of tests, the number\n"
 "of failures and the number of skipped tests.\n"
-msgstr ""
-#. TRANSLATORS: def ExUnit.start(options \\ [])
-#: lib/ex_unit.ex:141 
-msgid ""
-"Starts ExUnit and automatically runs tests right before the\n"
-"VM terminates. It accepts a set of options to configure `ExUnit`\n"
-"(the same ones accepted by `configure/1`).\n"
-"\n"
-"If you want to run tests manually, you can set `:autorun` to `false`.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.ExUnit.Test Summary
 #: lib/ex_unit.ex:65 

@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: 2017-03-27 12:03+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
@@ -9,7 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"POT-Creation-Date: \n"
 "X-Generator: Poedit 1.8.12\n"
 
 #. TRANSLATORS: def Calendar.ISO.days_in_month(year, month)
@@ -50,6 +50,11 @@ msgstr ""
 "    iex> Calendar.ISO.days_in_month(2004, 4)\n"
 "    30\n"
 "\n"
+
+#. TRANSLATORS: def Calendar.ISO.date_to_string(year, month, day)
+#: lib/calendar/iso.ex:95
+msgid "Converts the given date into a string.\n"
+msgstr "指定した日付を文字列に変換します。\n"
 
 #. TRANSLATORS: def Calendar.ISO.leap_year?(year)
 #: lib/calendar/iso.ex:47
@@ -155,8 +160,3 @@ msgstr ""
 "先発とは、閏年に対するグレゴリオ歴の規則がすべての年に適用される\n"
 "ことを意味します。従って、グレゴリオ歴が採用された1583年以前では\n"
 "日付は異なる結果を与えます。\n"
-
-#. TRANSLATORS: def Calendar.ISO.date_to_string(year, month, day)
-#: lib/calendar/iso.ex:95
-msgid "Converts the given date into a string.\n"
-msgstr "指定した日付を文字列に変換します。\n"

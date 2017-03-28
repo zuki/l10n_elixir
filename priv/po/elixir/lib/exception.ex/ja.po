@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: 2017-03-27 11:48+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
@@ -9,7 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"POT-Creation-Date: \n"
 "X-Generator: Poedit 1.8.12\n"
 
 #. TRANSLATORS: def Exception.format_file_line(file, line, suffix \\ "")
@@ -44,6 +44,36 @@ msgstr ""
 "    iex> Exception.format_file_line(nil, nil)\n"
 "    \"\"\n"
 "\n"
+
+#. TRANSLATORS: def Exception.format_stacktrace(trace \\ nil)
+#: lib/exception.ex:380
+msgid ""
+"Formats the stacktrace.\n"
+"\n"
+"A stacktrace must be given as an argument. If not, the stacktrace\n"
+"is retrieved from `Process.info/2`.\n"
+msgstr ""
+"スタックトレースをフォーマットします。\n"
+"\n"
+"スタックトレースは1引数として指定する必要があります。\n"
+"指定されない場合は、スタックトレースは`Process.info/2`から取得されます。\n"
+
+#. TRANSLATORS: def Exception.format_exit(reason)
+#: lib/exception.ex:161
+msgid ""
+"Formats an exit. It returns a string.\n"
+"\n"
+"Often there are errors/exceptions inside exits. Exits are often\n"
+"wrapped by the caller and provide stacktraces too. This function\n"
+"formats exits in a way to nicely show the exit reason, caller\n"
+"and stacktrace.\n"
+msgstr ""
+"exitをフォーマットします。文字列を返します。\n"
+"\n"
+"通常、exitの内部ではエラーや例外があります。exitは通常、呼び出し元で\n"
+"ラップされ、スタックトレースも提供されます。この関数は、終了理由、\n"
+"呼び出し元、スタックトレースをうまく表示するようにexitをフォーマットしま"
+"す。\n"
 
 #. TRANSLATORS: def Exception.format_mfa(module, fun, arity)
 #: lib/exception.ex:411
@@ -82,41 +112,58 @@ msgstr ""
 "    \"nil.bar()\"\n"
 "\n"
 "無名関数は-func/arity-anonfn-count-として報告されます。ここで、\n"
-"funcは無名関数を含む関数の名前です。\"anonymous fn in func/arity\"に変換します。\n"
-
-#. TRANSLATORS: def Exception.format_stacktrace(trace \\ nil)
-#: lib/exception.ex:380
-msgid ""
-"Formats the stacktrace.\n"
-"\n"
-"A stacktrace must be given as an argument. If not, the stacktrace\n"
-"is retrieved from `Process.info/2`.\n"
-msgstr ""
-"スタックトレースをフォーマットします。\n"
-"\n"
-"スタックトレースは1引数として指定する必要があります。\n"
-"指定されない場合は、スタックトレースは`Process.info/2`から取得されます。\n"
-
-#. TRANSLATORS: def Exception.format_exit(reason)
-#: lib/exception.ex:161
-msgid ""
-"Formats an exit. It returns a string.\n"
-"\n"
-"Often there are errors/exceptions inside exits. Exits are often\n"
-"wrapped by the caller and provide stacktraces too. This function\n"
-"formats exits in a way to nicely show the exit reason, caller\n"
-"and stacktrace.\n"
-msgstr ""
-"exitをフォーマットします。文字列を返します。\n"
-"\n"
-"通常、exitの内部ではエラーや例外があります。exitは通常、呼び出し元で\n"
-"ラップされ、スタックトレースも提供されます。この関数は、終了理由、\n"
-"呼び出し元、スタックトレースをうまく表示するようにexitをフォーマットします。\n"
+"funcは無名関数を含む関数の名前です。\"anonymous fn in func/arity\"に変換しま"
+"す。\n"
 
 #. TRANSLATORS: def Exception.format_stacktrace_entry(entry)
 #: lib/exception.ex:343
 msgid "Receives a stacktrace entry and formats it into a string.\n"
 msgstr "スタックトレースエントリを受け取り、文字列にフォーマットします。\n"
+
+#. TRANSLATORS: def Exception.format(kind, payload, stacktrace \\ nil)
+#: lib/exception.ex:134
+msgid ""
+"Normalizes and formats throw/errors/exits and stacktraces.\n"
+"\n"
+"It relies on `format_banner/3` and `format_stacktrace/1`\n"
+"to generate the final format.\n"
+"\n"
+"Note that `{:EXIT, pid}` do not generate a stacktrace though\n"
+"(as they are retrieved as messages without stacktraces).\n"
+msgstr ""
+"throw/errors/exitsとスタックトレースを正規化してフォーマットします。\n"
+"\n"
+"最終的なフォーマットの生成には`format_banner/3`と`format_stacktrace/1`に\n"
+"依存します。\n"
+"\n"
+"ただし、`{:EXIT, pid}`はスタックトレースを生成しないことに注意してください\n"
+"（スタックトレースのないメッセージとして取得されるからです）。\n"
+
+#. TRANSLATORS: def Exception.format_fa(fun, arity)
+#: lib/exception.ex:397
+msgid ""
+"Receives an anonymous function and arity and formats it as\n"
+"shown in stacktraces. The arity may also be a list of arguments.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    Exception.format_fa(fn -> nil end, 1)\n"
+"    #=> \"#Function<...>/1\"\n"
+"\n"
+msgstr ""
+"無名関数とアリティを受け取り、スタックトレースに表示される形に\n"
+"フォーマットします。アリティには引数のリストを指定することもできます。\n"
+"\n"
+"## 例\n"
+"\n"
+"    Exception.format_fa(fn -> nil end, 1)\n"
+"    #=> \"#Function<...>/1\"\n"
+"\n"
+
+#. TRANSLATORS: def Exception.message(exception)
+#: lib/exception.ex:48
+msgid "Gets the message for an `exception`.\n"
+msgstr "`exception`のメッセージを取得します。\n"
 
 #. TRANSLATORS: @type kind
 #: lib/exception.ex:24
@@ -157,56 +204,6 @@ msgstr ""
 "例外に対応するスタックトレースを返さない場合は、空のスタックトレース\n"
 "`[]`を指定する必要があります。\n"
 
-#. TRANSLATORS: def Exception.format_fa(fun, arity)
-#: lib/exception.ex:397
-msgid ""
-"Receives an anonymous function and arity and formats it as\n"
-"shown in stacktraces. The arity may also be a list of arguments.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    Exception.format_fa(fn -> nil end, 1)\n"
-"    #=> \"#Function<...>/1\"\n"
-"\n"
-msgstr ""
-"無名関数とアリティを受け取り、スタックトレースに表示される形に\n"
-"フォーマットします。アリティには引数のリストを指定することもできます。\n"
-"\n"
-"## 例\n"
-"\n"
-"    Exception.format_fa(fn -> nil end, 1)\n"
-"    #=> \"#Function<...>/1\"\n"
-"\n"
-
-#. TRANSLATORS: def Exception.message(exception)
-#: lib/exception.ex:48
-msgid "Gets the message for an `exception`.\n"
-msgstr "`exception`のメッセージを取得します。\n"
-
-#. TRANSLATORS: def Exception.format(kind, payload, stacktrace \\ nil)
-#: lib/exception.ex:134
-msgid ""
-"Normalizes and formats throw/errors/exits and stacktraces.\n"
-"\n"
-"It relies on `format_banner/3` and `format_stacktrace/1`\n"
-"to generate the final format.\n"
-"\n"
-"Note that `{:EXIT, pid}` do not generate a stacktrace though\n"
-"(as they are retrieved as messages without stacktraces).\n"
-msgstr ""
-"throw/errors/exitsとスタックトレースを正規化してフォーマットします。\n"
-"\n"
-"最終的なフォーマットの生成には`format_banner/3`と`format_stacktrace/1`に\n"
-"依存します。\n"
-"\n"
-"ただし、`{:EXIT, pid}`はスタックトレースを生成しないことに注意してください\n"
-"（スタックトレースのないメッセージとして取得されるからです）。\n"
-
-#. TRANSLATORS: @type t
-#: lib/exception.ex:17
-msgid "The exception type"
-msgstr "例外型"
-
 #. TRANSLATORS: Elixir.Exception Summary
 #: lib/exception.ex:2
 msgid ""
@@ -236,6 +233,11 @@ msgstr ""
 "リリースで変更される可能性があります。言い替えれば、このモジュールの\n"
 "関数を使用することにより、使用されている現在のElixirのバージョンに\n"
 "合せて例外をフォーマットすることが保証されます。\n"
+
+#. TRANSLATORS: @type t
+#: lib/exception.ex:17
+msgid "The exception type"
+msgstr "例外型"
 
 #. TRANSLATORS: def Exception.format_banner(kind, exception, stacktrace \\ nil)
 #: lib/exception.ex:101

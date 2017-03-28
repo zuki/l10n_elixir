@@ -37,6 +37,11 @@ msgid ""
 "    true\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Range.new(first, last)
+#: lib/range.ex:46 
+msgid ""
+"Creates a new range.\n"
+msgstr ""
 #. TRANSLATORS: def Range.range?(term)
 #: lib/range.ex:60 
 msgid ""
@@ -50,9 +55,4 @@ msgid ""
 "    iex> Range.range?(0)\n"
 "    false\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def Range.new(first, last)
-#: lib/range.ex:46 
-msgid ""
-"Creates a new range.\n"
 msgstr ""

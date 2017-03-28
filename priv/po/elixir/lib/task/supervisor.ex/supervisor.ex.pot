@@ -1,5 +1,5 @@
 #. TRANSLATORS: def Task.Supervisor.async_stream_nolink(supervisor, enumerable, module, function, args, options \\ [])
-#: lib/task/supervisor.ex:170 
+#: lib/task/supervisor.ex:171 
 msgid ""
 "Returns a stream that runs the given `module`, `function` and `args`\n"
 "concurrently on each item in `enumerable`.\n"
@@ -11,7 +11,7 @@ msgid ""
 "See `async_stream/6` for discussion and examples.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.start_child(supervisor, fun)
-#: lib/task/supervisor.ex:219 
+#: lib/task/supervisor.ex:220 
 msgid ""
 "Starts a task as a child of the given `supervisor`.\n"
 "\n"
@@ -19,6 +19,18 @@ msgid ""
 "only to the supervisor. This command is useful in case the\n"
 "task needs to perform side-effects (like I/O) and does not need\n"
 "to report back to the caller.\n"
+msgstr ""
+#. TRANSLATORS: def Task.Supervisor.async_stream(supervisor, enumerable, fun, options \\ [])
+#: lib/task/supervisor.ex:155 
+msgid ""
+"Returns a stream that runs the given `function` concurrently on each\n"
+"item in `enumerable`.\n"
+"\n"
+"Each item will be appended to the given `args` and processed by its\n"
+"own task. The tasks will be spawned under the given `supervisor` and\n"
+"are linked to the current process, similar to `async/2`.\n"
+"\n"
+"See `async_stream/6` for discussion and examples.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.async_nolink(supervisor, fun)
 #: lib/task/supervisor.ex:73 
@@ -45,17 +57,17 @@ msgid ""
 "terminates normally, the reason in the `:DOWN` message will be `:normal`.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.terminate_child(supervisor, pid)
-#: lib/task/supervisor.ex:203 
+#: lib/task/supervisor.ex:204 
 msgid ""
 "Terminates the child with the given `pid`.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.children(supervisor)
-#: lib/task/supervisor.ex:211 
+#: lib/task/supervisor.ex:212 
 msgid ""
 "Returns all children PIDs.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.async_stream_nolink(supervisor, enumerable, fun, options \\ [])
-#: lib/task/supervisor.ex:187 
+#: lib/task/supervisor.ex:188 
 msgid ""
 "Returns a stream that runs the given `function` concurrently on each\n"
 "item in `enumerable`.\n"
@@ -81,7 +93,7 @@ msgid ""
 "are emitted in the same order as the original `enumerable`.\n"
 "\n"
 "The level of concurrency can be controlled via the `:max_concurrency`\n"
-"option and defaults to `System.schedulers_online/1`. The timeout\n"
+"option and defaults to `System.schedulers_online/0`. The timeout\n"
 "can also be given as option and defaults to 5000 and it defaults to\n"
 "the maximum amount of time to wait without a task reply.\n"
 "\n"
@@ -92,9 +104,10 @@ msgid ""
 "## Options\n"
 "\n"
 "  * `:max_concurrency` - sets the maximum number of tasks to run\n"
-"    at the same time. Defaults to `System.schedulers_online/1`.\n"
+"    at the same time. Defaults to `System.schedulers_online/0`.\n"
 "  * `:timeout` - the maximum amount of time to wait without\n"
 "    receiving a task reply (across all running tasks).\n"
+"    Defaults to `5000`.\n"
 "\n"
 "## Examples\n"
 "\n"
@@ -153,18 +166,6 @@ msgid ""
 "The task will still be linked to the caller, see `Task.async/3` for\n"
 "more information and `async_nolink/2` for a non-linked variant.\n"
 msgstr ""
-#. TRANSLATORS: def Task.Supervisor.async_stream(supervisor, enumerable, fun, options \\ [])
-#: lib/task/supervisor.ex:154 
-msgid ""
-"Returns a stream that runs the given `function` concurrently on each\n"
-"item in `enumerable`.\n"
-"\n"
-"Each item will be appended to the given `args` and processed by its\n"
-"own task. The tasks will be spawned under the given `supervisor` and\n"
-"are linked to the current process, similar to `async/2`.\n"
-"\n"
-"See `async_stream/6` for discussion and examples.\n"
-msgstr ""
 #. TRANSLATORS: def Task.Supervisor.async_nolink(supervisor, module, fun, args)
 #: lib/task/supervisor.ex:100 
 msgid ""
@@ -175,7 +176,7 @@ msgid ""
 "more information.\n"
 msgstr ""
 #. TRANSLATORS: def Task.Supervisor.start_child(supervisor, module, fun, args)
-#: lib/task/supervisor.ex:232 
+#: lib/task/supervisor.ex:233 
 msgid ""
 "Starts a task as a child of the given `supervisor`.\n"
 "\n"

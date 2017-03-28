@@ -1,3 +1,8 @@
+#. TRANSLATORS: def Mix.Tasks.Compile.Elixir.manifests()
+#: lib/mix/tasks/compile.elixir.ex:68 
+msgid ""
+"Returns Elixir manifests.\n"
+msgstr ""
 #. TRANSLATORS: Elixir.Mix.Tasks.Compile.Elixir Summary
 #: lib/mix/tasks/compile.elixir.ex:7 
 msgid ""
@@ -32,9 +37,4 @@ msgid ""
 "    defaults as `elixirc` and they can always be overridden from\n"
 "    the command line according to the options above.\n"
 "\n"
-msgstr ""
-#. TRANSLATORS: def Mix.Tasks.Compile.Elixir.manifests()
-#: lib/mix/tasks/compile.elixir.ex:68 
-msgid ""
-"Returns Elixir manifests.\n"
 msgstr ""

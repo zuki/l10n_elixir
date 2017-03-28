@@ -17,6 +17,18 @@ msgid ""
 "to stdout as it comes.\n"
 msgstr ""
 
+#. TRANSLATORS: def Mix.Shell.IO.info(message)
+#: lib/mix/shell/io.ex:32
+msgid "Prints the given message to the shell followed by a newline.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Shell.IO.print_app()
+#: lib/mix/shell/io.ex:10
+msgid ""
+"Prints the current application to the shell if it\n"
+"was not printed yet.\n"
+msgstr ""
+
 #. TRANSLATORS: def Mix.Shell.IO.yes?(message)
 #: lib/mix/shell/io.ex:57
 msgid ""
@@ -25,24 +37,12 @@ msgid ""
 "regex `~r/^Y(es)?$/i`.\n"
 msgstr ""
 
-#. TRANSLATORS: def Mix.Shell.IO.info(message)
-#: lib/mix/shell/io.ex:32
-msgid "Prints the given message to the shell followed by a newline.\n"
-msgstr ""
-
 #. TRANSLATORS: Elixir.Mix.Shell.IO Summary
 #: lib/mix/shell/io.ex:2
 msgid ""
 "This is Mix's default shell.\n"
 "\n"
 "It simply prints messages to stdio and stderr.\n"
-msgstr ""
-
-#. TRANSLATORS: def Mix.Shell.IO.print_app()
-#: lib/mix/shell/io.ex:10
-msgid ""
-"Prints the current application to the shell if it\n"
-"was not printed yet.\n"
 msgstr ""
 
 #. TRANSLATORS: def Mix.Shell.IO.error(message)

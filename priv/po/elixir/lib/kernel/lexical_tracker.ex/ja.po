@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
-"PO-Revision-Date: 2015-05-20 21:54+0900\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2017-03-27 17:52+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9,22 +10,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#. TRANSLATORS: def Kernel.LexicalTracker.remote_references(arg)
-#: lib/kernel/lexical_tracker.ex:12
-#, fuzzy
-msgid "Returns all remotes referenced in this lexical scope.\n"
-msgstr "このレキシカルスコープの中につながる全てのリモートを返します。\n"
+"X-Generator: Poedit 1.8.12\n"
 
 #. TRANSLATORS: def Kernel.LexicalTracker.remote_dispatches(arg)
 #: lib/kernel/lexical_tracker.ex:19
-#, fuzzy
 msgid "Returns all remote dispatches in this lexical scope.\n"
-msgstr "このレキシカルスコープの中につながる全てのリモートを返します。\n"
+msgstr "このレキシカルスコープ内のすべてのリモートディスパッチを返します。\n"
+
+#. TRANSLATORS: def Kernel.LexicalTracker.remote_references(arg)
+#: lib/kernel/lexical_tracker.ex:12
+msgid "Returns all remotes referenced in this lexical scope.\n"
+msgstr "このレキシカルスコープ内のすべてのリモートレファレンスを返します。\n"
 
 #. TRANSLATORS: def Kernel.LexicalTracker.dest(arg)
 #: lib/kernel/lexical_tracker.ex:26
 msgid ""
 "Gets the destination the lexical scope is meant to\n"
 "compile to.\n"
-msgstr "コンパイルするはずの目的のレキシカルスコープを得ます。\n"
+msgstr "レキシカルスコープのコンパイル先を取得します。\n"

@@ -71,16 +71,16 @@ msgstr ""
 msgid "Removes compiled files for the given `manifest`.\n"
 msgstr ""
 
+#. TRANSLATORS: def Mix.Compilers.Erlang.ensure_application!(app, input)
+#: lib/mix/compilers/erlang.ex:124
+msgid "Ensures the native Erlang application is available.\n"
+msgstr ""
+
 #. TRANSLATORS: def Mix.Compilers.Erlang.to_erl_file(file)
 #: lib/mix/compilers/erlang.ex:147
 msgid ""
 "Converts the given `file` to a format accepted by\n"
 "the Erlang compilation tools.\n"
-msgstr ""
-
-#. TRANSLATORS: def Mix.Compilers.Erlang.ensure_application!(app, input)
-#: lib/mix/compilers/erlang.ex:124
-msgid "Ensures the native Erlang application is available.\n"
 msgstr ""
 
 #. TRANSLATORS: def Mix.Compilers.Erlang.assert_valid_erlc_paths(erlc_paths)

@@ -30,6 +30,16 @@ msgstr ""
 "依存関係について追加情報を持っている場合に使用できます。そうでない\n"
 "場合は、空のリストを返すべきです。\n"
 
+#. TRANSLATORS: def Mix.SCM.append(mod)
+#: lib/mix/scm.ex:137
+msgid "Appends the given SCM module to the list of available SCMs.\n"
+msgstr "指定されたSCMモジュールを利用可能なSCMリストの末尾に追加します。\n"
+
+#. TRANSLATORS: def Mix.SCM.prepend(mod)
+#: lib/mix/scm.ex:130
+msgid "Prepends the given SCM module to the list of available SCMs.\n"
+msgstr "指定されたSCMモジュールを利用可能なSCMリストの先頭に追加します。\n"
+
 #. TRANSLATORS: @callback format_lock/1
 #: lib/mix/scm.ex:27
 msgid ""
@@ -46,37 +56,6 @@ msgstr ""
 "べきです。\n"
 "\n"
 "nilが返された場合はロック情報が利用できないことを意味します。\n"
-
-#. TRANSLATORS: def Mix.SCM.prepend(mod)
-#: lib/mix/scm.ex:130
-msgid "Prepends the given SCM module to the list of available SCMs.\n"
-msgstr "指定されたSCMモジュールを利用可能なSCMリストの先頭に追加します。\n"
-
-#. TRANSLATORS: def Mix.SCM.append(mod)
-#: lib/mix/scm.ex:137
-msgid "Appends the given SCM module to the list of available SCMs.\n"
-msgstr "指定されたSCMモジュールを利用可能なSCMリストの末尾に追加します。\n"
-
-#. TRANSLATORS: @callback update/1
-#: lib/mix/scm.ex:70
-msgid ""
-"This behaviour function updates dependencies. It may be\n"
-"called by `deps.get` or `deps.update`.\n"
-"\n"
-"In the first scenario, a lock is received in `opts` and\n"
-"the repository must be updated to the lock. In the second,\n"
-"no lock is given and the repository can be updated freely.\n"
-"\n"
-"It must return the current lock.\n"
-msgstr ""
-"このビヘイビア関数は依存関係を更新します。`deps.get`または\n"
-"`deps.update`により呼ばれるでしょう。\n"
-"\n"
-"第一のシナリオは、ロックを`opts`で受取り、リポジトリはロックに\n"
-"更新しなければならないものです。第２のシナリオは、ロックは与えられずに\n"
-"リポジトリは自由に更新できるものです。\n"
-"\n"
-"現在のロックを返さなければなりません。\n"
 
 #. TRANSLATORS: def Mix.SCM.available()
 #: lib/mix/scm.ex:121
@@ -104,6 +83,17 @@ msgstr ""
 "ローカルの依存関係（すなわち、取り込み可能ではないもの）は\n"
 "親プロジェクトがコンパイルされる度に自動的に再コンパイルされます。\n"
 
+#. TRANSLATORS: @callback equal?/2
+#: lib/mix/scm.ex:107
+msgid ""
+"Receives two options and must return `true` if they refer to the\n"
+"same repository. The options are guaranteed to belong to the\n"
+"same SCM.\n"
+msgstr ""
+"２つのオプションを受取り、それらが同じリポジトリを参照している場合は\n"
+"`true`を返さなければなりません。両オプションは同じSCMに属していることが\n"
+"保証されます。\n"
+
 #. TRANSLATORS: @callback checkout/1
 #: lib/mix/scm.ex:58
 msgid ""
@@ -125,17 +115,6 @@ msgstr ""
 "\n"
 "現在のロックを返さなければなりません。\n"
 
-#. TRANSLATORS: @callback equal?/2
-#: lib/mix/scm.ex:107
-msgid ""
-"Receives two options and must return `true` if they refer to the\n"
-"same repository. The options are guaranteed to belong to the\n"
-"same SCM.\n"
-msgstr ""
-"２つのオプションを受取り、それらが同じリポジトリを参照している場合は\n"
-"`true`を返さなければなりません。両オプションは同じSCMに属していることが\n"
-"保証されます。\n"
-
 #. TRANSLATORS: @callback format/1
 #: lib/mix/scm.ex:19
 msgid ""
@@ -148,6 +127,27 @@ msgstr ""
 "際に利用され、インスペクションには使用されません。\n"
 "したがって、情報は簡潔で理解しやすいものである\n"
 "べきです。\n"
+
+#. TRANSLATORS: @callback update/1
+#: lib/mix/scm.ex:70
+msgid ""
+"This behaviour function updates dependencies. It may be\n"
+"called by `deps.get` or `deps.update`.\n"
+"\n"
+"In the first scenario, a lock is received in `opts` and\n"
+"the repository must be updated to the lock. In the second,\n"
+"no lock is given and the repository can be updated freely.\n"
+"\n"
+"It must return the current lock.\n"
+msgstr ""
+"このビヘイビア関数は依存関係を更新します。`deps.get`または\n"
+"`deps.update`により呼ばれるでしょう。\n"
+"\n"
+"第一のシナリオは、ロックを`opts`で受取り、リポジトリはロックに\n"
+"更新しなければならないものです。第２のシナリオは、ロックは与えられずに\n"
+"リポジトリは自由に更新できるものです。\n"
+"\n"
+"現在のロックを返さなければなりません。\n"
 
 #. TRANSLATORS: Elixir.Mix.SCM Summary
 #: lib/mix/scm.ex:2

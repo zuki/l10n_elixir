@@ -31,6 +31,17 @@ msgstr ""
 msgid "The error state returned by ExUnit.Test and ExUnit.TestCase"
 msgstr "ExUnit.TestとExUnit.TestCaseにより返されるエラーステートです"
 
+#. TRANSLATORS: def ExUnit.plural_rule(word)
+#: lib/ex_unit.ex:232
+msgid ""
+"Returns the pluralization for `word`.\n"
+"\n"
+"If one is not registered, returns the word appended with an \"s\".\n"
+msgstr ""
+"`word`の複数形を返します。\n"
+"\n"
+"複数形が登録されていない場合は、”s”を後ろに付けた単語を返します。\n"
+
 #. TRANSLATORS: def ExUnit.configure(options)
 #: lib/ex_unit.ex:169
 msgid ""
@@ -142,16 +153,20 @@ msgstr ""
 "\n"
 "  * `:timeout` - testのタイムアウトをセットします(デフォルトは60_000ms)\n"
 
-#. TRANSLATORS: def ExUnit.plural_rule(word)
-#: lib/ex_unit.ex:232
+#. TRANSLATORS: def ExUnit.start(options \\ [])
+#: lib/ex_unit.ex:141
 msgid ""
-"Returns the pluralization for `word`.\n"
+"Starts ExUnit and automatically runs tests right before the\n"
+"VM terminates. It accepts a set of options to configure `ExUnit`\n"
+"(the same ones accepted by `configure/1`).\n"
 "\n"
-"If one is not registered, returns the word appended with an \"s\".\n"
+"If you want to run tests manually, you can set `:autorun` to `false`.\n"
 msgstr ""
-"`word`の複数形を返します。\n"
+"ExUnitを開始し、自動的にテストを走らせ、直後にVMを終了します。\n"
+"`ExUnit`を構成するための、一組のオプションを受け入れます\n"
+"(オプションは`configure/1`と同じです)。\n"
 "\n"
-"複数形が登録されていない場合は、”s”を後ろに付けた単語を返します。\n"
+"マニュルでテストを走らせたい場合は`:autorun`を`false`にセットしてください。\n"
 
 #. TRANSLATORS: Elixir.ExUnit Summary
 #: lib/ex_unit.ex:2
@@ -284,21 +299,6 @@ msgstr ""
 "\n"
 "テストの数、失敗の数とスキップしたテストの数を\n"
 "含むマップを返します。\n"
-
-#. TRANSLATORS: def ExUnit.start(options \\ [])
-#: lib/ex_unit.ex:141
-msgid ""
-"Starts ExUnit and automatically runs tests right before the\n"
-"VM terminates. It accepts a set of options to configure `ExUnit`\n"
-"(the same ones accepted by `configure/1`).\n"
-"\n"
-"If you want to run tests manually, you can set `:autorun` to `false`.\n"
-msgstr ""
-"ExUnitを開始し、自動的にテストを走らせ、直後にVMを終了します。\n"
-"`ExUnit`を構成するための、一組のオプションを受け入れます\n"
-"(オプションは`configure/1`と同じです)。\n"
-"\n"
-"マニュルでテストを走らせたい場合は`:autorun`を`false`にセットしてください。\n"
 
 #. TRANSLATORS: Elixir.ExUnit.Test Summary
 #: lib/ex_unit.ex:65

@@ -1,18 +1,3 @@
-#. TRANSLATORS: def Mix.Generator.create_directory(path)
-#: lib/mix/generator.ex:34 
-msgid ""
-"Creates a directory if one does not exist yet.\n"
-"\n"
-"This function does nothing if the given directory already exists; in this\n"
-"case, it still logs the directory creation.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    iex> Mix.Generator.create_directory \"path/to/dir\"\n"
-"    * creating path/to/dir\n"
-"    :ok\n"
-"\n"
-msgstr ""
 #. TRANSLATORS: def Mix.Generator.create_file(path, contents, opts \\ [])
 #: lib/mix/generator.ex:9 
 msgid ""
@@ -46,6 +31,21 @@ msgid ""
 "      require Mix.Generator\n"
 "      Mix.Generator.embed_text(:error, \"There was an error!\")\n"
 "    end\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Generator.create_directory(path)
+#: lib/mix/generator.ex:34 
+msgid ""
+"Creates a directory if one does not exist yet.\n"
+"\n"
+"This function does nothing if the given directory already exists; in this\n"
+"case, it still logs the directory creation.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    iex> Mix.Generator.create_directory \"path/to/dir\"\n"
+"    * creating path/to/dir\n"
+"    :ok\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: defmacro Mix.Generator.embed_template(name, contents)

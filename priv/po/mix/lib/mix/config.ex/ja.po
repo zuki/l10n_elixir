@@ -94,30 +94,6 @@ msgstr ""
 "`file`が`loaded_paths`に含まれている場合は、`Mix.Config.LoadError`\n"
 "例外が発生します。\n"
 
-#. TRANSLATORS: def Mix.Config.read_wildcard!(path, loaded_paths \\ [])
-#: lib/mix/config.ex:201
-msgid ""
-"Reads many configuration files given by wildcard into a single config.\n"
-"\n"
-"Raises an error if `path` is a concrete filename (with no wildcards)\n"
-"but the corresponding file does not exist; if `path` matches no files,\n"
-"no errors are raised.\n"
-"\n"
-"`loaded_paths` is a list of configuration files that have been previously\n"
-"read.\n"
-msgstr ""
-"ワイルドカードにより指定された多くの構成ファイルを一つの個性に読み込みま"
-"す。\n"
-"\n"
-"`path`が具体的なファイル名（ワイルドカードなし）の場合はエラーが発生します"
-"が、\n"
-"対応するファイルが存在しない、すなわち、`path`にマッチするファイルがない場合"
-"は\n"
-"エラーは発生しません。\n"
-"\n"
-"`loaded_paths`は前もって読み込まれていた構成ファイルのリスト\n"
-"です。\n"
-
 #. TRANSLATORS: defmacro Mix.Config.config(app, key, opts)
 #: lib/mix/config.ex:85
 msgid ""
@@ -178,6 +154,30 @@ msgstr ""
 "\n"
 "    Application.get_env(:ecto, Repo)\n"
 "\n"
+
+#. TRANSLATORS: def Mix.Config.read_wildcard!(path, loaded_paths \\ [])
+#: lib/mix/config.ex:201
+msgid ""
+"Reads many configuration files given by wildcard into a single config.\n"
+"\n"
+"Raises an error if `path` is a concrete filename (with no wildcards)\n"
+"but the corresponding file does not exist; if `path` matches no files,\n"
+"no errors are raised.\n"
+"\n"
+"`loaded_paths` is a list of configuration files that have been previously\n"
+"read.\n"
+msgstr ""
+"ワイルドカードにより指定された多くの構成ファイルを一つの個性に読み込みま"
+"す。\n"
+"\n"
+"`path`が具体的なファイル名（ワイルドカードなし）の場合はエラーが発生します"
+"が、\n"
+"対応するファイルが存在しない、すなわち、`path`にマッチするファイルがない場合"
+"は\n"
+"エラーは発生しません。\n"
+"\n"
+"`loaded_paths`は前もって読み込まれていた構成ファイルのリスト\n"
+"です。\n"
 
 #. TRANSLATORS: def Mix.Config.persist(config)
 #: lib/mix/config.ex:220

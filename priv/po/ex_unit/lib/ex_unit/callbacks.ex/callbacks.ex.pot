@@ -11,16 +11,14 @@ msgid ""
 "may also be called dynamically, where a reference can be used to\n"
 "guarantee the callback will be invoked only once.\n"
 msgstr ""
-#. TRANSLATORS: defmacro ExUnit.Callbacks.setup(var, block)
-#: lib/ex_unit/callbacks.ex:132 
+#. TRANSLATORS: defmacro ExUnit.Callbacks.setup(block)
+#: lib/ex_unit/callbacks.ex:113 
 msgid ""
 "Defines a callback to be run before each test in a case.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    setup context do\n"
-"      [conn: Plug.Conn.build_conn()]\n"
-"    end\n"
+"    setup :clean_up_tmp_directory\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: defmacro ExUnit.Callbacks.setup_all(block)
@@ -127,14 +125,16 @@ msgid ""
 "    end\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: defmacro ExUnit.Callbacks.setup(block)
-#: lib/ex_unit/callbacks.ex:113 
+#. TRANSLATORS: defmacro ExUnit.Callbacks.setup(var, block)
+#: lib/ex_unit/callbacks.ex:132 
 msgid ""
 "Defines a callback to be run before each test in a case.\n"
 "\n"
 "## Examples\n"
 "\n"
-"    setup :clean_up_tmp_directory\n"
+"    setup context do\n"
+"      [conn: Plug.Conn.build_conn()]\n"
+"    end\n"
 "\n"
 msgstr ""
 #. TRANSLATORS: defmacro ExUnit.Callbacks.setup_all(var, block)

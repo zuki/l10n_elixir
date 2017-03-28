@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: 2017-03-22 18:16+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
@@ -9,12 +10,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"POT-Creation-Date: \n"
 "X-Generator: Poedit 1.8.12\n"
 
 #. TRANSLATORS: defmacro Behaviour.defcallback(spec)
 #: lib/behaviour.ex:13
-msgid "Defines a function callback according to the given type specification.\n"
+msgid ""
+"Defines a function callback according to the given type specification.\n"
 msgstr "指定した型仕様に従って、コールバック関数を定義します。\n"
 
 #. TRANSLATORS: defmacro Behaviour.defmacrocallback(spec)

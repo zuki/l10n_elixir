@@ -3,11 +3,6 @@
 msgid ""
 "Reads the manifest.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Compilers.Elixir.protocols_and_impls(manifest, compile_path)
-#: lib/mix/compilers/elixir.ex:108 
-msgid ""
-"Returns protocols and implementations for the given `manifest`.\n"
-msgstr ""
 #. TRANSLATORS: def Mix.Compilers.Elixir.compile(manifest, srcs, dest, force, opts)
 #: lib/mix/compilers/elixir.ex:18 
 msgid ""
@@ -21,4 +16,9 @@ msgid ""
 "The `manifest` is written down with information including dependencies\n"
 "between modules, which helps it recompile only the modules that\n"
 "have changed at runtime.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Compilers.Elixir.protocols_and_impls(manifest, compile_path)
+#: lib/mix/compilers/elixir.ex:108 
+msgid ""
+"Returns protocols and implementations for the given `manifest`.\n"
 msgstr ""

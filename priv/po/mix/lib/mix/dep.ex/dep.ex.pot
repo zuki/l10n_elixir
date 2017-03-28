@@ -1,9 +1,11 @@
-#. TRANSLATORS: def Mix.Dep.load_paths(dep)
-#: lib/mix/dep.ex:348 
+#. TRANSLATORS: def Mix.Dep.in_dependency(dep, post_config \\ [], fun)
+#: lib/mix/dep.ex:155 
 msgid ""
-"Returns all load paths for the given dependency.\n"
+"Runs the given `fun` inside the given dependency project by\n"
+"changing the current working directory and loading the given\n"
+"project onto the project stack.\n"
 "\n"
-"Automatically derived from source paths.\n"
+"It is expected a loaded dependency as argument.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.Dep.__struct__()
 #: lib/mix/dep.ex:4 
@@ -53,19 +55,17 @@ msgid ""
 "  * `:build` - the build path for the dependency\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Dep.in_dependency(dep, post_config \\ [], fun)
-#: lib/mix/dep.ex:155 
+#. TRANSLATORS: def Mix.Dep.load_paths(dep)
+#: lib/mix/dep.ex:348 
 msgid ""
-"Runs the given `fun` inside the given dependency project by\n"
-"changing the current working directory and loading the given\n"
-"project onto the project stack.\n"
+"Returns all load paths for the given dependency.\n"
 "\n"
-"It is expected a loaded dependency as argument.\n"
+"Automatically derived from source paths.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Dep.format_status(dep)
-#: lib/mix/dep.ex:185 
+#. TRANSLATORS: def Mix.Dep.mix?(dep)
+#: lib/mix/dep.ex:382 
 msgid ""
-"Formats the status of a dependency.\n"
+"Returns `true` if dependency is a Mix project.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.Dep.available?(dep)
 #: lib/mix/dep.ex:318 
@@ -88,6 +88,21 @@ msgid ""
 "If MIX_NO_DEPS is set, we return an empty list of dependencies\n"
 "without loading them.\n"
 msgstr ""
+#. TRANSLATORS: def Mix.Dep.diverged?(dep)
+#: lib/mix/dep.ex:326 
+msgid ""
+"Checks if a dependency has diverged.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Dep.make?(dep)
+#: lib/mix/dep.ex:396 
+msgid ""
+"Returns `true` if dependency is a Make project.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Dep.format_dep(dep)
+#: lib/mix/dep.ex:335 
+msgid ""
+"Formats a dependency for printing.\n"
+msgstr ""
 #. TRANSLATORS: def Mix.Dep.loaded(opts)
 #: lib/mix/dep.ex:89 
 msgid ""
@@ -98,25 +113,10 @@ msgid ""
 "This function raises an exception if any of the dependencies\n"
 "provided in the project are in the wrong format.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Dep.mix?(dep)
-#: lib/mix/dep.ex:382 
+#. TRANSLATORS: def Mix.Dep.format_status(dep)
+#: lib/mix/dep.ex:185 
 msgid ""
-"Returns `true` if dependency is a Mix project.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.Dep.diverged?(dep)
-#: lib/mix/dep.ex:326 
-msgid ""
-"Checks if a dependency has diverged.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.Dep.format_dep(dep)
-#: lib/mix/dep.ex:335 
-msgid ""
-"Formats a dependency for printing.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.Dep.make?(dep)
-#: lib/mix/dep.ex:396 
-msgid ""
-"Returns `true` if dependency is a Make project.\n"
+"Formats the status of a dependency.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.Dep.source_paths(dep)
 #: lib/mix/dep.ex:360 

@@ -19,26 +19,6 @@ msgid ""
 "section in the docs for `Mix`.\n"
 msgstr ""
 
-#. TRANSLATORS: def Mix.Task.shortdoc(module)
-#: lib/mix/task.ex:120
-msgid ""
-"Gets the shortdoc for the given task `module`.\n"
-"\n"
-"Returns the shortdoc or `nil`.\n"
-msgstr ""
-
-#. TRANSLATORS: def Mix.Task.task?(module)
-#: lib/mix/task.ex:410
-msgid "Returns `true` if given module is a task.\n"
-msgstr ""
-
-#. TRANSLATORS: @callback run/1
-#: lib/mix/task.ex:41
-msgid ""
-"A task needs to implement `run` which receives\n"
-"a list of command line args.\n"
-msgstr ""
-
 #. TRANSLATORS: def Mix.Task.task_name(module)
 #: lib/mix/task.ex:164
 msgid "Returns the task name for the given `module`.\n"
@@ -98,6 +78,11 @@ msgid ""
 "Returns environment (for example, `:test`, or `:prod`), or `nil`.\n"
 msgstr ""
 
+#. TRANSLATORS: def Mix.Task.task?(module)
+#: lib/mix/task.ex:410
+msgid "Returns `true` if given module is a task.\n"
+msgstr ""
+
 #. TRANSLATORS: def Mix.Task.rerun(task, args \\ [])
 #: lib/mix/task.ex:398
 msgid ""
@@ -123,6 +108,21 @@ msgid ""
 "\n"
 "Modules that are not yet loaded won't show up.\n"
 "Check `load_all/0` if you want to preload all tasks.\n"
+msgstr ""
+
+#. TRANSLATORS: @callback run/1
+#: lib/mix/task.ex:41
+msgid ""
+"A task needs to implement `run` which receives\n"
+"a list of command line args.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.Task.shortdoc(module)
+#: lib/mix/task.ex:120
+msgid ""
+"Gets the shortdoc for the given task `module`.\n"
+"\n"
+"Returns the shortdoc or `nil`.\n"
 msgstr ""
 
 #. TRANSLATORS: def Mix.Task.run(task, args \\ [])

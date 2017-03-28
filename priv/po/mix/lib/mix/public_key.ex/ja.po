@@ -10,13 +10,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. TRANSLATORS: def Mix.PublicKey.verify(binary, hash, signature)
-#: lib/mix/public_key.ex:51
-msgid ""
-"Verifies the given binary has the proper signature using the system public "
-"keys.\n"
-msgstr ""
-
 #. TRANSLATORS: def Mix.PublicKey.public_keys()
 #: lib/mix/public_key.ex:21
 msgid "Returns all public keys as a list.\n"
@@ -25,6 +18,13 @@ msgstr ""
 #. TRANSLATORS: def Mix.PublicKey.public_keys_path()
 #: lib/mix/public_key.ex:16
 msgid "Returns the filesystem path for public keys.\n"
+msgstr ""
+
+#. TRANSLATORS: def Mix.PublicKey.verify(binary, hash, signature)
+#: lib/mix/public_key.ex:51
+msgid ""
+"Verifies the given binary has the proper signature using the system public "
+"keys.\n"
 msgstr ""
 
 #. TRANSLATORS: def Mix.PublicKey.decode!(id, key)

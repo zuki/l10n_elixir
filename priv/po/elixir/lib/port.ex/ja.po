@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: 2017-02-03 16:52+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
@@ -9,8 +10,63 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"POT-Creation-Date: \n"
 "X-Generator: Poedit 1.8.11\n"
+
+#. TRANSLATORS: def Port.list()
+#: lib/port.ex:256
+msgid ""
+"Returns a list of all ports in the current node.\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+"現在のノードのすべてのポートのリストを返します。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
+
+#. TRANSLATORS: def Port.info(port, spec)
+#: lib/port.ex:237
+msgid ""
+"Returns information about the `port` or `nil` if the port is closed.\n"
+"\n"
+"For more information, see [`:erlang.port_info/2`](http://www.erlang.org/doc/"
+"man/erlang.html#port_info-2).\n"
+msgstr ""
+"`port`に関する情報を返します。ポートが閉じていたら`nil`を返します。\n"
+"\n"
+"詳細は、[`:erlang.port_info/2`](http://www.erlang.org/doc/man/erlang."
+"html#port_info-2)を参照してください。\n"
+
+#. TRANSLATORS: def Port.command(port, data, options \\ [])
+#: lib/port.ex:204
+msgid ""
+"Sends `data` to the port driver `port`.\n"
+"\n"
+"For more information, see [`:erlang.port_command/2`](http://www.erlang.org/"
+"doc/man/erlang.html#port_command-2).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+"ポートドライバ`port`へ`data`を送信します。\n"
+"\n"
+"詳細は、[`:erlang.port_command/2`](http://www.erlang.org/doc/man/erlang."
+"html#port_command-2)\n"
+"を参照してください。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
+
+#. TRANSLATORS: def Port.info(port)
+#: lib/port.ex:228
+msgid ""
+"Returns information about the `port` or `nil` if the port is closed.\n"
+"\n"
+"For more information, see [`:erlang.port_info/1`](http://www.erlang.org/doc/"
+"man/erlang.html#port_info-1).\n"
+msgstr ""
+"`port`に関する情報を返します。ポートが閉じていたら`nil`を返します。\n"
+"\n"
+"詳細は、[`:erlang.port_info/1`](http://www.erlang.org/doc/man/erlang."
+"html#port_info-1)\n"
+"を参照してください。\n"
 
 #. TRANSLATORS: def Port.open(name, settings)
 #: lib/port.ex:167
@@ -63,49 +119,6 @@ msgstr ""
 "\n"
 "コンパイラによりインライン化されます。\n"
 
-#. TRANSLATORS: def Port.list()
-#: lib/port.ex:256
-msgid ""
-"Returns a list of all ports in the current node.\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-"現在のノードのすべてのポートのリストを返します。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
-
-#. TRANSLATORS: def Port.command(port, data, options \\ [])
-#: lib/port.ex:204
-msgid ""
-"Sends `data` to the port driver `port`.\n"
-"\n"
-"For more information, see [`:erlang.port_command/2`](http://www.erlang.org/"
-"doc/man/erlang.html#port_command-2).\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-"ポートドライバ`port`へ`data`を送信します。\n"
-"\n"
-"詳細は、[`:erlang.port_command/2`](http://www.erlang.org/doc/man/erlang."
-"html#port_command-2)\n"
-"を参照してください。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
-
-#. TRANSLATORS: def Port.info(port)
-#: lib/port.ex:228
-msgid ""
-"Returns information about the `port` or `nil` if the port is closed.\n"
-"\n"
-"For more information, see [`:erlang.port_info/1`](http://www.erlang.org/doc/"
-"man/erlang.html#port_info-1).\n"
-msgstr ""
-"`port`に関する情報を返します。ポートが閉じていたら`nil`を返します。\n"
-"\n"
-"詳細は、[`:erlang.port_info/1`](http://www.erlang.org/doc/man/erlang."
-"html#port_info-1)\n"
-"を参照してください。\n"
-
 #. TRANSLATORS: def Port.close(port)
 #: lib/port.ex:192
 msgid ""
@@ -120,6 +133,24 @@ msgstr ""
 "\n"
 "詳細は、[`:erlang.port_close/1`](http://www.erlang.org/doc/man/erlang."
 "html#port_close-1)\n"
+"を参照してください。\n"
+"\n"
+"コンパイラによりインライン化されます。\n"
+
+#. TRANSLATORS: def Port.connect(port, pid)
+#: lib/port.ex:216
+msgid ""
+"Associates the `port` identifier with a `pid`.\n"
+"\n"
+"For more information, see [`:erlang.port_connect/2`](http://www.erlang.org/"
+"doc/man/erlang.html#port_connect-2).\n"
+"\n"
+"Inlined by the compiler.\n"
+msgstr ""
+"`pid`に`port`識別子を関連付けます。\n"
+"\n"
+"詳細は、[`:erlang.port_connect/2`](http://www.erlang.org/doc/man/erlang."
+"html#port_connect-2)\n"
 "を参照してください。\n"
 "\n"
 "コンパイラによりインライン化されます。\n"
@@ -477,37 +508,6 @@ msgstr ""
 "    Port.open({:spawn_executable, \"/path/to/wrapper\"},\n"
 "              [args: [\"/path/to/program\", \"a\", \"b\", \"c\"]])\n"
 "\n"
-
-#. TRANSLATORS: def Port.info(port, spec)
-#: lib/port.ex:237
-msgid ""
-"Returns information about the `port` or `nil` if the port is closed.\n"
-"\n"
-"For more information, see [`:erlang.port_info/2`](http://www.erlang.org/doc/"
-"man/erlang.html#port_info-2).\n"
-msgstr ""
-"`port`に関する情報を返します。ポートが閉じていたら`nil`を返します。\n"
-"\n"
-"詳細は、[`:erlang.port_info/2`](http://www.erlang.org/doc/man/erlang."
-"html#port_info-2)を参照してください。\n"
-
-#. TRANSLATORS: def Port.connect(port, pid)
-#: lib/port.ex:216
-msgid ""
-"Associates the `port` identifier with a `pid`.\n"
-"\n"
-"For more information, see [`:erlang.port_connect/2`](http://www.erlang.org/"
-"doc/man/erlang.html#port_connect-2).\n"
-"\n"
-"Inlined by the compiler.\n"
-msgstr ""
-"`pid`に`port`識別子を関連付けます。\n"
-"\n"
-"詳細は、[`:erlang.port_connect/2`](http://www.erlang.org/doc/man/erlang."
-"html#port_connect-2)\n"
-"を参照してください。\n"
-"\n"
-"コンパイラによりインライン化されます。\n"
 
 #~ msgid ""
 #~ "Returns a list of the ports for the current node.\n"

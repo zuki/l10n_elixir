@@ -12,15 +12,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.12\n"
 
-#. TRANSLATORS: @type agent
-#: lib/agent.ex:114
-msgid "The agent reference"
-msgstr "エージェントのリファレンス"
-
 #. TRANSLATORS: @type name
 #: lib/agent.ex:111
 msgid "The agent name"
 msgstr "エージェントの名前"
+
+#. TRANSLATORS: @type agent
+#: lib/agent.ex:114
+msgid "The agent reference"
+msgstr "エージェントのリファレンス"
 
 #. TRANSLATORS: def Agent.update(agent, fun, timeout \\ 5000)
 #: lib/agent.ex:245
@@ -40,6 +40,83 @@ msgstr ""
 "\n"
 "タイムアウトも指定することができます(デフォルト値は5000です)。\n"
 "この関数は常に`:ok`を返します。\n"
+
+#. TRANSLATORS: def Agent.get(agent, module, fun, args, timeout \\ 5000)
+#: lib/agent.ex:206
+msgid ""
+"Gets an agent value via the given function.\n"
+"\n"
+"Same as `get/3` but a module, function and args are expected\n"
+"instead of an anonymous function. The state is added as first\n"
+"argument to the given list of args.\n"
+msgstr ""
+"指定した関数を介してエージェントの値を取得します。\n"
+"\n"
+"`get/3`と同じですが、無名関数の代わりに、モジュール、関数、引数を\n"
+"引数に取ります。状態は、引数として指定されたリストの第1引数として\n"
+"追加されます。\n"
+
+#. TRANSLATORS: def Agent.start(module, fun, args, options \\ [])
+#: lib/agent.ex:181
+msgid ""
+"Starts an agent with the given module function and arguments.\n"
+"\n"
+"Similar to `start/2` but a module, function and args are expected\n"
+"instead of an anonymous function.\n"
+msgstr ""
+"指定したモジュールと関数、引数でエージェントを起動します。\n"
+"\n"
+"`start/2`と似ていますが、無名関数の代わりに、\n"
+"モジュール、関数、引数を引数に取ります。\n"
+
+#. TRANSLATORS: def Agent.get_and_update(agent, module, fun, args, timeout \\ 5000)
+#: lib/agent.ex:233
+msgid ""
+"Gets and updates the agent state in one operation.\n"
+"\n"
+"Same as `get_and_update/3` but a module, function and args are expected\n"
+"instead of an anonymous function. The state is added as first\n"
+"argument to the given list of args.\n"
+msgstr ""
+"1回の操作で、エージェントの状態を取得・更新します。\n"
+"\n"
+"`get_and_update/3`と同じですが、無名関数の代わりに、モジュール、関数、引数"
+"を\n"
+"引数に取ります。状態は、引数として指定されたリストの第1引数として\n"
+"追加されます。\n"
+
+#. TRANSLATORS: def Agent.get(agent, fun, timeout \\ 5000)
+#: lib/agent.ex:192
+msgid ""
+"Gets an agent value via the given function.\n"
+"\n"
+"The function `fun` is sent to the `agent` which invokes the function\n"
+"passing the agent state. The result of the function invocation is\n"
+"returned.\n"
+"\n"
+"A timeout can also be specified (it has a default value of 5000).\n"
+msgstr ""
+"指定した関数を介してエージェントの値を取得します。\n"
+"\n"
+"関数`fun`が`agent`に送られ、`agent`は状態を渡して関数を\n"
+"実行します。関数の実行結果が返されます。\n"
+"\n"
+"タイムアウトも指定することができます(デフォルト値は5000です)。\n"
+
+#. TRANSLATORS: def Agent.update(agent, module, fun, args, timeout \\ 5000)
+#: lib/agent.ex:259
+msgid ""
+"Updates the agent state.\n"
+"\n"
+"Same as `update/3` but a module, function and args are expected\n"
+"instead of an anonymous function. The state is added as first\n"
+"argument to the given list of args.\n"
+msgstr ""
+"エージェントの状態を更新します。\n"
+"\n"
+"`update/3`と同じですが、無名関数の代わりに、モジュール、関数、引数を\n"
+"引数に取ります。状態は、引数として指定されたリストの第1引数として\n"
+"追加されます。\n"
 
 #. TRANSLATORS: def Agent.stop(agent, reason \\ :normal, timeout \\ :infinity)
 #: lib/agent.ex:297
@@ -63,18 +140,18 @@ msgstr ""
 "保持します。理由が`:normal`, `:shutdown`、`{:shutdown, _}`\n"
 "以外の場合は、エラーレポートはログされます。\n"
 
-#. TRANSLATORS: def Agent.update(agent, module, fun, args, timeout \\ 5000)
-#: lib/agent.ex:259
+#. TRANSLATORS: def Agent.cast(agent, module, fun, args)
+#: lib/agent.ex:285
 msgid ""
-"Updates the agent state.\n"
+"Performs a cast (fire and forget) operation on the agent state.\n"
 "\n"
-"Same as `update/3` but a module, function and args are expected\n"
+"Same as `cast/2` but a module, function and args are expected\n"
 "instead of an anonymous function. The state is added as first\n"
 "argument to the given list of args.\n"
 msgstr ""
-"エージェントの状態を更新します。\n"
+"エージェントの状態に対しキャスト操作(発火して忘れる)を実行します。\n"
 "\n"
-"`update/3`と同じですが、無名関数の代わりに、モジュール、関数、引数を\n"
+"`cast/2`と同じですが、無名関数のかわりに、モジュール、関数、引数を\n"
 "引数に取ります。状態は、引数として指定されたリストの第1引数として\n"
 "追加されます。\n"
 
@@ -321,67 +398,6 @@ msgstr ""
 "\n"
 "エージェントの状態は、指定のリストに最初の引数として追加されます。\n"
 
-#. TRANSLATORS: def Agent.start(module, fun, args, options \\ [])
-#: lib/agent.ex:181
-msgid ""
-"Starts an agent with the given module function and arguments.\n"
-"\n"
-"Similar to `start/2` but a module, function and args are expected\n"
-"instead of an anonymous function.\n"
-msgstr ""
-"指定したモジュールと関数、引数でエージェントを起動します。\n"
-"\n"
-"`start/2`と似ていますが、無名関数の代わりに、\n"
-"モジュール、関数、引数を引数に取ります。\n"
-
-#. TRANSLATORS: def Agent.get(agent, fun, timeout \\ 5000)
-#: lib/agent.ex:192
-msgid ""
-"Gets an agent value via the given function.\n"
-"\n"
-"The function `fun` is sent to the `agent` which invokes the function\n"
-"passing the agent state. The result of the function invocation is\n"
-"returned.\n"
-"\n"
-"A timeout can also be specified (it has a default value of 5000).\n"
-msgstr ""
-"指定した関数を介してエージェントの値を取得します。\n"
-"\n"
-"関数`fun`が`agent`に送られ、`agent`は状態を渡して関数を\n"
-"実行します。関数の実行結果が返されます。\n"
-"\n"
-"タイムアウトも指定することができます(デフォルト値は5000です)。\n"
-
-#. TRANSLATORS: def Agent.get(agent, module, fun, args, timeout \\ 5000)
-#: lib/agent.ex:206
-msgid ""
-"Gets an agent value via the given function.\n"
-"\n"
-"Same as `get/3` but a module, function and args are expected\n"
-"instead of an anonymous function. The state is added as first\n"
-"argument to the given list of args.\n"
-msgstr ""
-"指定した関数を介してエージェントの値を取得します。\n"
-"\n"
-"`get/3`と同じですが、無名関数の代わりに、モジュール、関数、引数を\n"
-"引数に取ります。状態は、引数として指定されたリストの第1引数として\n"
-"追加されます。\n"
-
-#. TRANSLATORS: def Agent.cast(agent, module, fun, args)
-#: lib/agent.ex:285
-msgid ""
-"Performs a cast (fire and forget) operation on the agent state.\n"
-"\n"
-"Same as `cast/2` but a module, function and args are expected\n"
-"instead of an anonymous function. The state is added as first\n"
-"argument to the given list of args.\n"
-msgstr ""
-"エージェントの状態に対しキャスト操作(発火して忘れる)を実行します。\n"
-"\n"
-"`cast/2`と同じですが、無名関数のかわりに、モジュール、関数、引数を\n"
-"引数に取ります。状態は、引数として指定されたリストの第1引数として\n"
-"追加されます。\n"
-
 #. TRANSLATORS: def Agent.start_link(fun, options \\ [])
 #: lib/agent.ex:120
 msgid ""
@@ -451,22 +467,6 @@ msgstr ""
 "\n"
 "指定したコールバック関数が`reason`で失敗した場合、\n"
 "関数は`{:error, reason}`を返します。\n"
-
-#. TRANSLATORS: def Agent.get_and_update(agent, module, fun, args, timeout \\ 5000)
-#: lib/agent.ex:233
-msgid ""
-"Gets and updates the agent state in one operation.\n"
-"\n"
-"Same as `get_and_update/3` but a module, function and args are expected\n"
-"instead of an anonymous function. The state is added as first\n"
-"argument to the given list of args.\n"
-msgstr ""
-"1回の操作で、エージェントの状態を取得・更新します。\n"
-"\n"
-"`get_and_update/3`と同じですが、無名関数の代わりに、モジュール、関数、引数"
-"を\n"
-"引数に取ります。状態は、引数として指定されたリストの第1引数として\n"
-"追加されます。\n"
 
 #. TRANSLATORS: def Agent.start(fun, options \\ [])
 #: lib/agent.ex:171

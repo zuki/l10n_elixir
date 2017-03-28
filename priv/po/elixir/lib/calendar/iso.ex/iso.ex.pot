@@ -19,6 +19,11 @@ msgid ""
 "    30\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Calendar.ISO.date_to_string(year, month, day)
+#: lib/calendar/iso.ex:95 
+msgid ""
+"Converts the given date into a string.\n"
+msgstr ""
 #. TRANSLATORS: def Calendar.ISO.leap_year?(year)
 #: lib/calendar/iso.ex:47 
 msgid ""
@@ -80,9 +85,4 @@ msgid ""
 "today. The proleptic means the Gregorian rules for leap years are\n"
 "applied for all time, consequently the dates give different results\n"
 "before the year 1583 from when the Gregorian calendar was adopted.\n"
-msgstr ""
-#. TRANSLATORS: def Calendar.ISO.date_to_string(year, month, day)
-#: lib/calendar/iso.ex:95 
-msgid ""
-"Converts the given date into a string.\n"
 msgstr ""

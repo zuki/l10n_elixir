@@ -11,6 +11,16 @@ msgid ""
 "if the SCM has extra knowledge of the dependency, otherwise it\n"
 "should return an empty list.\n"
 msgstr ""
+#. TRANSLATORS: def Mix.SCM.append(mod)
+#: lib/mix/scm.ex:137 
+msgid ""
+"Appends the given SCM module to the list of available SCMs.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.SCM.prepend(mod)
+#: lib/mix/scm.ex:130 
+msgid ""
+"Prepends the given SCM module to the list of available SCMs.\n"
+msgstr ""
 #. TRANSLATORS: @callback format_lock/1
 #: lib/mix/scm.ex:27 
 msgid ""
@@ -20,28 +30,6 @@ msgid ""
 "easy to spot.\n"
 "\n"
 "If nil is returned, it means no lock information is available.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.SCM.prepend(mod)
-#: lib/mix/scm.ex:130 
-msgid ""
-"Prepends the given SCM module to the list of available SCMs.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.SCM.append(mod)
-#: lib/mix/scm.ex:137 
-msgid ""
-"Appends the given SCM module to the list of available SCMs.\n"
-msgstr ""
-#. TRANSLATORS: @callback update/1
-#: lib/mix/scm.ex:70 
-msgid ""
-"This behaviour function updates dependencies. It may be\n"
-"called by `deps.get` or `deps.update`.\n"
-"\n"
-"In the first scenario, a lock is received in `opts` and\n"
-"the repository must be updated to the lock. In the second,\n"
-"no lock is given and the repository can be updated freely.\n"
-"\n"
-"It must return the current lock.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.SCM.available()
 #: lib/mix/scm.ex:121 
@@ -59,6 +47,13 @@ msgid ""
 "Local dependencies (i.e. non fetchable ones) are automatically\n"
 "recompiled every time the parent project is compiled.\n"
 msgstr ""
+#. TRANSLATORS: @callback equal?/2
+#: lib/mix/scm.ex:107 
+msgid ""
+"Receives two options and must return `true` if they refer to the\n"
+"same repository. The options are guaranteed to belong to the\n"
+"same SCM.\n"
+msgstr ""
 #. TRANSLATORS: @callback checkout/1
 #: lib/mix/scm.ex:58 
 msgid ""
@@ -71,13 +66,6 @@ msgid ""
 "\n"
 "It must return the current lock.\n"
 msgstr ""
-#. TRANSLATORS: @callback equal?/2
-#: lib/mix/scm.ex:107 
-msgid ""
-"Receives two options and must return `true` if they refer to the\n"
-"same repository. The options are guaranteed to belong to the\n"
-"same SCM.\n"
-msgstr ""
 #. TRANSLATORS: @callback format/1
 #: lib/mix/scm.ex:19 
 msgid ""
@@ -85,6 +73,18 @@ msgid ""
 "when printing the dependency and not for inspection,\n"
 "so the amount of information should be concise and\n"
 "easy to spot.\n"
+msgstr ""
+#. TRANSLATORS: @callback update/1
+#: lib/mix/scm.ex:70 
+msgid ""
+"This behaviour function updates dependencies. It may be\n"
+"called by `deps.get` or `deps.update`.\n"
+"\n"
+"In the first scenario, a lock is received in `opts` and\n"
+"the repository must be updated to the lock. In the second,\n"
+"no lock is given and the repository can be updated freely.\n"
+"\n"
+"It must return the current lock.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Mix.SCM Summary
 #: lib/mix/scm.ex:2 

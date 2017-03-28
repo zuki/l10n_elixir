@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: l 10n_elixir\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: 2017-01-31 11:03+0900\n"
 "Last-Translator: 小田 照敬 <EMAIL@ADDRESS>\n"
 "Language-Team: Japanese\n"
@@ -9,7 +10,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"POT-Creation-Date: \n"
 "X-Generator: Poedit 1.8.11\n"
 
 #. TRANSLATORS: def System.compiled_endianness()
@@ -171,19 +171,6 @@ msgstr ""
 "Erlang APIでは、 `:milli_seconds`, `:micro_seconds`, \n"
 "`:nano_seconds`を時間単位として使用していることに留意してください。\n"
 
-#. TRANSLATORS: def System.argv(args)
-#: lib/system.ex:197
-msgid ""
-"Modifies command line arguments.\n"
-"\n"
-"Changes the list of command line arguments. Use it with caution,\n"
-"as it destroys any previous argv information.\n"
-msgstr ""
-"コマンドライン引数を変更します。\n"
-"\n"
-"コマンドライン引数のリストを変更します。\n"
-"以前のargv情報は全て破壊されますので、使用には注意してください。\n"
-
 #. TRANSLATORS: def System.schedulers()
 #: lib/system.ex:759
 msgid "Returns the number of schedulers in the VM.\n"
@@ -342,10 +329,41 @@ msgstr ""
 "`user_home/0`と同じですが、ユーザホームが設定されて\n"
 "いない場合、`nil`を返す代わりに`RuntimeError`を発生させます。\n"
 
+#. TRANSLATORS: def System.argv(args)
+#: lib/system.ex:197
+msgid ""
+"Modifies command line arguments.\n"
+"\n"
+"Changes the list of command line arguments. Use it with caution,\n"
+"as it destroys any previous argv information.\n"
+msgstr ""
+"コマンドライン引数を変更します。\n"
+"\n"
+"コマンドライン引数のリストを変更します。\n"
+"以前のargv情報は全て破壊されますので、使用には注意してください。\n"
+
 #. TRANSLATORS: def System.otp_release()
 #: lib/system.ex:751
 msgid "Returns the OTP release number.\n"
 msgstr "OTPリリース番号を返します。\n"
+
+#. TRANSLATORS: def System.put_env(enum)
+#: lib/system.ex:400
+msgid ""
+"Sets multiple environment variables.\n"
+"\n"
+"Sets a new value for each environment variable corresponding\n"
+"to each key in `dict`.\n"
+msgstr ""
+"複数の環境変数を設定します。\n"
+"\n"
+"`dict`の各キーに対応する各環境変数に\n"
+"新しい値を設定します。\n"
+
+#. TRANSLATORS: def System.endianness()
+#: lib/system.ex:139
+msgid "Returns the endianness.\n"
+msgstr "エンディアンを返します。\n"
 
 #. TRANSLATORS: def System.convert_time_unit(time, from_unit, to_unit)
 #: lib/system.ex:678
@@ -375,39 +393,37 @@ msgstr ""
 "単位に変換します（すなわち、`System.convert_time_unit(1, :second, :native)`\n"
 "を実行します）。\n"
 
-#. TRANSLATORS: def System.system_time(unit)
-#: lib/system.ex:666
+#. TRANSLATORS: def System.stacktrace()
+#: lib/system.ex:422
 msgid ""
-"Returns the current system time in the given time unit.\n"
+"Last exception stacktrace.\n"
 "\n"
-"It is the VM view of the `os_time/0`. They may not match in\n"
-"case of time warps although the VM works towards aligning\n"
-"them. This time is not monotonic.\n"
+"Note that the Erlang VM (and therefore this function) does not\n"
+"return the current stacktrace but rather the stacktrace of the\n"
+"latest exception.\n"
+"\n"
+"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
 msgstr ""
-"現在のシステム時間を指定された時間単位で返します。\n"
+"最後の例外スタックトレース。\n"
 "\n"
-"これはVMから見た`os_time/0`です。VMは両者を整合させようと\n"
-"しますが、タイムワープがあると両者は一致しない場合があります。\n"
-"この時間は単調増加ではありません。\n"
+"Erlang VM(そして、この関数)は現在のスタックトレースではなく、\n"
+"最後の例外のスタックトレースを返すことに\n"
+"注意してください。\n"
+"\n"
+"コンパイラにより`:erlang.get_stacktrace/0`にインライン化されます。\n"
 
-#. TRANSLATORS: def System.find_executable(program)
-#: lib/system.ex:331
+#. TRANSLATORS: def System.monotonic_time(unit)
+#: lib/system.ex:641
 msgid ""
-"Locates an executable on the system.\n"
+"Returns the current monotonic time in the given time unit.\n"
 "\n"
-"This function looks up an executable program given\n"
-"its name using the environment variable PATH on Unix\n"
-"and Windows. It also considers the proper executable\n"
-"extension for each OS, so for Windows it will try to\n"
-"lookup files with `.com`, `.cmd` or similar extensions.\n"
+"This time is monotonically increasing and starts in an unspecified\n"
+"point in time.\n"
 msgstr ""
-"システム上の実行ファイルの場所を探します。\n"
+"現在の単調増加時間を指定された時間単位で返します。\n"
 "\n"
-"この関数は、UnixやWindowsの環境変数PATHを使用して\n"
-"指定された名前の実行可能プログラムを探します。\n"
-"各OSにおける適切な実行可能ファイルの拡張子を考慮しますので、\n"
-"たとえば、Windowsでは、`.com`や`.cmd`などの拡張子の\n"
-"ファイルを探します。\n"
+"この時間は、不特定の時間に始まり、\n"
+"単調に増加します。\n"
 
 #. TRANSLATORS: def System.argv()
 #: lib/system.ex:187
@@ -514,56 +530,6 @@ msgstr ""
 "    System.halt(:abort)\n"
 "\n"
 
-#. TRANSLATORS: def System.put_env(enum)
-#: lib/system.ex:400
-msgid ""
-"Sets multiple environment variables.\n"
-"\n"
-"Sets a new value for each environment variable corresponding\n"
-"to each key in `dict`.\n"
-msgstr ""
-"複数の環境変数を設定します。\n"
-"\n"
-"`dict`の各キーに対応する各環境変数に\n"
-"新しい値を設定します。\n"
-
-#. TRANSLATORS: def System.endianness()
-#: lib/system.ex:139
-msgid "Returns the endianness.\n"
-msgstr "エンディアンを返します。\n"
-
-#. TRANSLATORS: def System.stacktrace()
-#: lib/system.ex:422
-msgid ""
-"Last exception stacktrace.\n"
-"\n"
-"Note that the Erlang VM (and therefore this function) does not\n"
-"return the current stacktrace but rather the stacktrace of the\n"
-"latest exception.\n"
-"\n"
-"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
-msgstr ""
-"最後の例外スタックトレース。\n"
-"\n"
-"Erlang VM(そして、この関数)は現在のスタックトレースではなく、\n"
-"最後の例外のスタックトレースを返すことに\n"
-"注意してください。\n"
-"\n"
-"コンパイラにより`:erlang.get_stacktrace/0`にインライン化されます。\n"
-
-#. TRANSLATORS: def System.monotonic_time(unit)
-#: lib/system.ex:641
-msgid ""
-"Returns the current monotonic time in the given time unit.\n"
-"\n"
-"This time is monotonically increasing and starts in an unspecified\n"
-"point in time.\n"
-msgstr ""
-"現在の単調増加時間を指定された時間単位で返します。\n"
-"\n"
-"この時間は、不特定の時間に始まり、\n"
-"単調に増加します。\n"
-
 #. TRANSLATORS: def System.os_time()
 #: lib/system.ex:725
 msgid ""
@@ -584,6 +550,40 @@ msgstr ""
 "単調増加ではありません。\n"
 "\n"
 "コンパイラにより、`:erlang.time_offset/0`にインライン化されます。\n"
+
+#. TRANSLATORS: def System.find_executable(program)
+#: lib/system.ex:331
+msgid ""
+"Locates an executable on the system.\n"
+"\n"
+"This function looks up an executable program given\n"
+"its name using the environment variable PATH on Unix\n"
+"and Windows. It also considers the proper executable\n"
+"extension for each OS, so for Windows it will try to\n"
+"lookup files with `.com`, `.cmd` or similar extensions.\n"
+msgstr ""
+"システム上の実行ファイルの場所を探します。\n"
+"\n"
+"この関数は、UnixやWindowsの環境変数PATHを使用して\n"
+"指定された名前の実行可能プログラムを探します。\n"
+"各OSにおける適切な実行可能ファイルの拡張子を考慮しますので、\n"
+"たとえば、Windowsでは、`.com`や`.cmd`などの拡張子の\n"
+"ファイルを探します。\n"
+
+#. TRANSLATORS: def System.system_time(unit)
+#: lib/system.ex:666
+msgid ""
+"Returns the current system time in the given time unit.\n"
+"\n"
+"It is the VM view of the `os_time/0`. They may not match in\n"
+"case of time warps although the VM works towards aligning\n"
+"them. This time is not monotonic.\n"
+msgstr ""
+"現在のシステム時間を指定された時間単位で返します。\n"
+"\n"
+"これはVMから見た`os_time/0`です。VMは両者を整合させようと\n"
+"しますが、タイムワープがあると両者は一致しない場合があります。\n"
+"この時間は単調増加ではありません。\n"
 
 #. TRANSLATORS: def System.unique_integer(modifiers \\ [])
 #: lib/system.ex:775
@@ -648,31 +648,22 @@ msgstr ""
 "\n"
 "環境変数`varname`に新しい値`value`を設定します。\n"
 
-#. TRANSLATORS: def System.build_info()
-#: lib/system.ex:162
+#. TRANSLATORS: def System.monotonic_time()
+#: lib/system.ex:628
 msgid ""
-"Elixir build information.\n"
+"Returns the current monotonic time in the `:native` time unit.\n"
 "\n"
-"Returns a keyword list with Elixir version, Git short revision hash and "
-"compilation date.\n"
+"This time is monotonically increasing and starts in an unspecified\n"
+"point in time.\n"
+"\n"
+"Inlined by the compiler into `:erlang.monotonic_time/0`.\n"
 msgstr ""
-"Elixirビルドインフォメーションです。\n"
+"現在の単調増加時間を`:native`時間単位で返します。\n"
 "\n"
-"Elixirバージョン、gitリビジョンハッシュの短縮版、コンパイル日時を含むキーワー"
-"ドリストを返します。\n"
-
-#. TRANSLATORS: def System.os_time(unit)
-#: lib/system.ex:740
-msgid ""
-"Returns the current OS time in the given time `unit`.\n"
+"この時間は、不特定の時間に始まり、\n"
+"単調に増加します。\n"
 "\n"
-"This time may be adjusted forwards or backwards in time\n"
-"with no limitation and is not monotonic.\n"
-msgstr ""
-"現在のOS時間を指定された時間単位`unit`で返します。\n"
-"\n"
-"この時間は時間の前方または後方に無制限に調整される場合があり、\n"
-"単調増加ではありません。\n"
+"コンパイラにより、`:erlang.monotonic_time/0`にインライン化されます。\n"
 
 #. TRANSLATORS: def System.cwd!()
 #: lib/system.ex:230
@@ -701,22 +692,18 @@ msgstr ""
 "環境変数が未定義の場合は`nil`を\n"
 "返します。\n"
 
-#. TRANSLATORS: def System.monotonic_time()
-#: lib/system.ex:628
+#. TRANSLATORS: def System.build_info()
+#: lib/system.ex:162
 msgid ""
-"Returns the current monotonic time in the `:native` time unit.\n"
+"Elixir build information.\n"
 "\n"
-"This time is monotonically increasing and starts in an unspecified\n"
-"point in time.\n"
-"\n"
-"Inlined by the compiler into `:erlang.monotonic_time/0`.\n"
+"Returns a keyword list with Elixir version, Git short revision hash and "
+"compilation date.\n"
 msgstr ""
-"現在の単調増加時間を`:native`時間単位で返します。\n"
+"Elixirビルドインフォメーションです。\n"
 "\n"
-"この時間は、不特定の時間に始まり、\n"
-"単調に増加します。\n"
-"\n"
-"コンパイラにより、`:erlang.monotonic_time/0`にインライン化されます。\n"
+"Elixirバージョン、gitリビジョンハッシュの短縮版、コンパイル日時を含むキーワー"
+"ドリストを返します。\n"
 
 #. TRANSLATORS: def System.cmd(command, args, opts \\ [])
 #: lib/system.ex:474
@@ -890,6 +877,19 @@ msgstr ""
 "シェルの中で信頼できるコマンドをパイプやリダイレクトなどと実行したい\n"
 "場合は、[`:os.cmd/1`](http://www.erlang.org/doc/man/os.html#cmd-1)\n"
 "をチェックしてください。\n"
+
+#. TRANSLATORS: def System.os_time(unit)
+#: lib/system.ex:740
+msgid ""
+"Returns the current OS time in the given time `unit`.\n"
+"\n"
+"This time may be adjusted forwards or backwards in time\n"
+"with no limitation and is not monotonic.\n"
+msgstr ""
+"現在のOS時間を指定された時間単位`unit`で返します。\n"
+"\n"
+"この時間は時間の前方または後方に無制限に調整される場合があり、\n"
+"単調増加ではありません。\n"
 
 #. TRANSLATORS: def System.user_home()
 #: lib/system.ex:240

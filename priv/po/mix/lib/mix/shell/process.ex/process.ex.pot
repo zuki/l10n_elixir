@@ -1,24 +1,18 @@
-#. TRANSLATORS: def Mix.Shell.Process.prompt(message)
-#: lib/mix/shell/process.ex:100 
+#. TRANSLATORS: def Mix.Shell.Process.info(message)
+#: lib/mix/shell/process.ex:80 
 msgid ""
 "Forwards the message to the current process.\n"
-"\n"
-"It also checks the inbox for an input message matching:\n"
-"\n"
-"    {:mix_shell_input, :prompt, value}\n"
-"\n"
-"If one does not exist, it will abort since there was no shell\n"
-"process inputs given. `value` must be a string.\n"
-"\n"
-"## Examples\n"
-"\n"
-"The following will answer with `\"Meg\"` to the prompt\n"
-"`\"What's your name?\"`:\n"
-"\n"
-"    # The response is sent before calling prompt/1 so that prompt/1 can read it\n"
-"    send self(), {:mix_shell_input, :prompt, \"Meg\"}\n"
-"    Mix.shell.prompt(\"What's your name?\")\n"
-"\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Shell.Process.cmd(command, opts \\ [])
+#: lib/mix/shell/process.ex:68 
+msgid ""
+"Executes the given command and forwards its messages to\n"
+"the current process.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Shell.Process.error(message)
+#: lib/mix/shell/process.ex:88 
+msgid ""
+"Forwards the error to the current process.\n"
 msgstr ""
 #. TRANSLATORS: Elixir.Mix.Shell.Process Summary
 #: lib/mix/shell/process.ex:2 
@@ -52,6 +46,40 @@ msgid ""
 "    #=> \"Pretty cool\"\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Mix.Shell.Process.flush(callback \\ fn x -> x end)
+#: lib/mix/shell/process.ex:35 
+msgid ""
+"Flushes all `:mix_shell` and `:mix_shell_input` messages from the current process.\n"
+"\n"
+"If a callback is given, it is invoked for each received message.\n"
+"\n"
+"## Examples\n"
+"\n"
+"    flush &IO.inspect(&1)\n"
+"\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Shell.Process.prompt(message)
+#: lib/mix/shell/process.ex:100 
+msgid ""
+"Forwards the message to the current process.\n"
+"\n"
+"It also checks the inbox for an input message matching:\n"
+"\n"
+"    {:mix_shell_input, :prompt, value}\n"
+"\n"
+"If one does not exist, it will abort since there was no shell\n"
+"process inputs given. `value` must be a string.\n"
+"\n"
+"## Examples\n"
+"\n"
+"The following will answer with `\"Meg\"` to the prompt\n"
+"`\"What's your name?\"`:\n"
+"\n"
+"    # The response is sent before calling prompt/1 so that prompt/1 can read it\n"
+"    send self(), {:mix_shell_input, :prompt, \"Meg\"}\n"
+"    Mix.shell.prompt(\"What's your name?\")\n"
+"\n"
+msgstr ""
 #. TRANSLATORS: def Mix.Shell.Process.yes?(message)
 #: lib/mix/shell/process.ex:131 
 msgid ""
@@ -69,33 +97,5 @@ msgid ""
 "    # Send the response to self() first so that yes?/1 will be able to read it\n"
 "    send self(), {:mix_shell_input, :yes?, true}\n"
 "    Mix.shell.yes?(\"Are you sure you want to continue?\")\n"
-"\n"
-msgstr ""
-#. TRANSLATORS: def Mix.Shell.Process.info(message)
-#: lib/mix/shell/process.ex:80 
-msgid ""
-"Forwards the message to the current process.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.Shell.Process.error(message)
-#: lib/mix/shell/process.ex:88 
-msgid ""
-"Forwards the error to the current process.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.Shell.Process.cmd(command, opts \\ [])
-#: lib/mix/shell/process.ex:68 
-msgid ""
-"Executes the given command and forwards its messages to\n"
-"the current process.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.Shell.Process.flush(callback \\ fn x -> x end)
-#: lib/mix/shell/process.ex:35 
-msgid ""
-"Flushes all `:mix_shell` and `:mix_shell_input` messages from the current process.\n"
-"\n"
-"If a callback is given, it is invoked for each received message.\n"
-"\n"
-"## Examples\n"
-"\n"
-"    flush &IO.inspect(&1)\n"
 "\n"
 msgstr ""

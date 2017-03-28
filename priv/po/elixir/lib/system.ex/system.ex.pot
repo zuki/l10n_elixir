@@ -89,14 +89,6 @@ msgid ""
 "`:micro_seconds` and `:nano_seconds` as time units although Elixir normalizes\n"
 "their spelling to match the SI convention.\n"
 msgstr ""
-#. TRANSLATORS: def System.argv(args)
-#: lib/system.ex:197 
-msgid ""
-"Modifies command line arguments.\n"
-"\n"
-"Changes the list of command line arguments. Use it with caution,\n"
-"as it destroys any previous argv information.\n"
-msgstr ""
 #. TRANSLATORS: def System.schedulers()
 #: lib/system.ex:759 
 msgid ""
@@ -182,10 +174,31 @@ msgid ""
 "Same as `user_home/0` but raises `RuntimeError`\n"
 "instead of returning `nil` if no user home is set.\n"
 msgstr ""
+#. TRANSLATORS: def System.argv(args)
+#: lib/system.ex:197 
+msgid ""
+"Modifies command line arguments.\n"
+"\n"
+"Changes the list of command line arguments. Use it with caution,\n"
+"as it destroys any previous argv information.\n"
+msgstr ""
 #. TRANSLATORS: def System.otp_release()
 #: lib/system.ex:751 
 msgid ""
 "Returns the OTP release number.\n"
+msgstr ""
+#. TRANSLATORS: def System.put_env(enum)
+#: lib/system.ex:400 
+msgid ""
+"Sets multiple environment variables.\n"
+"\n"
+"Sets a new value for each environment variable corresponding\n"
+"to each key in `dict`.\n"
+msgstr ""
+#. TRANSLATORS: def System.endianness()
+#: lib/system.ex:139 
+msgid ""
+"Returns the endianness.\n"
 msgstr ""
 #. TRANSLATORS: def System.convert_time_unit(time, from_unit, to_unit)
 #: lib/system.ex:678 
@@ -202,25 +215,24 @@ msgid ""
 "convert 1 second to the `:native` time unit (i.e.,\n"
 "`System.convert_time_unit(1, :second, :native)`).\n"
 msgstr ""
-#. TRANSLATORS: def System.system_time(unit)
-#: lib/system.ex:666 
+#. TRANSLATORS: def System.stacktrace()
+#: lib/system.ex:422 
 msgid ""
-"Returns the current system time in the given time unit.\n"
+"Last exception stacktrace.\n"
 "\n"
-"It is the VM view of the `os_time/0`. They may not match in\n"
-"case of time warps although the VM works towards aligning\n"
-"them. This time is not monotonic.\n"
+"Note that the Erlang VM (and therefore this function) does not\n"
+"return the current stacktrace but rather the stacktrace of the\n"
+"latest exception.\n"
+"\n"
+"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
 msgstr ""
-#. TRANSLATORS: def System.find_executable(program)
-#: lib/system.ex:331 
+#. TRANSLATORS: def System.monotonic_time(unit)
+#: lib/system.ex:641 
 msgid ""
-"Locates an executable on the system.\n"
+"Returns the current monotonic time in the given time unit.\n"
 "\n"
-"This function looks up an executable program given\n"
-"its name using the environment variable PATH on Unix\n"
-"and Windows. It also considers the proper executable\n"
-"extension for each OS, so for Windows it will try to\n"
-"lookup files with `.com`, `.cmd` or similar extensions.\n"
+"This time is monotonically increasing and starts in an unspecified\n"
+"point in time.\n"
 msgstr ""
 #. TRANSLATORS: def System.argv()
 #: lib/system.ex:187 
@@ -278,38 +290,6 @@ msgid ""
 "    System.halt(:abort)\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def System.put_env(enum)
-#: lib/system.ex:400 
-msgid ""
-"Sets multiple environment variables.\n"
-"\n"
-"Sets a new value for each environment variable corresponding\n"
-"to each key in `dict`.\n"
-msgstr ""
-#. TRANSLATORS: def System.endianness()
-#: lib/system.ex:139 
-msgid ""
-"Returns the endianness.\n"
-msgstr ""
-#. TRANSLATORS: def System.stacktrace()
-#: lib/system.ex:422 
-msgid ""
-"Last exception stacktrace.\n"
-"\n"
-"Note that the Erlang VM (and therefore this function) does not\n"
-"return the current stacktrace but rather the stacktrace of the\n"
-"latest exception.\n"
-"\n"
-"Inlined by the compiler into `:erlang.get_stacktrace/0`.\n"
-msgstr ""
-#. TRANSLATORS: def System.monotonic_time(unit)
-#: lib/system.ex:641 
-msgid ""
-"Returns the current monotonic time in the given time unit.\n"
-"\n"
-"This time is monotonically increasing and starts in an unspecified\n"
-"point in time.\n"
-msgstr ""
 #. TRANSLATORS: def System.os_time()
 #: lib/system.ex:725 
 msgid ""
@@ -321,6 +301,26 @@ msgid ""
 "with no limitation and is not monotonic.\n"
 "\n"
 "Inlined by the compiler into `:os.system_time/0`.\n"
+msgstr ""
+#. TRANSLATORS: def System.find_executable(program)
+#: lib/system.ex:331 
+msgid ""
+"Locates an executable on the system.\n"
+"\n"
+"This function looks up an executable program given\n"
+"its name using the environment variable PATH on Unix\n"
+"and Windows. It also considers the proper executable\n"
+"extension for each OS, so for Windows it will try to\n"
+"lookup files with `.com`, `.cmd` or similar extensions.\n"
+msgstr ""
+#. TRANSLATORS: def System.system_time(unit)
+#: lib/system.ex:666 
+msgid ""
+"Returns the current system time in the given time unit.\n"
+"\n"
+"It is the VM view of the `os_time/0`. They may not match in\n"
+"case of time warps although the VM works towards aligning\n"
+"them. This time is not monotonic.\n"
 msgstr ""
 #. TRANSLATORS: def System.unique_integer(modifiers \\ [])
 #: lib/system.ex:775 
@@ -354,20 +354,15 @@ msgid ""
 "\n"
 "Sets a new `value` for the environment variable `varname`.\n"
 msgstr ""
-#. TRANSLATORS: def System.build_info()
-#: lib/system.ex:162 
+#. TRANSLATORS: def System.monotonic_time()
+#: lib/system.ex:628 
 msgid ""
-"Elixir build information.\n"
+"Returns the current monotonic time in the `:native` time unit.\n"
 "\n"
-"Returns a keyword list with Elixir version, Git short revision hash and compilation date.\n"
-msgstr ""
-#. TRANSLATORS: def System.os_time(unit)
-#: lib/system.ex:740 
-msgid ""
-"Returns the current OS time in the given time `unit`.\n"
+"This time is monotonically increasing and starts in an unspecified\n"
+"point in time.\n"
 "\n"
-"This time may be adjusted forwards or backwards in time\n"
-"with no limitation and is not monotonic.\n"
+"Inlined by the compiler into `:erlang.monotonic_time/0`.\n"
 msgstr ""
 #. TRANSLATORS: def System.cwd!()
 #: lib/system.ex:230 
@@ -385,15 +380,12 @@ msgid ""
 "`varname` as a binary, or `nil` if the environment\n"
 "variable is undefined.\n"
 msgstr ""
-#. TRANSLATORS: def System.monotonic_time()
-#: lib/system.ex:628 
+#. TRANSLATORS: def System.build_info()
+#: lib/system.ex:162 
 msgid ""
-"Returns the current monotonic time in the `:native` time unit.\n"
+"Elixir build information.\n"
 "\n"
-"This time is monotonically increasing and starts in an unspecified\n"
-"point in time.\n"
-"\n"
-"Inlined by the compiler into `:erlang.monotonic_time/0`.\n"
+"Returns a keyword list with Elixir version, Git short revision hash and compilation date.\n"
 msgstr ""
 #. TRANSLATORS: def System.cmd(command, args, opts \\ [])
 #: lib/system.ex:474 
@@ -477,6 +469,14 @@ msgid ""
 "If you desire to execute a trusted command inside a shell, with pipes,\n"
 "redirecting and so on, please check\n"
 "[`:os.cmd/1`](http://www.erlang.org/doc/man/os.html#cmd-1).\n"
+msgstr ""
+#. TRANSLATORS: def System.os_time(unit)
+#: lib/system.ex:740 
+msgid ""
+"Returns the current OS time in the given time `unit`.\n"
+"\n"
+"This time may be adjusted forwards or backwards in time\n"
+"with no limitation and is not monotonic.\n"
 msgstr ""
 #. TRANSLATORS: def System.user_home()
 #: lib/system.ex:240 

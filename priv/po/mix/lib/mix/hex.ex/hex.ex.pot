@@ -8,14 +8,14 @@ msgstr ""
 msgid ""
 "Returns `true` if `Hex` is loaded or installed. Otherwise returns `false`.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Hex.start()
-#: lib/mix/hex.ex:48 
-msgid ""
-"Ensures `Hex` is started.\n"
-msgstr ""
 #. TRANSLATORS: def Mix.Hex.ensure_updated?()
 #: lib/mix/hex.ex:25 
 msgid ""
 "Returns `true` if it has the required `Hex`. If an update is performed, it then exits.\n"
 "Otherwise returns `false` without updating anything.\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Hex.start()
+#: lib/mix/hex.ex:48 
+msgid ""
+"Ensures `Hex` is started.\n"
 msgstr ""

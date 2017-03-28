@@ -17,11 +17,6 @@ msgstr ""
 msgid "Reads the manifest.\n"
 msgstr "マニフェストを読み込みます。\n"
 
-#. TRANSLATORS: def Mix.Compilers.Elixir.protocols_and_impls(manifest, compile_path)
-#: lib/mix/compilers/elixir.ex:108
-msgid "Returns protocols and implementations for the given `manifest`.\n"
-msgstr "指定した`manifest`のプロトコルと実装を返します。\n"
-
 #. TRANSLATORS: def Mix.Compilers.Elixir.compile(manifest, srcs, dest, force, opts)
 #: lib/mix/compilers/elixir.ex:18
 msgid ""
@@ -49,3 +44,8 @@ msgstr ""
 "`manifest`はモジュール間の依存関係を含む情報が記載されています。\n"
 "実行時に変更されたモジュールのみを再コンパイルするのに\n"
 "役立ちます。\n"
+
+#. TRANSLATORS: def Mix.Compilers.Elixir.protocols_and_impls(manifest, compile_path)
+#: lib/mix/compilers/elixir.ex:108
+msgid "Returns protocols and implementations for the given `manifest`.\n"
+msgstr "指定した`manifest`のプロトコルと実装を返します。\n"

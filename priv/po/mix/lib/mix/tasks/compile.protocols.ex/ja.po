@@ -10,6 +10,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#. TRANSLATORS: def Mix.Tasks.Compile.Protocols.clean()
+#: lib/mix/tasks/compile.protocols.ex:67
+msgid "Cleans up consolidated protocols.\n"
+msgstr ""
+
 #. TRANSLATORS: Elixir.Mix.Tasks.Compile.Protocols Summary
 #: lib/mix/tasks/compile.protocols.ex:7
 msgid ""
@@ -42,9 +47,4 @@ msgid ""
 "    iex> Protocol.consolidated?(Enumerable)\n"
 "    true\n"
 "\n"
-msgstr ""
-
-#. TRANSLATORS: def Mix.Tasks.Compile.Protocols.clean()
-#: lib/mix/tasks/compile.protocols.ex:67
-msgid "Cleans up consolidated protocols.\n"
 msgstr ""

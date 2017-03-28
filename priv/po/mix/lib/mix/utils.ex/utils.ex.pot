@@ -15,11 +15,10 @@ msgid ""
 "    \"compile.elixir\"\n"
 "\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Utils.can_write?(path)
-#: lib/mix/utils.ex:410 
+#. TRANSLATORS: def Mix.Utils.extract_stale(sources, targets)
+#: lib/mix/utils.ex:69 
 msgid ""
-"Prompts the user to overwrite the file if it exists. Returns\n"
-"the user input.\n"
+"Extracts all stale `sources` compared to the given `targets`.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.Utils.command_to_module_name(command)
 #: lib/mix/utils.ex:283 
@@ -45,10 +44,13 @@ msgid ""
 "recursively for files with the given extensions or matching\n"
 "the given patterns.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Utils.extract_stale(sources, targets)
-#: lib/mix/utils.ex:69 
+#. TRANSLATORS: def Mix.Utils.print_tree(nodes, callback, opts \\ [])
+#: lib/mix/utils.ex:151 
 msgid ""
-"Extracts all stale `sources` compared to the given `targets`.\n"
+"Prints the given tree according to the callback.\n"
+"\n"
+"The callback will be invoked for each node and it\n"
+"must return a `{printed, children}` tuple.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.Utils.write_dot_graph!(path, title, nodes, callback, opts \\ [])
 #: lib/mix/utils.ex:200 
@@ -58,31 +60,10 @@ msgid ""
 "The callback will be invoked for each node and it\n"
 "must return a `{printed, children}` tuple.\n"
 msgstr ""
-#. TRANSLATORS: def Mix.Utils.print_tree(nodes, callback, opts \\ [])
-#: lib/mix/utils.ex:151 
-msgid ""
-"Prints the given tree according to the callback.\n"
-"\n"
-"The callback will be invoked for each node and it\n"
-"must return a `{printed, children}` tuple.\n"
-msgstr ""
 #. TRANSLATORS: def Mix.Utils.compiling_n(n, ext)
 #: lib/mix/utils.ex:114 
 msgid ""
 "Prints n files are being compiled with the given extension.\n"
-msgstr ""
-#. TRANSLATORS: def Mix.Utils.read_path(path, opts \\ [])
-#: lib/mix/utils.ex:359 
-msgid ""
-"Opens and reads content from either a URL or a local filesystem path\n"
-"and returns the contents as a `{:ok, binary}`, `:badpath` for invalid\n"
-"paths or `{:local, message}` for local errors and `{:remote, message}`\n"
-"for remote ones.\n"
-"\n"
-"## Options\n"
-"\n"
-"  * `:sha512` - checks against the given SHA-512 checksum. Returns\n"
-"    `{:checksum, message}` in case it fails\n"
 msgstr ""
 #. TRANSLATORS: def Mix.Utils.mix_home()
 #: lib/mix/utils.ex:4 
@@ -115,6 +96,19 @@ msgid ""
 "    {:module, Mix.Tasks.Compile}\n"
 "\n"
 msgstr ""
+#. TRANSLATORS: def Mix.Utils.read_path(path, opts \\ [])
+#: lib/mix/utils.ex:359 
+msgid ""
+"Opens and reads content from either a URL or a local filesystem path\n"
+"and returns the contents as a `{:ok, binary}`, `:badpath` for invalid\n"
+"paths or `{:local, message}` for local errors and `{:remote, message}`\n"
+"for remote ones.\n"
+"\n"
+"## Options\n"
+"\n"
+"  * `:sha512` - checks against the given SHA-512 checksum. Returns\n"
+"    `{:checksum, message}` in case it fails\n"
+msgstr ""
 #. TRANSLATORS: def Mix.Utils.last_modified(path)
 #: lib/mix/utils.ex:87 
 msgid ""
@@ -122,6 +116,12 @@ msgid ""
 "\n"
 "If the path does not exist, it returns the Unix epoch\n"
 "(1970-01-01 00:00:00).\n"
+msgstr ""
+#. TRANSLATORS: def Mix.Utils.can_write?(path)
+#: lib/mix/utils.ex:410 
+msgid ""
+"Prompts the user to overwrite the file if it exists. Returns\n"
+"the user input.\n"
 msgstr ""
 #. TRANSLATORS: def Mix.Utils.mix_paths()
 #: lib/mix/utils.ex:21 

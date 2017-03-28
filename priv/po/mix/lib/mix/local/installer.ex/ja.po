@@ -42,10 +42,9 @@ msgid ""
 "package. Also, the Mix env is set to :prod.\n"
 msgstr ""
 
-#. TRANSLATORS: @callback find_previous_versions/2
-#: lib/mix/local/installer.ex:27
-msgid ""
-"Returns a list of already installed version of the same archive or escript.\n"
+#. TRANSLATORS: def Mix.Local.Installer.uninstall(type, argv)
+#: lib/mix/local/installer.ex:243
+msgid "A common implementation for uninstalling archives and scripts.\n"
 msgstr ""
 
 #. TRANSLATORS: def Mix.Local.Installer.print_list(type, items)
@@ -56,16 +55,17 @@ msgid ""
 "escripts.\n"
 msgstr ""
 
+#. TRANSLATORS: @callback find_previous_versions/2
+#: lib/mix/local/installer.ex:27
+msgid ""
+"Returns a list of already installed version of the same archive or escript.\n"
+msgstr ""
+
 #. TRANSLATORS: @callback build/1
 #: lib/mix/local/installer.ex:32
 msgid ""
 "For installs involving a `fetch`, this will be executed as the "
 "`in_package`.\n"
-msgstr ""
-
-#. TRANSLATORS: def Mix.Local.Installer.uninstall(type, argv)
-#: lib/mix/local/installer.ex:243
-msgid "A common implementation for uninstalling archives and scripts.\n"
 msgstr ""
 
 #. TRANSLATORS: @type install_spec
@@ -81,14 +81,14 @@ msgid ""
 "\n"
 msgstr ""
 
-#. TRANSLATORS: @callback install/3
-#: lib/mix/local/installer.ex:37
-msgid "The installation itself.\n"
-msgstr ""
-
 #. TRANSLATORS: @callback check_install_spec/2
 #: lib/mix/local/installer.ex:22
 msgid ""
 "Checks that the `install_spec` and `opts` are supported by the respective "
 "module.\n"
+msgstr ""
+
+#. TRANSLATORS: @callback install/3
+#: lib/mix/local/installer.ex:37
+msgid "The installation itself.\n"
 msgstr ""
